@@ -3,7 +3,7 @@ supervisors:
   - id: s01
     name: "Dr. Savvas Triantafyllou"
     title: "Associate Professor, National Technical University of Athens"
-    photo: "img/supervisors/savvas.jpg"
+    photo: "img/supervisors/st.jpg"
     profile: "https://users.ntua.gr/savtri"
   - id: s02
     name: "Dr. Ioannis Kalogeris"
@@ -38,7 +38,7 @@ supervisors:
   - id: s06
     name: "Dr. Francesco Dal Corso"
     title: "Associate Professor, University of Trento"
-    photo: "img/supervisors/francescodalcorso_c.jpg"
+    photo: "img/supervisors/fdc.jpg"
     profile: "https://dalcorso.dicam.unitn.it/"
   - id: s07
     name: "Dr. Maria Pantano"

@@ -44,7 +44,7 @@ logos:
     scale: 1.5
     row: 3
     ispartner: 1
-  - image: img/logos/ethz.png
+  - image: img/logos/eth.png
     url: https://ethz.ch/en.html
     scale: 1.5
     row: 3
