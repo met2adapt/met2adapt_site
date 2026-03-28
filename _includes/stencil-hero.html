@@ -1,0 +1,27 @@
+<section class="stencil-hero" aria-label="Research team photos behind stencil">
+<!-- Inline SVG mask definitions -->
+<svg class="stencil-defs" width="0" height="0" aria-hidden="true" focusable="false">
+<defs>
+  <mask id="stencilMask" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+	<rect x="0" y="0" width="1" height="1" fill="black"/>
+	<!-- white = visible hole; replace path with your stencil shape or text -->
+	<g transform="translate(0.5,0.5) scale(0.9)">
+	  <path d="M-0.45,-0.25 C-0.25,-0.45 0.25,-0.45 0.45,-0.25 C0.55,-0.15 0.55,0.15 0.45,0.25 C0.25,0.45 -0.25,0.45 -0.45,0.25 C-0.55,0.15 -0.55,-0.15 -0.45,-0.25 Z"
+			fill="white"/>
+	</g>
+  </mask>
+</defs>
+</svg>
+
+<!-- Photo layer (replace --photo-url in CSS or inline style below) -->
+<div class="stencil-photo" aria-hidden="true"></div>
+
+<!-- Overlay that uses the mask to reveal the photo through the stencil -->
+<div class="stencil-overlay" role="img" aria-label="Photos visible through stencil"></div>
+
+<!-- Optional content -->
+<div class="stencil-content">
+<h1>Research</h1>
+<p class="lead">Images float behind a stencil cutout</p>
+</div>
+</section>

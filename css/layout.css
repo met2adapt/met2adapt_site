@@ -1,0 +1,189 @@
+﻿.site-header { background:var(--white); border-bottom:1px solid #e0e0e0; position:sticky; top:0; z-index:20; transition:padding .25s, box-shadow .25s; }
+.site-header.shrink { padding:0.1rem 0; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
+.header-inner { display:flex; justify-content:space-between; align-items:center; padding:0.75rem 0; max-width: 1600px;   /* increase this to make content wider */ }
+.logo a { font-family:"Montserrat",sans-serif; font-size:1.3rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--primary-dark); }
+
+.main-nav ul { list-style:none; display:flex; gap:1.25rem; margin:0; padding:0; }
+.main-nav a { font-family:"Montserrat",sans-serif; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted);font-weight: 700; /* bold */ }
+.main-nav a.active, .main-nav a:hover { color:var(--primary); }
+.nav-toggle { display:none; background:none; border:none; font-size:1.4rem; cursor:pointer; }
+
+.breadcrumb { background:var(--bg-light); padding:0.6rem 0; font-size:0.85rem; color:var(--muted); }
+.site-footer { background:var(--primary-dark); color:#d1d5db; padding:2rem 0; font-size:0.9rem;font-weight:1000 }
+
+
+.site-footer {
+  background: var(--primary-dark);
+  color: #d1d5db;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+
+.site-footer {
+  width: 100%;
+  background: var(--primary-dark);
+  color: #d1d5db;
+  padding: 2rem 0;
+}
+
+.footer-inner {
+  max-width: 1600px;   /* increase this to make content wider */
+  margin: 0 auto;      /* centers the content */
+  padding: 0 1rem;     /* horizontal breathing room on small screens */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.25rem;
+}
+
+
+.footer-col { display:flex; flex-direction:column; gap:0.5rem; }
+
+
+
+.footer-links a { color: inherit; text-decoration: underline; }
+
+
+/* ensure text doesn't collapse or wrap awkwardly */
+.col-3-text {
+  line-height: 1.2;  
+  color: inherit;
+}
+
+/* horizontal grouping for text + logo */
+.col-3-content {
+  display: flex;
+  align-items: flex-start; /* top align children */
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+/* ensure the logo itself is top-aligned inside the flex row */
+.eu-logo {
+  width: 160px;
+  height: auto;
+  display: block;
+  align-self: flex-start; /* explicit top alignment for the image */
+}
+
+/* keep the text natural */
+.col-3-text {
+  line-height: 1.2;
+  color: inherit;
+}
+
+
+/* keep footer links below the horizontal group on desktop */
+.footer-links {
+  margin-top: 0.5rem;
+}
+
+/* responsive: stack vertically on small screens */
+@media (max-width: 700px) {
+  .col-3-content {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .col-3-text { white-space: normal; text-align: center; }
+  .footer-links { text-align: center; }
+}
+
+
+@media (max-width:700px) {
+  .footer-inner { grid-template-columns: 1fr; text-align:center; }
+  .eu-logo { margin: 0 auto; }
+}
+
+
+
+
+@media (max-width:768px) {
+  .main-nav ul { position:absolute; right:0; top:100%; background:var(--white); flex-direction:column; align-items:flex-start; padding:0.75rem 1rem; box-shadow:0 8px 20px rgba(0,0,0,0.12); display:none; }
+  .main-nav ul.open { display:flex; }
+  .nav-toggle { display:inline-block; }
+}
+
+/* NAV base */
+.main-nav { position: relative; }
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Toggle button hidden on desktop */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+/* SVG inherits color */
+.nav-icon { fill: currentColor; }
+
+/* Mobile behavior */
+@media (max-width: 768px) {
+
+  /* show toggle */
+  .nav-toggle { display: inline-block; }
+
+  /* hide desktop menu by default */
+  .main-nav ul {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.5rem);
+    background: var(--white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    border-radius: 6px;
+    display: none; /* hidden until open */
+    min-width: 200px;
+    z-index: 40;
+  }
+
+  /* show when nav open */
+  .main-nav.open ul { display: flex; }
+
+  /* make links full width for easier tapping */
+  .main-nav ul a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  /* Animated hamburger to X */
+  .nav-icon rect {
+    transition: transform 0.28s ease, opacity 0.28s ease;
+    transform-origin: center;
+  }
+
+  /* When open, rotate first and last bars and hide middle */
+  .main-nav.open .nav-icon rect:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+  }
+  .main-nav.open .nav-icon rect:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .main-nav.open .nav-icon rect:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+}

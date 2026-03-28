@@ -1,0 +1,261 @@
+/* ==========================================================================
+   GLOBAL VARIABLES
+   ========================================================================== */
+:root {
+  --site-bg: #ffffff;
+  --hero-height: 800px;  
+  --photo-url: url("/img/research/wps.png");
+  --film-color: rgba(0,0,0,0.62);
+  --stencil-size: 0%; 
+  --wp-stencil-cloud-fill: var(--page-bg, #ffffff);
+}
+
+/* ==========================================================================
+   BASE COMPONENTS (Buttons, Forms, Global Cards)
+   ========================================================================== */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.6rem 1.4rem; border-radius: 999px;
+  font-family: "Montserrat", sans-serif; font-size: 0.9rem;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  border: 2px solid transparent; cursor: pointer; transition: .2s;
+}
+.btn-primary { background: var(--primary); color: var(--white); }
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--primary); border-color: var(--primary); }
+
+.info-card, .wp-card {
+  background: var(--white); border-radius: var(--radius); padding: 1.75rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05); transition: .25s;
+}
+.info-card:hover, .wp-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,0.10); }
+
+.form-row { margin-bottom: 1rem; }
+.form-row label { display: block; margin-bottom: 0.3rem; font-weight: 600; font-size: 0.9rem; }
+.form-row input, .form-row textarea { width: 100%; padding: 0.55rem 0.7rem; border-radius: 4px; border: 1px solid #d1d5db; font-size: 0.95rem; }
+.form-row input:focus, .form-row textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 1px rgba(0,58,112,0.15); }
+
+.visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; border: 0; padding: 0; margin: -1px; }
+[hidden] { display: none !important; }
+
+/* ==========================================================================
+   SUPERVISORS GRID & CARDS
+   ========================================================================== */
+.supervisors-section .container { max-width: 1200px; margin-left: auto; margin-right: auto; }
+.supervisors-grid { display: grid; gap: 1.25rem; align-items: start; margin-top: 1rem; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+@media (min-width: 1200px) { .supervisors-grid { grid-template-columns: repeat(5, 1fr); } }
+@media (min-width: 1600px) { .supervisors-section .container { max-width: 1200px; } .supervisors-grid { grid-template-columns: repeat(6, 1fr); } }
+
+.supervisor-card { text-align: center; padding: 0.25rem; background: transparent; border: none; }
+.supervisor-meta { margin-top: 0.5rem; font-size: 0.95rem; color: #222; }
+.supervisor-name { display: block; font-weight: 600; color: inherit; text-decoration: none; }
+.supervisor-title { font-size: 0.85rem; color: #666; margin-top: 0.15rem; }
+
+.photo-bg {
+  --photo-size: 120px; --bg-size: calc(var(--photo-size) * 1.1);
+  display: inline-block; width: var(--bg-size); height: var(--bg-size);
+  position: relative; border-radius: 50%; box-sizing: border-box; overflow: visible; vertical-align: middle;
+  /* Increased opacity and added a second, more vibrant blue */
+  background: linear-gradient(135deg, rgba(0, 58, 112, 0.05) 0%, rgba(0, 102, 178, 0.25) 100%);
+  
+  /* Adding a subtle inner shadow makes the blue feel deeper */
+  box-shadow: inset 0 2px 10px rgba(0, 58, 112, 0.1), 0 6px 18px rgba(0, 58, 112, 0.08);
+  
+  /* This border helps define the shape against a white page */
+  border: 1px solid rgba(0, 58, 112, 0.15);
+}
+.supervisor-photo {
+  width: var(--photo-size); height: var(--photo-size); object-fit: cover; object-position: center; border-radius: 50%;
+  display: block; position: absolute; top: 0; right: 0; z-index: 2; box-shadow: 0 6px 18px rgba(0,0,0,0.08); transition: transform .18s ease, box-shadow .18s ease;
+}
+.supervisor-link:hover .supervisor-photo, .supervisor-link:focus .supervisor-photo, .photo-bg:focus-within .supervisor-photo { transform: translateY(-4px) scale(1.02); }
+.supervisor-link:focus-visible .photo-bg, .photo-bg:focus-within { outline: 3px solid rgba(0,58,112,0.14); outline-offset: 6px; border-radius: 50%; }
+
+@media (max-width: 880px) { .photo-bg { --photo-size: 96px; } }
+@media (min-width: 1400px) { .photo-bg { --photo-size: 140px; } }
+
+/* ==========================================================================
+   STENCIL HERO & WP STENCIL (PARALLAX RESTORED)
+   ========================================================================== */
+.stencil-hero { position: relative; height: var(--hero-height); overflow: hidden; display: flex; align-items: center; justify-content: center; color: #fff; }
+
+.stencil-photo { 
+  position: absolute; 
+  inset: 0; 
+  background-image: var(--photo-url); 
+  background-size: 80%; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; /* Restores Scroll Parallax */
+  transition: transform .6s cubic-bezier(.2,.8,.2,1); 
+  z-index: 1; 
+}
+
+.stencil-content h1 { margin: 0 0 .25rem 0; font-size: clamp(1.6rem, 3.6vw, 2.6rem); }
+.stencil-content .lead { margin: 0; opacity: .9; font-size: clamp(.9rem, 1.6vw, 1.05rem); }
+.stencil-hero:hover .stencil-photo, .stencil-hero:focus-within .stencil-photo { transform: scale(1.04); }
+
+@supports not ((-webkit-mask: url(#stencilMask))) {
+  .stencil-overlay { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)); mix-blend-mode: multiply; }
+  .stencil-photo { filter: saturate(.95) contrast(.98); }
+}
+
+.wp-stencil { width: 100%; padding: 2.25rem 0; box-sizing: border-box; background: transparent; }
+.wp-stencil__inner { max-width: 1200px; margin: 0 auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 420px; gap: 2rem; align-items: center; }
+.wp-stencil__text { z-index: 3; }
+.wp-stencil__title { margin: 0 0 .5rem 0; font-size: clamp(1.25rem, 2.6vw, 1.6rem); }
+.wp-stencil__body { font-size: 1rem; line-height: 1.6; }
+.wp-stencil__visual { position: relative; width: 100%; height: 260px; overflow: hidden; background: transparent; z-index: 1; }
+.wp-stencil__visual::before { content: ""; position: absolute; inset: 0; background: var(--wp-stencil-cloud-fill); z-index: 1; pointer-events: none; }
+
+.wp-stencil__photo { 
+  position: absolute; 
+  inset: 0; 
+  z-index: 2; 
+  background-image: var(--wp-photo, var(--photo-url));; /* Ensures image is present */
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed; /* Restores Scroll Parallax */
+  display: block; 
+  visibility: visible; 
+  transition: transform .4s ease;
+}
+
+.wp-stencil__photo[data-mask-url] { 
+  -webkit-mask: var(--wp-mask) center/72% no-repeat; 
+  mask: var(--wp-mask) center/72% no-repeat; 
+}
+
+.wp-stencil:hover .wp-stencil__photo, .wp-stencil:focus-within .wp-stencil__photo { transform: scale(1.02); }
+.wp-stencil--full-bleed { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; padding: 3rem 0; background: linear-gradient(180deg,#fafafa,#fff); }
+
+@media (max-width: 880px) {
+  .wp-stencil__inner { grid-template-columns: 1fr; gap: 1rem; }
+  .wp-stencil__visual { height: 220px; order: 2; }
+  .wp-stencil__text { order: 1; }
+}
+
+/* ==========================================================================
+   WORK PACKAGE CARDS 
+   ========================================================================== */
+.wp-card--fullwidth { position: relative; width: 100vw; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; box-sizing: border-box; padding: 2rem 0; background: transparent; z-index: 0; }
+.wp-card--fullwidth .wp-card__inner { max-width: 1200px; margin: 0 auto; padding: 0 1rem; box-sizing: border-box; }
+.wp-card--fullwidth + .wp-card--fullwidth { margin-top: 1.5rem; }
+
+.wp-card--centered { position: relative; width: 100%; max-width: 1600px; margin: 2rem auto; padding: 1.25rem; background: var(--card-bg, #ffffff); border-radius: 10px; box-shadow: 0 8px 20px rgba(16,24,40,0.08), 0 2px 6px rgba(16,24,40,0.04); transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms ease; z-index: 0; overflow: visible; }
+.wp-card--centered .wp-card__inner { max-width: 100%; margin: 0 auto; padding: 0; box-sizing: border-box; }
+.wp-card--centered:hover, .wp-card--centered:focus-within { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(16,24,40,0.12), 0 6px 12px rgba(16,24,40,0.06); }
+.wp-card--centered + .wp-card--centered { margin-top: 2.25rem; }
+
+@media (max-width: 880px) { .wp-card--centered { margin: 1rem; padding: .75rem; border-radius: 8px; max-width: 100%; } }
+
+/* ==========================================================================
+   DOCTORAL CANDIDATES (DC) ACCORDION & TOGGLES
+   ========================================================================== */
+.wp-dc-group { margin-top: 1.75rem; display: grid; gap: 1.25rem; }
+.wp-dc { background: var(--bg-light); padding: 1rem; border-radius: var(--radius); }
+.wp-dc h3 { margin: 0 0 0.75rem 0; font-size: 1.05rem; color: var(--primary-dark); }
+.wp-card__dc { margin-top: 1rem; }
+
+.dc-accordion { display: grid; gap: 1rem; }
+.dc-item { background: var(--white); border-radius: var(--radius); box-shadow: 0 6px 18px rgba(0,0,0,0.05); overflow: hidden; border-top: 6px solid var(--primary); }
+
+.dc-header { display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1.1rem; cursor: pointer; user-select: none; }
+.dc-thumb { width: 72px; height: 72px; flex: 0 0 72px; border-radius: 6px; object-fit: cover; background: #f0f0f0; }
+
+.dc-meta { display: inline-flex; flex-direction: column; align-items: flex-start; gap: .15rem; margin-left: .6rem; flex: 1; min-width: 0; }
+.dc-title { font-family: "Montserrat", sans-serif; font-weight: 700; margin: 0; font-size: 1rem; color: var(--primary-dark); display: block; }
+.dc-sub { margin: 0.15rem 0 0; color: #556; font-size: 0.9rem; display: block; }
+
+/* ACCORDION Icon Style */
+.dc-header .dc-toggle { 
+  margin-left: auto; background: none; border: none; font-size: 1.25rem; color: var(--muted); 
+  width: 40px; height: 40px; border-radius: 6px; 
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: transform 180ms ease, color 180ms ease;
+}
+.dc-header .dc-toggle[aria-expanded="true"] { color: var(--primary); transform: rotate(180deg); }
+
+/* STANDALONE Button Style (Updated to match palette) */
+.wp-card__dc .dc-toggle {
+  display: inline-flex; 
+  align-items: center; 
+  gap: .5rem; 
+  padding: .5rem .85rem; 
+  border-radius: 8px;
+  
+  /* Swapped to your primary dark blue palette */
+  background: var(--primary);
+  border: 1px solid var(--primary-dark);
+  box-shadow: 0 4px 10px rgba(0, 58, 112, 0.15); 
+  
+  cursor: pointer; 
+  font-weight: 600; 
+  
+  /* Changed text to white for contrast */
+  color: var(--white); 
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Added a hover effect for better UX */
+.wp-card__dc .dc-toggle:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 58, 112, 0.2);
+}
+
+.wp-card__dc .dc-toggle__icon { 
+  display: inline-block; 
+  transition: transform 180ms ease; 
+}
+
+.wp-card__dc .dc-toggle[aria-expanded="true"] .dc-toggle__icon { 
+  transform: rotate(180deg); 
+}
+.wp-card__dc .dc-toggle__icon { display: inline-block; transition: transform 180ms ease; }
+.wp-card__dc .dc-toggle[aria-expanded="true"] .dc-toggle__icon { transform: rotate(180deg); }
+
+/* DC Content Bodies & Fallback Lists */
+.dc-body { padding: 1rem 1.1rem 1.25rem; border-top: 1px solid #eef2f6; display: none; gap: 1rem; }
+.dc-body.open { display: block; }
+.dc-grid { display: grid; grid-template-columns: 1fr 320px; gap: 1rem; align-items: start; }
+.dc-photo { width: 100%; height: 220px; object-fit: contain; border-radius: 6px; background: transparent; box-shadow: 0 6px 14px rgba(0,0,0,0.04); transform: scale(var(--dc-scale)); }
+.dc-tags { margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.dc-tag { background: #f3f6fb; color: var(--primary-dark); padding: 0.25rem 0.6rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
+.dc-list { margin-top: .75rem; padding: .75rem; background: var(--card-bg, #fff); border-radius: 8px; border: 1px solid rgba(16,24,40,0.04); box-shadow: 0 6px 18px rgba(16,24,40,0.04); }
+
+/* Prevent 3D transform visual bugs in Safari */
+.dc-toggle[aria-expanded="true"], .dc-header[aria-expanded="true"], .dc-toggle, .dc-header, .dc-meta, .dc-thumb { backface-visibility: hidden; }
+
+@media (max-width: 900px) {
+  .dc-grid { grid-template-columns: 1fr; }
+  .dc-thumb { width: 56px; height: 56px; flex: 0 0 56px; }
+  .dc-photo { height: 180px; }
+  .dc-list { padding: .5rem; }
+}
+
+/* ==========================================================================
+   LISTS
+   ========================================================================== */
+.metadapt-olist { list-style: none; padding-left: 0; margin: 1rem 0 1.5rem; counter-reset: metadapt-item; }
+.metadapt-olist > li { counter-increment: metadapt-item; display: grid; grid-template-columns: 2.5rem 1fr; column-gap: 0.75rem; align-items: start; margin-bottom: 0.75rem; }
+.metadapt-olist > li::before { content: counter(metadapt-item) ")"; font-weight: 700; color: var(--metadapt-accent); text-align: right; padding-top: 0.05rem; }
+.metadapt-olist .metadapt-olist { margin-top: 0.5rem; counter-reset: metadapt-subitem; }
+.metadapt-olist .metadapt-olist > li { counter-increment: metadapt-subitem; grid-template-columns: 3rem 1fr; margin-bottom: 0.5rem; }
+.metadapt-olist .metadapt-olist > li::before { content: counter(metadapt-item) "." counter(metadapt-subitem) ")"; font-weight: 700; }
+.metadapt-list { margin: 0.5rem 0 1rem; padding-left: 1.25rem; }
+.metadapt-list > li { margin-bottom: 0.4rem; }
+.metadapt-list > li::marker { color: var(--metadapt-accent); }
+.metadapt-list .metadapt-list { margin-top: 0.4rem; padding-left: 1.25rem; }
+.metadapt-li-title { font-weight: 700; color: var(--metadapt-text); }
+.metadapt-li-note { color: var(--metadapt-muted); }
+.metadapt-olist--separated > li { padding-bottom: 0.75rem; border-bottom: 1px solid var(--metadapt-border); }
+.metadapt-olist--separated > li:last-child { border-bottom: none; padding-bottom: 0; }
+
+/* ==========================================================================
+   ACCESSIBILITY REDUCED MOTION GLOBALS
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .supervisor-photo, .stencil-photo, .wp-stencil__photo, .dc-toggle { transition: none !important; transform: none !important; }
+  .supervisor-link:focus .supervisor-photo { outline-offset: 0; }
+}

@@ -1,0 +1,32 @@
+items:
+
+  - id: news-2026-01
+    title: "The 1st call for applications is now open!"
+    date: 2026-02-01
+    excerpt: "We invite applications for range of doctoral positions."
+    content: >
+      The first call for applications is now open. This is an exceptional opportunity for highly motivated and outstanding candidates to join an innovative team of researchers engaged in cutting-edge projects that span a wide range of disciplines.
+    image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1200&auto=format&fit=crop"
+    external_url: "https://euraxess.ec.europa.eu/jobs/392117"
+
+  - id: news-2026-02
+    title: "Met2Adapt Kick-off Meeting"
+    date: 2026-02-16
+    excerpt: "Consortium-wide meeting to launch the project."
+    content: >
+      The MENTOR consortium met for a two-day kick-off meeting to align research plans,
+      present work packages and introduce the doctoral candidates. Sessions included
+      project governance, data management and training plans.
+    image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1200&auto=format&fit=crop"
+    external_url: ""
+
+  - id: news-2026-03
+    title: "The Met2Adapt webpage is live!"
+    date: 2026-03-05
+    excerpt: "Our primary communication platform is up and running!"
+    content: >
+      
+    image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1200&auto=format&fit=crop"
+    external_url: ""
+
+

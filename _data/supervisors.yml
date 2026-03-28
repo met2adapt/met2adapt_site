@@ -1,0 +1,137 @@
+# _data/supervisors.yml
+supervisors:
+  - id: s01
+    name: "Dr. Savvas Triantafyllou"
+    title: "Associate Professor, National Technical University of Athens"
+    photo: "img/supervisors/savvas.jpg"
+    profile: "https://users.ntua.gr/savtri"
+  - id: s02
+    name: "Dr. Ioannis Kalogeris"
+    title: "Assistant Professor, National Technical University of Athens"
+    photo: "/img/supervisors/kalogeris.jpg"
+    profile: "https://www.mech.ntua.gr/en/kalogeris"
+  - id: s03
+    name: "Dr. Ioannis Antoniadis"
+    title: "Full Professor, National Technical University of Athens"
+    photo: "img/supervisors/DSC_5351.jpg"
+    profile: "https://www.mech.ntua.gr/en/antoniadis"
+  - id: s04
+    name: "Dr. Evangelos Sapountzakis"
+    title: "Full Professor, National Technical University of Athens"
+    photo: "img/supervisors/cvsapoun.jpg"
+    profile: "http://structural.civil.ntua.gr/esapountzakis/"
+  - id: s24
+    name: "Dr. Joao Santos"
+    title: "Head of Innovation and Digital Transformation, Nadara"
+    photo: "img/supervisors/joaosantos_nadara.png"
+    profile: "https://nadara.com/"   
+  - id: s25
+    name: "Dr. Andre Graca"
+    title: "R&D Project Engineer, Nadara "
+    photo: "img/supervisors/Andre_Nadara.jpg"
+    profile: "https://nadara.com/"     
+  - id: s05
+    name: "Dr. Oreste Bursi"
+    title: "Full Professor, University of Trento"
+    photo: "img/supervisors/obursi.jpg"
+    profile: "https://webapps.unitn.it/du/en/Persona/PER0003232/Curriculum"
+  - id: s06
+    name: "Dr. Francesco Dal Corso"
+    title: "Associate Professor, University of Trento"
+    photo: "img/supervisors/francescodalcorso_c.jpg"
+    profile: "https://dalcorso.dicam.unitn.it/"
+  - id: s07
+    name: "Dr. Maria Pantano"
+    title: "Associate Professor, University of Trento"
+    photo: "/img/supervisors/mpantano.png"
+    profile: "https://webapps.unitn.it/du/en/Persona/PER0163626/Curriculum"
+  - id: s08
+    name: "Dr. Roberta Springhetti"
+    title: "Adjunct Professor, University of Trento"
+    photo: "/img/supervisors/rspringhetti.jpg"
+    profile: "https://webapps.unitn.it/du/en/Persona/PER0004883/Didattica"
+  - id: s09
+    name: "Dr. Antonio Palermo"
+    title: "Associate Professor, University of Bologna"
+    photo: "img/supervisors/Antonio_Palermo.jpg"
+    profile: "https://www.unibo.it/sitoweb/antonio.palermo6/cv-en"
+  - id: s10
+    name: "Dr. Renata Archetti"
+    title: "Full Professor, University of Bologna"
+    photo: "/img/supervisors/rarchetti.jpg"
+    profile: "https://www.unibo.it/sitoweb/renata.archetti"
+  - id: s11
+    name: "Dr. Alessandro Marzani"
+    title: "Full Professor, University of Bologna"
+    photo: "/img/supervisors/amarzani.jpg"
+    profile: "https://www.unibo.it/sitoweb/alessandro.marzani"
+  - id: s12
+    name: "Dr. Daniel Colquitt"
+    title: "Full Professor, University of Liverpool"
+    photo: "img/supervisors/Headshot-Colquitt.jpg"
+    profile: "https://www.danielcolquitt.com/"
+  - id: s13
+    name: "Dr. Alexander Movchan"
+    title: "Full Professor, University of Liverpool"
+    photo: "img/supervisors/Movchan.png"
+    profile: "https://www.liverpool.ac.uk/people/alexander-movchan/professional"
+  - id: s14
+    name: "Dr. Emmanouil Kakouris"
+    title: "Assistant Professor, University of Warwick"
+    photo: "img/supervisors/Emmanouil_Kakouris.jfif"
+    profile: "https://warwick.ac.uk/fac/sci/eng/people/emmanouil_kakouris/"
+  - id: s15
+    name: "Dr. Peter Brommer"
+    title: "Associate Professor, University of Warwick"
+    photo: "/img/supervisors/peter_brommer.jpg"
+    profile: "https://warwick.ac.uk/fac/sci/eng/people/peter_brommer/"
+  - id: s16
+    name: "Dr. Maria Lourdes Jalon Ramirez"
+    title: "Assistant Professor, University of Granada"
+    photo: "/img/supervisors/mlourdes.png"
+    profile: "https://www.ugr.es/personal/maria-lourdes-jalon-ramirez"
+  - id: s17
+    name: "Dr. Juan Chiachio Ruano"
+    title: "Full Professor, University of Granada"
+    photo: "/img/supervisors/jchiachio.png"
+    profile: "https://www.ugr.es/en/staff/juan-chiachio-ruano"
+  - id: s18
+    name: "Dr. Dimitrios Chronopoulos"
+    title: "Associate Professor, KU Leuven"
+    photo: "img/supervisors/dc.jpg"
+    profile: "https://www.kuleuven.be/wieiswie/en/person/00144410"
+  - id: s19
+    name: "Dr. Elke Deckers"
+    title: "Associate Professor, KU Leuven"
+    photo: "img/supervisors/eld.jpg"
+    profile: "https://www.kuleuven.be/wieiswie/en/person/00059933"
+  - id: s20
+    name: "Dr. Athanasios Kolios"
+    title: "Full Professor, DTU"
+    photo: "img/supervisors/Athanasios Kolios_400x400.jpg"
+    profile: "https://wind.dtu.dk/"
+  - id: s21
+    name: "Dr. Yi Guo"
+    title: "Full Professor, DTU"
+    photo: "/img/supervisors/yiguo.webp"
+    profile: "https://wind.dtu.dk/"
+  - id: s22
+    name: "Dr. Eleni Chatzi"
+    title: "Full Professor, ETHZ"
+    photo: "/img/supervisors/echatzi.jpg"
+    profile: "https://chatzi.ibk.ethz.ch/about-us/people/prof-dr-eleni-chatzi.html"
+  - id: s23
+    name: "Dr. Vasileios Dertimanis"
+    title: "Lecturer, ETHZ"
+    photo: "/img/supervisors/vdertimanis.jpg"
+    profile: "https://chatzi.ibk.ethz.ch/about-us/people/research-staff/vasileios-ntertimanis.html"
+  - id: s24
+    name: "Dr. Andrea Colombi"
+    title: "ZHAW Zurich University of Applied Sciences"
+    photo: "/img/supervisors/acolo.webp"
+    profile: "https://www.zhaw.ch/en/about-us/person/colo"    
+  - id: s25
+    name: "Dr. Filipe Megalhaes"
+    title: "University of Porto"
+    photo: "/img/supervisors/fmeg.jpg"
+    profile: "https://sigarra.up.pt/feup/en/func_geral.formview?p_codigo=249580"      

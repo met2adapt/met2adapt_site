@@ -1,0 +1,83 @@
+{%- comment -%}
+Include: dc-accordion.html
+Usage:
+{% include dc-accordion.html wp=wp single_open=false %}
+Parameters:
+wp: work package object (from site.data.dcs.work_packages)
+single_open: boolean (optional)
+{%- endcomment -%}
+
+{%- assign wp = include.wp | default: nil -%}
+{%- if wp == nil -%}
+{% comment %} no work-package provided {% endcomment %}
+{%- else -%}
+
+<section class="wp-dc" aria-labelledby="{{ wp.id }}-title">
+<h3 id="{{ wp.id }}-title">{{ wp.title }}</h3>
+
+{% if wp.description %}
+<p class="wp-desc">{{ wp.description }}</p>
+{% endif %}
+
+<div class="dc-accordion" id="{{ wp.id }}-accordion" data-single-open="{{ include.single_open | default: false }}">
+{%- assign dcs = wp.dcs | default: [] -%}
+{% for dc in dcs %}
+<div class="dc-item" id="{{ dc.id }}">
+<div class="dc-header"
+role="button"
+aria-controls="{{ dc.id }}-body"
+aria-expanded="false"
+tabindex="0">
+{% if dc.thumb %}
+<img class="dc-thumb" src="{{ dc.thumb | escape }}" alt="{{ dc.title | escape }} thumbnail">
+{% endif %}
+
+<div class="dc-meta">
+<p class="dc-title">
+{% if dc.code %}{{ dc.code }} {% endif %}{{ dc.title }}
+</p>
+
+<p class="dc-sub">
+{% if dc.supervisor %}Supervisor: {{ dc.supervisor }}{% endif %}
+{% if dc.host %}{% if dc.supervisor %} · {% endif %}Host: {{ dc.host }}{% endif %}
+</p>
+</div>
+
+<span class="dc-toggle__icon" aria-hidden="true">▾</span>
+</div>
+
+<div id="{{ dc.id }}-body" class="dc-body" aria-hidden="true" hidden>
+<div class="dc-grid">
+<div>
+{% if dc.summary %}
+<p><strong>Project summary</strong></p>
+<p>{{ dc.summary }}</p>
+{% endif %}
+
+{% if dc.methods %}
+<p><strong>Methods</strong></p>
+<p>{{ dc.methods }}</p>
+{% endif %}
+
+{% if dc.tags %}
+<div class="dc-tags">
+{% for tag in dc.tags %}
+<span class="dc-tag">{{ tag }}</span>
+{% endfor %}
+</div>
+{% endif %}
+</div>
+
+<div>
+{% if dc.photo %}
+<img class="dc-photo" style="--dc-scale: {{ dc.photo_scale | default: 1 }};" src="{{ dc.photo | escape }}" alt="{{ dc.title | escape }} photo">
+{% endif %}
+</div>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+</section>
+
+{%- endif -%}

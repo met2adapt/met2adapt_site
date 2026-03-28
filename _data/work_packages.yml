@@ -1,0 +1,42 @@
+# _data/work_packages.yml
+- id: wp1
+  title: "WP1: Design"
+  photo: "/img/slidingwp1.png"
+  speed: 2.00
+  description: "How can we engineer novel meta-material architectures with optimum vibration mitigation capabilities tailored to the specific mechanical and environmental stimuli pertinent to wind and wave energy production?"
+  content: |
+    ## Lead: University of Trento
+    
+    In WP1 partners join forces to deliver novel meta-material architectures that are truly reliable and durable for mitigating vibrations and extending the operational life of wind and wave energy critical components. 
+    
+
+- id: wp2
+  title: "WP2: Predict"
+  photo: "/img/slidingwp2.png"
+  speed: 2.00
+  description: "Can we derive damage indices from fast yet reliable numerical simulation fusing physics and AI?"
+  content: |
+    ## Lead: National Technical University of Athens
+
+    We develop a new multi-level, multi-physics predictive modelling framework that provides rapid yet reliable estimates on the mechanical and acoustic performance of meta-materials and meta-structures for renewable energy production.
+
+- id: wp3
+  title: "WP3: Protect"
+  photo: "/img/slidingwp3.png"
+  speed: 2.00
+  description: "Can we design meta-structures that are self-tuned, resilient, and adaptable to adverse environmental conditions?"
+  content: |
+    ## Lead: University of Bologna
+
+    We design, build, and experimentally validate novel meta-structures for the protection of off-shore renewable energy production assemblies against adverse environmental conditions.
+    
+- id: wp4
+  title: "WP4: Sense"
+  photo: "/img/slidingwp4.png"
+  speed: 2.00
+  description: "How can we enable a truly man-ageable and resilient green-energy production ecosystem via intelligent SHM and prognostics?"
+  content: |
+    ## Lead: ETHZ
+
+    We harness the exotic properties of meta-materials into developing and establishing an innovative, and robust structural health monitoring and prognostics platform that is low-cost, fully autonomous, reliable and accurate.
+

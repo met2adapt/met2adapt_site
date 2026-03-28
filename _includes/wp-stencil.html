@@ -1,0 +1,37 @@
+{%- assign mask_id = include.mask_id | default: "wpStencil-" | append: include.title | slugify -%}
+<section class="wp-stencil{% if include.full_bleed %} wp-stencil--full-bleed{% endif %}" role="region" aria-labelledby="wp-{{ include.title | slugify }}">
+<div class="wp-stencil__inner">
+<div class="wp-stencil__text">
+<h2 id="wp-{{ include.title | slugify }}" class="wp-stencil__title">{{ include.title }}</h2>
+<div class="wp-stencil__body">
+{{ include.content }}
+</div>
+</div>
+
+<div class="wp-stencil__visual"
+aria-hidden="true"
+data-speed="{{ include.speed | default: 0.12 }}"
+data-mask-id="{{ mask_id }}"
+style="--wp-photo: url('{{ include.photo | default: '/assets/images/research-hero.jpg' }}')">
+
+<!-- unique inline mask for this instance -->
+<svg class="wp-stencil__defs" width="0" height="0" aria-hidden="true" focusable="false">
+<defs>
+<mask id="{{ mask_id }}" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+<rect x="0" y="0" width="1" height="1" fill="black"/>
+<!-- white = visible hole; replace path with your stencil shape -->
+<g transform="translate(0.5,0.5) scale(0.9)">
+<path d="M-0.45,-0.25 C-0.25,-0.45 0.25,-0.45 0.45,-0.25 C0.55,-0.15 0.55,0.15 0.45,0.25 C0.25,0.45 -0.25,0.45 -0.45,0.25 C-0.55,0.15 -0.55,-0.15 -0.45,-0.25 Z" fill="white"/>
+</g>
+</mask>
+</defs>
+</svg>
+
+<!-- Background layer that matches page background and has no border -->
+<div class="wp-stencil__bg" aria-hidden="true"></div>
+
+<!-- Photo is masked so it shows only inside the stencil hole -->
+<div class="wp-stencil__photo" role="img" aria-label="{{ include.title }} image"></div>
+</div>
+</div>
+</section>

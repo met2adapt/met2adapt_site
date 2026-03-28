@@ -1,0 +1,46 @@
+{%- comment -%}
+Include: news-item.html
+Usage:
+{% include news-item.html news=item %}
+{%- endcomment -%}
+
+<article class="news-card" id="{{ include.news.id }}">
+<div class="news-card-inner">
+<div class="news-media">
+<img src="{{ include.news.image }}" alt="{{ include.news.title }} image" class="news-thumb">
+</div>
+
+<div class="news-body">
+<h3 class="news-title">{{ include.news.title }}</h3>
+<p class="news-meta">{{ include.news.date | date: "%B %d, %Y" }}</p>
+<p class="news-excerpt">{{ include.news.excerpt }}</p>
+
+<div class="news-actions">
+{% if include.news.external_url and include.news.external_url != "" %}
+<a class="btn btn-outline" href="{{ include.news.external_url }}" target="_blank" rel="noopener">Read on external site</a>
+{% else %}
+<button class="btn btn-primary news-open" data-news-id="{{ include.news.id }}">Read more</button>
+{% endif %}
+</div>
+</div>
+</div>
+
+<div class="news-detail" id="{{ include.news.id }}-detail" aria-hidden="true">
+<div class="news-detail-inner">
+<div class="news-detail-left">
+<h3>{{ include.news.title }}</h3>
+<p class="news-meta">{{ include.news.date | date: "%B %d, %Y" }}</p>
+<p class="news-full">{{ include.news.content }}</p>
+</div>
+<div class="news-detail-right">
+<img src="{{ include.news.image }}" alt="{{ include.news.title }} image" class="news-detail-photo">
+</div>
+</div>
+
+<div class="news-detail-footer">
+<button class="btn btn-outline news-close" data-news-id="{{ include.news.id }}">Close</button>
+</div>
+</div>
+</article>
+
+

@@ -1,0 +1,31 @@
+title: "Met2Adapt Met2Adapt - Resilient Renewable Energy"
+#baseurl: "/"
+#url: "http://localhost:4000"
+
+url: "https://www.met2adapt.eu"
+baseurl: ""
+
+theme: null
+
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  parse_block_html: true # default for kramdown is false. This will enable using Markdown links
+
+footer:
+  col1: "Your text for the first column."
+  col2: "Your text for the middle column."
+  col3: "Met2Adapt is funded by the European Union under the grant agreement No 101227175. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency (REA). Neither the European Union nor the granting authority can be held responsible for them."

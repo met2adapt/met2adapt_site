@@ -1,0 +1,195 @@
+# _data/dcs.yml
+work_packages:
+  - id: wp1
+    dcs:
+      - id: wp1-dc1
+        code: "DC3"
+        title: "Multiscale Modelling and Machine Learning-Based Design of Innovative Vibration-Attenuating Metapanels"
+        supervisor: "Prof. I. Kalogeris, Prof. I. Antoniadis, Prof. D. Chronopoulos"
+        host: "National Technical University of Athens"
+        summary: "Create high-performance, reusable metamaterial panel systems that achieve superior vibration and noise attenuation while remaining cost-effective and compatible with sustainable construction practices."
+        methods: "computational mechanics; experimental validation; numerical simulation."
+        tags: ["machine learning","vibro-acoustics","sustainability"]
+        thumb: "/img/dcs/placeholder.jpg"
+        photo: "/img/research/dc_project/fig_3.png"
+
+      - id: wp1-dc2
+        code: "DC4"
+        title: "Optimal devices, methodologies and digital twin models for the use of metastructural devices in Operational Wind Turbines"
+        supervisor: "Prof. F. Magalhães, Mr. A. Graca, Prof. O. Bursi"
+        host: "University of Porto"
+        summary: "To develop a digital twin for meta0-material fitted wind turbines incorporating SHM  and simulation data from aeroelastic and structural FE models."
+        methods: "numerical modelling; structural health monitoring; data fusion."
+        tags: ["surrrogate modelling","substruturing","Digital Twinning"]
+        thumb: "/img/dcs/placeholder.jpg"
+        photo: "/img/research/dc_project/fig_1.png"
+        photo_scale: 0.9
+        
+      - id: wp1-dc3
+        code: "DC6"
+        title: "Self-tuning variable length systems for the vibration reduction of wind blades"
+        supervisor: "Prof. F. Dal Corso, Prof. R. Springhetti, Prof. F. Magalhães, Mr. A. Graça"
+        host: "University of Trento"
+        summary: "Derive novel dimensionless expressions of the Differential Algebraic System of equations governing the nonlinear dynamics of variable  length systems with lumped mass and subject to configurational forces."
+        methods: "nonlinear dynamics; space-time formulations; high cycle fatigue ."
+        tags: ["Variable Length Systems","self tuning","Optimisation"]
+        thumb: "/img/dcs/placeholder.jpg"
+        photo: "/img/research/dc_project/fig_2.png"
+
+        
+      - id: wp1-dc4
+        code: "DC12"
+        title: "Developing elasto-acoustic metamaterials for noise and vibration attenuation in wind turbine blades"
+        supervisor: "Prof. D. Chronopoulos, Prof. E. Deckers, Prof. I. Kalogeris"
+        host: "KU Leuven"
+        summary: "Develop and optimize elasto-acoustic metamaterials with phase cancellation in order to simultaneously achieve vibration and noise
+attenuation in wind farms."
+        methods: "noise propagation modelling; structural optimisation; optimal placement."
+        tags: ["Phase Retrieval","Noise attentuation","nonlinear dynamics"]
+        thumb: "/img/dcs/placeholder.jpg"
+        photo: "/img/research/dc_project/fig_4.png"
+        
+        
+      - id: wp1-dc5
+        code: "DC14"
+        title: "Uncertainty Quantification and Technology Qualification for Advanced Wind Turbine Components"
+        supervisor: "Prof. A. Kolios, Prof. Y. Guo, Prof. J. Chiachio"
+        host: "DTU"
+        summary: "Develop a robust framework for uncertainty quantification (UQ) and technology qualification, aimed at validating the
+safety, performance, and longevity of advanced wind turbine components, particularly next-generation blades featuring adaptive meta-materials."
+        methods: "Baysian Inference; Stochastic modelling; performance benchmarks."
+        tags: ["UQ","Technology Qualifcation","Certification"]
+        thumb: "/img/dcs/placeholder.jpg"
+        photo: "/img/research/dc_project/fig_5.png"       
+
+  - id: wp2
+    dcs:
+      - id: wp2-dc1
+        code: "DC1"
+        title: "Resolving failure modes in complex composite components"
+        supervisor: "Prof. S. Triantafyllou, Prof. I. Kalogeris, Prof. F. Magalhães"
+        host: "National Technical University of Athens"
+        summary: "Develop an efficient and versatile multiscale computational method for simulating damage evolution in meta-materials."
+        methods: "computational mechanics; machine learning; high-performance computing."
+        tags: ["Composites","Fracture","Surrogate modelling"]
+        thumb: "/img/dcs/placeholder.jpg"
+        photo: "/img/research/dc_project/fig_6.png"
+
+      - id: wp2-dc2
+        code: "DC2"
+        title: "Coupled chemo-mechanical interactions leading to fatigue damage in corrosive environments"
+        supervisor: "Prof. S. Triantafyllou, Prof. E. Sapountzakis, Prof. A. Palermo"
+        host: "National Technical University of Athens"
+        summary: "Formulate a high fidelity numerical framework to resolve crack initiation and propagation in components fitted with meta-materials operating in highly corrosive environments."
+        methods: "Fracture mechanics; multi-phusics; V&V."
+        tags: ["Meta-materials","Corrosion","Fracture"]
+        thumb: "/img/dcs/placeholder.jpg"
+        photo: "/img/research/dc_project/fig_7.png"
+        
+      - id: wp2-dc3
+        code: "DC9"
+        title: "Modelling of the dynamic response for offshore wind farms"
+        supervisor: "Prof. D. Colquitt, Prof. A. Movchan, Prof. A. Palermo"
+        host: "University of Liverpool"
+        summary: "Deliver analytical and computational models of individual and clusters of turbines, considering solid-fluid interactions, and scattering and generation of waves."
+        methods: "analytical modelling; nonlinear dynamics; environmental impact assessment."
+        tags: ["Wind turbine clusters","gravity water waves","mechanical waves", "acoustic waves"]
+        thumb: "/img/dcs/placeholder.jpg"
+        photo: "/img/research/dc_project/fig_8.png"
+
+      - id: wp2-dc4
+        code: "DC10"
+        title: "Development of deep learning-based surrogate models for predicting failure in meta-material composites"
+        supervisor: "Prof. E. Kakouris, Prof. P. Brommer, Prof. S. Triantafyllou"
+        host: "University of Warwick"
+        summary: "Integrate advanced deep learning approaches with state-of-the-art fracture modelling techniques for rapid yet high fidelity damage modelling."
+        methods: "machine learning; computational fracture mechanics; verification and validation."
+        tags: ["Surrogate modelling","fracture modelling","evolving fractures"]
+        thumb: "/img/dcs/placeholder.jpg"
+        photo: "/img/research/dc_project/fig_9.png"
+        
+  - id: wp3
+    title: "WP1  Discovery of new signalling elements"
+    dcs:
+      - id: wp3-dc1
+        code: "DC5"
+        title: "Nutrient sensor discovery"
+        supervisor: "Prof. O. Bursi, Prof. M. F. Pantano, Dr. V. Dertimanis"
+        host: "University of Trento"
+        summary: "Conceive and design enhanced cylinders for wave protection of floating tanks of pump hydro offshore and vibration mitigation of towers for synergically coupled to offshore wind turbines in wind farms subjected to frequent wave/wind loadings."
+        methods: "nonlinear dynamics; wave methods; topological optimisation; prototyping."
+        tags: ["Distributed resonators","Spider web resonators","Hydro pumping"]
+        thumb: "/img/dcs/placeholder.jpg"
+        photo: "/img/research/dc_project/fig_10.png"
+
+      - id: wp3-dc2
+        code: "DC7"
+        title: "Optimal displacement of meta-structures for enhanced renewable energy harvesting"
+        supervisor: "Prof. R. Archetti, Prof. A. Marzani, Prof. D. Colquitt"
+        host: "University of Bologna"
+        summary: "Study the underlying physics and design periodic (resonant) structures either fully or partially submerged and located near the shore, where shallow wavefronts exist."
+        methods: "wave dynamics; analytical and numerical modelling; prototyping."
+        tags: ["Meta-Structures","wave attenuation","Fluid Structure Interaction"]
+        thumb: "/img/dcs/placeholder.jpg"
+        photo: "/img/research/dc_project/fig_11.png"
+        
+      - id: wp3-dc3
+        code: "DC8"
+        title: "On the combined use of wave energy converters and meta-structures for fatigue-life extension of existing offshore structures"
+        supervisor: "Prof. A. Palermo, Prof. R. Archetti, Prof. D. Colquitt"
+        host: "University of Bologna"
+        summary: "Develop solutions for reducing vibrations in offshore structures by attenuating the amplitude of wave loads and/or mitigating their dynamic response to wind loading."
+        methods: "wave dynamics; optimisation; analytical and numerical modelling."
+        tags: ["Wave Energy Converters","Wind farms","Meta-Structures"]
+        thumb: "/img/dcs/placeholder.jpg"
+        photo: "/img/research/dc_project/fig_12.png"
+     
+  - id: wp4
+    title: "WP1  Discovery of new signalling elements"
+    dcs:
+      - id: wp4-dc1
+        code: "DC11"
+        title: "GenAI-aided reliability assessment of mechanical metamaterials in offshore wind and wave energy applications"
+        supervisor: "Prof. J. Chiachio, Prof. M.L. Jalón, Prof. A. Kolios"
+        host: "University of Granada"
+        summary: "Develop an efficient methodological framework to quantify the structural reliability of meta-materials involving material and geometrical uncertainties."
+        methods: "Data augmentation; generative AI; reliability analysis."
+        tags: ["risk","machine learning","wind and wave energy"]
+        thumb: "/img/dcs/placeholder.jpg"
+        photo: "/img/research/dc_project/fig_13.png"
+
+      - id: wp4-dc2
+        code: "DC13"
+        title: "Risk-based Maintenance Planning for Wind Turbine Components"
+        supervisor: "Prof. A. Kolios, Prof. Y. Guo, Prof. J. Santos"
+        host: "DTU"
+        summary: "Create a comprehensive risk assessment and maintenance planning framework for wind turbine technologies, with a focus on enhancing structural resilience and operational efficiency."
+        methods: "risk based inspection; risk based maintenance; digital tool development."
+        tags: ["Wind turbine risk assesment","preventive maintenance"]
+        thumb: "/img/dcs/placeholder.jpg"
+        photo: "/img/research/dc_project/fig_14.png"
+        
+      - id: wp4-dc3
+        code: "DC15"
+        title: "Meta-structures with autonomous sensing capacities"
+        supervisor: "Prof. E. Chatzi, Dr. V. Dertimanis, Prof. A. Colombi"
+        host: "ETHZ"
+        summary: "Develop metamaterial  based structures and devices that through vibration energy harvesting can exploit structural vibration to power sensors and data communication to the base."
+        methods: "nonlinear dynamics; electro-mechanical couplings; experimental validation."
+        tags: ["Vibration and Energy harversting","Electro-mechanics"]
+        thumb: "/img/dcs/placeholder.jpg"
+        photo: "/img/research/dc_project/fig_15.png"
+
+      - id: wp4-dc4
+        code: "DC16"
+        title: "Active meta-structures for enhanced damage detection and localization on wind turbine blades"
+        supervisor: "Prof. E. Chatzi, Dr. V. Dertimanis, Prof. A. Colombi"
+        host: "ETHZ"
+        summary: "Classify the topology of damage on blades and design a class of surface-bonded metamaterials acting as meta-filters for guided waves."
+        methods: "nonlinear dynamics; algorithmic development; experimental validation."
+        tags: ["Damage identification","Damage Localisation","Meta-Filtering"]
+        thumb: "/img/dcs/placeholder.jpg"
+        photo: "/img/research/dc_project/fig_16.png"
+
+        
+   

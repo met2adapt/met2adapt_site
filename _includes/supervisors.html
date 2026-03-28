@@ -1,0 +1,36 @@
+<section class="supervisors-section reveal">
+<div class="container">
+<h2 id="supervisors">Meet our Supervisors</h2>
+
+
+<div class="supervisors-grid" role="list" aria-labelledby="supervisors">
+
+{% for s in site.data.supervisors.supervisors %}
+
+<figure class="supervisor-card" role="listitem">
+<a href="{{ s.profile }}" class="supervisor-link" aria-label="Profile of {{ s.name }}">
+<span class="photo-bg" style="--photo-size:120px">
+<img
+class="supervisor-photo"
+src="{{ s.photo | relative_url }}"
+alt="Photo of {{ s.name }}"
+loading="lazy"
+width="240"
+height="240">
+</span>
+</a>
+
+<figcaption class="supervisor-meta">
+<a href="{{ s.profile | relative_url }}" class="supervisor-name">{{ s.name }}</a>
+<div class="supervisor-title">
+{{ s.title }}
+</div>
+</figcaption>
+</figure>
+
+
+{% endfor %}
+
+</div>
+</div>
+</section>
