@@ -132,6 +132,6 @@ supervisors:
     profile: "https://www.zhaw.ch/en/about-us/person/colo"    
   - id: s25
     name: "Dr. Filipe Megalhaes"
-    title: "University of Porto"
+    title: "Associate Professor, University of Porto"
     photo: "/img/supervisors/fmeg.jpg"
     profile: "https://sigarra.up.pt/feup/en/func_geral.formview?p_codigo=249580"      

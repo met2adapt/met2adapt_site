@@ -1,62 +1,62 @@
 logos:    
   - image: img/logos/DTU-logo.jpg
     url: https://www.dtu.dk/english/
-    scale: 1.8
+    scale: 3
     row: 1
     ispartner: 1
   - image: img/logos/KUL.png
     url: https://www.kuleuven.be/english/kuleuven
-    scale: 1.8
+    scale: 3
     row: 1
     ispartner: 1
   - image: img/logos/Logo_Unibo.png
     url: https://www.unibo.it/en
-    scale: 1.8
+    scale: 3
     row: 1
     ispartner: 1
   - image: img/logos/nadara.png
     url: https://nadara.com/
-    scale: 1.8
+    scale: 3
     row: 1
     ispartner: 1
   - image: img/logos/UoL.png
     url: https://www.liverpool.ac.uk/
-    scale: 1.8
-    row: 1
-    ispartner: 1
-  - image: img/logos/UniTrento_logo_ITA_colore.jpg
-    url: https://www.unitn.it/en
-    scale: 1.5
+    scale: 2
     row: 2
     ispartner: 1
   - image: img/logos/pyrforos_bw.jpg
     url: https://ntua.gr/en/
     scale: 1.0
     row: 2    
+    ispartner: 1    
+  - image: img/logos/UniTrento_logo_ITA_colore.jpg
+    url: https://www.unitn.it/en
+    scale: 2
+    row: 2
     ispartner: 1
   - image: img/logos/UoW.png
     url: https://warwick.ac.uk/
     scale: 1.1
-    row: 2
+    row: 3
     ispartner: 1
   - image: img/logos/ugr-horizontal-color.svg
     url: https://www.ugr.es/en
-    scale: 1.5
+    scale: 3
     row: 3
     ispartner: 1
   - image: img/logos/eth.png
     url: https://ethz.ch/en.html
-    scale: 1.5
+    scale: 2
     row: 3
     ispartner: 1
   - image: img/logos/cnr.png
     url: https://www.cnr.it/en
-    scale: 1.5
+    scale: 2
     row: 1
     ispartner: 2
   - image: img/logos/columbia.jpg
     url: https://www.columbia.edu/
-    scale: 1.5
+    scale: 2
     row: 1
     ispartner: 2
   - image: img/logos/princeton_seal.svg
@@ -67,16 +67,16 @@ logos:
   - image: img/logos/cub.svg
     url: https://www.colorado.edu/
     scale: 0.8
-    row: 1
+    row: 2
     ispartner: 2
   - image: img/logos/uporto.png
     url: https://www.up.pt/portal/en/
-    scale: 0.8
-    row: 1
+    scale: 2
+    row: 2
     ispartner: 2
   - image: img/logos/zhaw_rgb.jpg
     url: https://www.zhaw.ch/en/university
-    scale: 0.8
+    scale: 1.0
     row: 1
     ispartner: 2
     

@@ -1,9 +1,9 @@
 title: "Met2Adapt Met2Adapt - Resilient Renewable Energy"
-#baseurl: "/"
-#url: "http://localhost:4000"
+baseurl: "/"
+url: "http://localhost:4000"
 
-url: "https://www.met2adapt.eu"
-baseurl: ""
+#url: "https://www.met2adapt.eu"
+#baseurl: ""
 
 theme: null
 

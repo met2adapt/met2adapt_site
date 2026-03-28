@@ -74,29 +74,42 @@
 @media (max-width: 880px) { .photo-bg { --photo-size: 96px; } }
 @media (min-width: 1400px) { .photo-bg { --photo-size: 140px; } }
 
+/* Ensure supervisor photos appear and stack correctly on mobile */
 @media (max-width: 768px) {
-  /* Make the photos visible again */
-  .supervisor-photo, .photo-bg { 
-    display: block; 
-    margin: 0 auto 1rem; /* Centers the photo and adds space below it */
-  }
-
-  /* Shrink the photo size for smaller screens */
-  .supervisor-photo {
-    width: 140px; 
-    height: 140px;
-  }
   
+  /* 1. Force the container to be visible and have a physical size */
   .photo-bg {
-    width: 150px;
-    height: 150px;
+    display: inline-flex !important; /* Spans need this to respect width/height */
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem !important; /* Center the photo and add space below */
+    width: var(--photo-size, 120px) !important; 
+    height: var(--photo-size, 120px) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
-  /* Ensure the card stacks vertically so the text fits next to the photo */
+  /* 2. Stack the card content vertically */
   .supervisor-card {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-bottom: 2rem;
+  }
+
+  /* 3. Ensure the metadata text is centered */
+  .supervisor-meta {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  /* 4. Troubleshooting the 'Reveal' animation */
+  /* If the section stays invisible, this forces it to show on mobile */
+  .supervisors-section.reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
   }
 }
 
@@ -284,4 +297,67 @@
 @media (prefers-reduced-motion: reduce) {
   .supervisor-photo, .stencil-photo, .wp-stencil__photo, .dc-toggle { transition: none !important; transform: none !important; }
   .supervisor-link:focus .supervisor-photo { outline-offset: 0; }
+}
+
+@media (max-width: 768px) {
+  .logo-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 3rem !important; /* Increased space between logos */
+  }
+
+  .logo-cell {
+    width: 100% !important;
+    max-width: 280px !important; /* Allows a wider footprint on mobile */
+    /* Resets the desktop scale so they appear at full size */
+    transform: scale(1) !important; 
+  }
+
+  .logo-cell img {
+    /* Increase this value to make them larger */
+    max-height: 120px !important; 
+    width: auto !important;
+    margin: 0 auto;
+    /* Ensures the individual --scale variable doesn't shrink them too much */
+    transform: scale(1.1); 
+  }
+}
+
+/* Add distance between hero buttons on mobile */
+@media (max-width: 768px) {
+  .hero-actions {
+    display: flex;
+    flex-direction: column; /* Stacks the buttons vertically */
+    align-items: center;    /* Centers them horizontally */
+    gap: 1.25rem;           /* Creates the distance between them */
+    margin-top: 2rem;       /* Optional: adds space above the button group */
+  }
+
+  .hero-actions .btn {
+    width: 100%;            /* Optional: makes buttons full-width on mobile */
+    max-width: 250px;       /* Optional: prevents them from getting too wide */
+  }
+}
+/* Bulletproof fix for overlapping hero buttons on mobile */
+@media (max-width: 768px) {
+  .hero-actions {
+    display: flex !important;
+    flex-direction: column !important; /* Stack them */
+    align-items: center !important;
+    gap: 0 !important; /* Disable gap to use margins instead */
+    height: auto !important; /* Ensure the container grows with the buttons */
+  }
+
+  /* Target the first button specifically and push the second one away */
+  .hero-actions .btn:first-child {
+    margin-bottom: 20px !important; 
+  }
+
+  /* Ensure buttons have enough vertical room */
+  .hero-actions .btn {
+    display: inline-flex !important;
+    width: auto !important;
+    min-width: 220px;
+    padding: 0.8rem 1.5rem !important; /* Slightly taller for easier tapping */
+  }
 }

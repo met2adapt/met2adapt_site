@@ -47,10 +47,10 @@ permalink: /
 <div class="hc-slide" data-index="3" aria-hidden="true" id="slide-3">
 <img src="img/slider/slid4.jpg" alt="elipsometer">
 </div>
-<div class="hc-slide" data-index="3" aria-hidden="true" id="slide-4">
+<div class="hc-slide" data-index="4" aria-hidden="true" id="slide-4">
 <img src="img/slider/slid5.jpg" alt="Photo of a sound tunnel">
 </div>
-<div class="hc-slide" data-index="3" aria-hidden="true" id="slide-5">
+<div class="hc-slide" data-index="5" aria-hidden="true" id="slide-5">
 <img src="img/slider/slid6.png" alt="Photo of a meta-material">
 </div>
 </div>
@@ -62,6 +62,9 @@ permalink: /
 <button role="tab" aria-selected="true" aria-controls="slide-0" data-to="0" type="button"></button>
 <button role="tab" aria-selected="false" aria-controls="slide-1" data-to="1" type="button"></button>
 <button role="tab" aria-selected="false" aria-controls="slide-2" data-to="2" type="button"></button>
+<button role="tab" aria-selected="false" aria-controls="slide-3" data-to="3" type="button"></button>
+<button role="tab" aria-selected="false" aria-controls="slide-4" data-to="4" type="button"></button>
+<button role="tab" aria-selected="false" aria-controls="slide-5" data-to="5" type="button"></button>
 </div>
 </div>
 
