@@ -74,6 +74,32 @@
 @media (max-width: 880px) { .photo-bg { --photo-size: 96px; } }
 @media (min-width: 1400px) { .photo-bg { --photo-size: 140px; } }
 
+@media (max-width: 768px) {
+  /* Make the photos visible again */
+  .supervisor-photo, .photo-bg { 
+    display: block; 
+    margin: 0 auto 1rem; /* Centers the photo and adds space below it */
+  }
+
+  /* Shrink the photo size for smaller screens */
+  .supervisor-photo {
+    width: 140px; 
+    height: 140px;
+  }
+  
+  .photo-bg {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Ensure the card stacks vertically so the text fits next to the photo */
+  .supervisor-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
 /* ==========================================================================
    STENCIL HERO & WP STENCIL (PARALLAX RESTORED)
    ========================================================================== */
