@@ -360,6 +360,35 @@
     min-width: 220px;
     padding: 0.8rem 1.5rem !important; /* Slightly taller for easier tapping */
   }
+  
+/* 1. Fix the Stencil Hero image visibility */
+  .stencil-photo {
+    /* Ensures the image fills the entire screen width/height on mobile */
+    background-size: cover !important; 
+    
+    /* CRITICAL: 'fixed' backgrounds often turn invisible on mobile */
+    background-attachment: scroll !important; 
+    
+    /* Centers the most important part of the research image */
+    background-position: center center !important; 
+    
+    /* Ensures no parallax transforms interfere with visibility */
+    transform: none !important; 
+  }
+
+  /* 2. Adjust the Hero container height for mobile */
+  .stencil-hero {
+    /* 800px is often too tall for a phone screen; 60vh is more natural */
+    height: 60vh !important; 
+    min-height: 400px;
+  }
+
+  /* 3. Ensure the WP Stencil photos also show up clearly */
+  .wp-stencil__photo {
+    background-size: cover !important;
+    background-attachment: scroll !important;
+  }  
+  
 }
 
 /* Force 'reveal' sections to show on mobile if JS fails */
