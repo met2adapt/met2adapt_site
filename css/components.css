@@ -361,3 +361,12 @@
     padding: 0.8rem 1.5rem !important; /* Slightly taller for easier tapping */
   }
 }
+
+/* Force 'reveal' sections to show on mobile if JS fails */
+@media (max-width: 768px) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+}
