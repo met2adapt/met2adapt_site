@@ -36,7 +36,7 @@ logos:
     ispartner: 1
   - image: img/logos/UoW.png
     url: https://warwick.ac.uk/
-    scale: 1.1
+    scale: 1.3
     row: 3
     ispartner: 1
   - image: img/logos/ugr-horizontal-color.svg
