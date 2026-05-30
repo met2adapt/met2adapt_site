@@ -16,7 +16,7 @@ permalink: /recruitment/
 
 <section class="intro-section reveal">
 <div class="container">
-<h2>Our Vision</h2>
+<h2>Call for applications</h2>
 
 <p>Met2Adapt puts forward an ambitious research and training plan that will foster a new generation of researchers able to design and deliver sustainable meta-materials for vibration mitigation, self-aware meta-components and eventually carbon-efficient yet safe meta-structures for the renewable energy sector. The focal point of this research will be the deployment of custom-fit solutions for infrastructure that is critical to the European energy resilience, i.e. offshore and onshore wind farms, and wave-energy converters.</p> 
 
