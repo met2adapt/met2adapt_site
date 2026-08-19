@@ -15,7 +15,7 @@
     jobdescription: "/downloads/dc1_job_description.pdf"
   highlight: 1
 
-- title: "DC2 Coupled chemo-mechanical interactions leading to fatigue damage in corrosive environments - 2nd Call for Applications"
+- title: "DC2 Coupled chemo-mechanical interactions leading to fatigue damage in corrosive environments - This position is now filled"
   image: 
   description:  DC2 will work on the development of a high fidelity numerical framework to resolve crack initiation and propagation in composite components fitted with meta-materials operating in highly corrosive environments. The successful candidate will have a high-scoring Masters degree in Mechanical, Civil, Materials, Simulation or similar Engineering field. This funding call is open to all EU and International applicants. The position offers a competitive MSCA fellowship and full participation in the network’s international training programme. The position includes secondments (indicatively) at Princeton University, the University of Porto and the University of Bologna, providing high-level training in meta-structural concepts, meta-material development and digital twinning. 
   requires: The ideal candidate has strong analytical and quantitative skills in computational solid mechanics, fracture mechanics and finite element modelling, as well as programming experience. Prior exposure to machine-learning-based surrogate modelling is considered an asset. Good written and spoken English skills are required. We value good interpersonal skills, the ability to work in a diverse, multidisciplinary and international team, readiness to present results at international conferences, and the willingness to spend several months at partner universities and industrial partners within the project.
@@ -79,17 +79,17 @@
   informal: For informal inquiries you may contact Prof. Francesco Dal Corso at <a href="mailto:francesco.dalcorso@unitn.it">francesco.dalcorso@unitn.it</a> attaching also a CV
   highlight: 1   
 
-- title: "DC6 Self-tuning variable length systems for the vibration reduction of wind blades - Second call for applications"
+- title: "DC6 Self-tuning variable length systems for the vibration reduction of wind blades - Third call for applications"
   image: 
   description:  The project aims at delivering novel methods for simulating the complex  nonlinear dynamics of Variable-Length Systems (VLS) and further investigate the optimum number and placement of the VLS along the wind turbine blade and the evaluation of blade vibration reduction capabilities in view of enhanced blade high-cycle fatigue performance.
   requires: We are seeking a passionate, curious, and enthusiastic new team membercommitted to addressing climate change by advancing renewable energy systems. We are looking for someone who thrives on solving complex problems, isn't afraid to ask challenging questions, and possesses the determination to pursue innovative solutions in a rapidly evolving field. Applicants must hold a master's degree or single-cycle degree obtained no more than six years prior to the deadline for applications.
   host: University of Trento, Italy
   award: University of Trento, Italy
-  appStart: 29/05/2026
-  appEnd: 14/07/2026
+  appStart: 07/08/2026
+  appEnd: 08/09/2026
   projectStart: 1/11/2026
   howTo:
-    url: https://lavoraconnoi.unitn.it/incarichi-di-ricerca/dipartimento-di-ingegneria-civile-ambientale-e-meccanica-avviso-di-selezione-il-conferimento-di-n
+    url: https://lavoraconnoi.unitn.it/en/research-assignments/department-civil-environmental-and-mechanical-engineering-call-selections-awarding-no-1-research-6
     display: You can apply for this position here.
   informal: For informal inquiries you may contact Prof. Francesco Dal Corso at <a href="mailto:francesco.dalcorso@unitn.it">francesco.dalcorso@unitn.it</a> attaching also a CV
   highlight: 1  
