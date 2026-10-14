@@ -1,4 +1,5 @@
 # _data/dcs.yml
+# _data/dcs.yml
 work_packages:
   - id: wp1
     dcs:
@@ -59,7 +60,7 @@ attenuation in wind farms."
 safety, performance, and longevity of advanced wind turbine components, particularly next-generation blades featuring adaptive meta-materials."
         methods: "Baysian Inference; Stochastic modelling; performance benchmarks."
         tags: ["UQ","Technology Qualifcation","Certification"]
-        thumb: "/img/dcs/placeholder.jpg"
+        thumb: "/img/dcs/joao_brites_m2a_photo.jpg"
         photo: "/img/research/dc_project/fig_5.png"       
 
   - id: wp2
