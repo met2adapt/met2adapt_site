@@ -202,6 +202,21 @@
 .dc-header { display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1.1rem; cursor: pointer; user-select: none; }
 .dc-thumb { width: 72px; height: 72px; flex: 0 0 72px; border-radius: 6px; object-fit: cover; background: #f0f0f0; }
 
+.dc-thumb {
+  --thumb-size: 72px;
+  width: var(--thumb-size);
+  height: var(--thumb-size);
+  flex: 0 0 var(--thumb-size);
+  border-radius: 6px;
+  object-fit: cover;
+  object-position: center top;   /* keeps faces framed in headshots */
+  background: #f0f0f0;
+}
+
+@media (max-width: 900px) {
+  .dc-thumb { width: calc(var(--thumb-size) * 0.78); height: calc(var(--thumb-size) * 0.78); flex-basis: calc(var(--thumb-size) * 0.78); }
+}
+
 .dc-meta { display: inline-flex; flex-direction: column; align-items: flex-start; gap: .15rem; margin-left: .6rem; flex: 1; min-width: 0; }
 .dc-title { font-family: "Montserrat", sans-serif; font-weight: 700; margin: 0; font-size: 1rem; color: var(--primary-dark); display: block; }
 .dc-sub { margin: 0.15rem 0 0; color: #556; font-size: 0.9rem; display: block; }
@@ -268,9 +283,41 @@
 
 @media (max-width: 900px) {
   .dc-grid { grid-template-columns: 1fr; }
-  .dc-thumb { width: 56px; height: 56px; flex: 0 0 56px; }
+  .dc-thumb { width: calc(var(--thumb-size) * 0.78); height: calc(var(--thumb-size) * 0.78); flex-basis: calc(var(--thumb-size) * 0.78); }
   .dc-photo { height: 180px; }
   .dc-list { padding: .5rem; }
+}
+
+.dc-thumb {
+  --thumb-size: 72px;
+  width: var(--thumb-size);
+  height: var(--thumb-size);
+  flex: 0 0 var(--thumb-size);
+  border-radius: 6px;
+  object-fit: cover;
+  object-position: center center;   /* keeps faces framed in headshots */
+  background: #f0f0f0;
+}
+
+.dc-bio {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-light);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+.dc-bio p { margin: 0; }
+.dc-bio p + p { margin-top: 0.5rem; }
+
+.dc-section-label {
+  margin: 0 0 0.35rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
 }
 
 /* ==========================================================================

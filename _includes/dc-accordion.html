@@ -29,7 +29,8 @@ aria-controls="{{ dc.id }}-body"
 aria-expanded="false"
 tabindex="0">
 {% if dc.thumb %}
-<img class="dc-thumb" src="{{ dc.thumb | escape }}" alt="{{ dc.title | escape }} thumbnail">
+<img class="dc-thumb" src="{{ dc.thumb | relative_url }}" alt="{{ dc.code }}"
+     {% if dc.thumb_size %}style="--thumb-size: {{ dc.thumb_size }}px"{% endif %}>
 {% endif %}
 
 <div class="dc-meta">
@@ -49,6 +50,12 @@ tabindex="0">
 <div id="{{ dc.id }}-body" class="dc-body" aria-hidden="true" hidden>
 <div class="dc-grid">
 <div>
+{% if dc.bio %}
+<div class="dc-bio">
+  <h4 class="dc-section-label">About the DC</h4>
+  {{ dc.bio | markdownify }}
+</div>
+{% endif %}
 {% if dc.summary %}
 <p><strong>Project summary</strong></p>
 <p>{{ dc.summary }}</p>

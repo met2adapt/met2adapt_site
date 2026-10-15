@@ -61,7 +61,9 @@ safety, performance, and longevity of advanced wind turbine components, particul
         methods: "Baysian Inference; Stochastic modelling; performance benchmarks."
         tags: ["UQ","Technology Qualifcation","Certification"]
         thumb: "/img/dcs/joao_brites_m2a_photo.jpg"
+        thumb_size: 140
         photo: "/img/research/dc_project/fig_5.png"       
+        bio: João Brites holds a Bachelor’s and a Master’s degree in Engineering Physics from the University of Porto. Prior to joining Met2Adapt, he completed a research internship at IFIMUP focused on sustainable energy harvesting, carried out his MSc thesis research with the CENTRA group at FEUP on space debris and satellite orbit reconstruction, and later held a research fellowship at FEUP working on astrodynamics and celestial mechanics. He is currently a Doctoral Candidate at DTU Wind and Energy Systems, focusing on uncertainty quantification and technology qualification for advanced wind turbine components.
 
   - id: wp2
     dcs:
@@ -84,8 +86,10 @@ safety, performance, and longevity of advanced wind turbine components, particul
         summary: "Formulate a high fidelity numerical framework to resolve crack initiation and propagation in components fitted with meta-materials operating in highly corrosive environments."
         methods: "Fracture mechanics; multi-phusics; V&V."
         tags: ["Meta-materials","Corrosion","Fracture"]
-        thumb: "/img/dcs/placeholder.jpg"
+        thumb: "/img/dcs/ipsi.jpg"
+        thumb_size: 140
         photo: "/img/research/dc_project/fig_7.png"
+        bio: Ioannis Ypsilantis holds a Bachelor in Mathematics from the University of Patras and a Master degree in Mathematics in Science and Engineering from the Technical University of Munich with a specialisation in Numerical Methods and Optimisation. Prior to joining Met2Adapt he held a junior researcher position at CIDETEC, Spain where he implemented physics informed ML pipelines in various simulation frameworks.
         
       - id: wp2-dc3
         code: "DC9"
@@ -110,11 +114,10 @@ safety, performance, and longevity of advanced wind turbine components, particul
         photo: "/img/research/dc_project/fig_9.png"
         
   - id: wp3
-    title: "WP1  Discovery of new signalling elements"
     dcs:
       - id: wp3-dc1
         code: "DC5"
-        title: "Nutrient sensor discovery"
+        title: "Enhanced Wave Bandgaps in Offshore Cylindrical Elements Embedding Linear and Nonlinear Topological Resonators"
         supervisor: "Prof. O. Bursi, Prof. M. F. Pantano, Dr. V. Dertimanis"
         host: "University of Trento"
         summary: "Conceive and design enhanced cylinders for wave protection of floating tanks of pump hydro offshore and vibration mitigation of towers for synergically coupled to offshore wind turbines in wind farms subjected to frequent wave/wind loadings."
@@ -146,7 +149,6 @@ safety, performance, and longevity of advanced wind turbine components, particul
         photo: "/img/research/dc_project/fig_12.png"
      
   - id: wp4
-    title: "WP1  Discovery of new signalling elements"
     dcs:
       - id: wp4-dc1
         code: "DC11"
@@ -169,6 +171,7 @@ safety, performance, and longevity of advanced wind turbine components, particul
         tags: ["Wind turbine risk assesment","preventive maintenance"]
         thumb: "/img/dcs/placeholder.jpg"
         photo: "/img/research/dc_project/fig_14.png"
+    
         
       - id: wp4-dc3
         code: "DC15"
