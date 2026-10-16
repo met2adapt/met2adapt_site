@@ -158,8 +158,10 @@ safety, performance, and longevity of advanced wind turbine components, particul
         summary: "Develop an efficient methodological framework to quantify the structural reliability of meta-materials involving material and geometrical uncertainties."
         methods: "Data augmentation; generative AI; reliability analysis."
         tags: ["risk","machine learning","wind and wave energy"]
-        thumb: "/img/dcs/placeholder.jpg"
+        thumb: "/img/dcs/Perfil_Braulio.jpg"
+        thumb_size: 140
         photo: "/img/research/dc_project/fig_13.png"
+        bio: Braulio Neira is a Mechanical Engineer specialising in renewable energy systems, with a strong focus on wave energy converters and marine energy technologies. His research combines analytical modelling, multibody dynamics, numerical simulation and experimental testing. His work has focused on the development of wave energy converters with nonlinear and variable-stiffness mechanisms, including the design and construction of lab-scale prototypes for wave-channel testing. He has gained international research experience through collaborations with RWTH Aachen University, the University of Edinburgh, the Federal University of Rio de Janeiro and other partner institutions. Braulio has contributed to journal and conference publications in marine energy and mechanical engineering, and has presented his research at international conferences, receiving recognition through a poster award.
 
       - id: wp4-dc2
         code: "DC13"
