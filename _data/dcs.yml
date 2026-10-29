@@ -99,8 +99,10 @@ safety, performance, and longevity of advanced wind turbine components, particul
         summary: "Deliver analytical and computational models of individual and clusters of turbines, considering solid-fluid interactions, and scattering and generation of waves."
         methods: "analytical modelling; nonlinear dynamics; environmental impact assessment."
         tags: ["Wind turbine clusters","gravity water waves","mechanical waves", "acoustic waves"]
-        thumb: "/img/dcs/placeholder.jpg"
+        thumb: "/img/dcs/Photo-Fenia Papadopoulou.jpg"
+        thumb_size: 140
         photo: "/img/research/dc_project/fig_8.png"
+        bio: Ms. Papadopoulou graduated with an MEng from the School of Applied Mathematical and Physical Sciences at NTUA in 2026, focusing on the mathematical modelling of wave scattering in flexural plates. Her theoretical background in PDEs, wave propagation, continuum mechanics, elasticity theory, and dynamical systems is enhanced by her practical experience using tools such as Mathematica and MATLAB. She applied this combination of skills in her thesis, "Elastic Scattering in Kirchhoff Plates" conducted under the supervision of Prof. Gourgiotis. In October 2026, she began her PhD in the Department of Mathematical Sciences, in Applied Mathematics, at the University of Liverpool, supervised by Prof. Colquitt and Prof. Movchan.
 
       - id: wp2-dc4
         code: "DC10"
