@@ -38,8 +38,12 @@ tabindex="0">
 {% if dc.code %}{{ dc.code }} {% endif %}{{ dc.title }}
 </p>
 
+
 <p class="dc-sub">
-{% if dc.supervisor %}Supervisor: {{ dc.supervisor }}{% endif %}
+{% if dc.name %}Name: {{ dc.name }}{% endif %}
+</p>
+<p class="dc-sub">
+{% if dc.supervisor %}Supervisors: {{ dc.supervisor }}{% endif %}
 {% if dc.host %}{% if dc.supervisor %} · {% endif %}Host: {{ dc.host }}{% endif %}
 </p>
 </div>
@@ -52,7 +56,7 @@ tabindex="0">
 <div>
 {% if dc.bio %}
 <div class="dc-bio">
-  <h4 class="dc-section-label">About the DC</h4>
+  <h4 class="dc-section-label">Short Bio</h4>
   {{ dc.bio | markdownify }}
 </div>
 {% endif %}

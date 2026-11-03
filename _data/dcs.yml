@@ -6,13 +6,16 @@ work_packages:
       - id: wp1-dc1
         code: "DC3"
         title: "Multiscale Modelling and Machine Learning-Based Design of Innovative Vibration-Attenuating Metapanels"
+        name: Ms. Marianna Diamanta
         supervisor: "Prof. I. Kalogeris, Prof. I. Antoniadis, Prof. D. Chronopoulos"
         host: "National Technical University of Athens"
         summary: "Create high-performance, reusable metamaterial panel systems that achieve superior vibration and noise attenuation while remaining cost-effective and compatible with sustainable construction practices."
         methods: "computational mechanics; experimental validation; numerical simulation."
         tags: ["machine learning","vibro-acoustics","sustainability"]
-        thumb: "/img/dcs/placeholder.jpg"
+        thumb: "/img/dcs/MD2.jpg"
+        thumb_size: 140
         photo: "/img/research/dc_project/fig_3.png"
+        bio: Marianna holds a Diploma in Civil Engineering from National Technical University of Athens, a minor in Finance from Deree, and a Masters degree in Hydraulic Mechanics from Delft University with a specialization in Hydraulic Engineering. She has experience in Wave Mechanics, Numerical Modelling, Machine Learning, and Stochastic Methods, as well as strong programming skills.
 
       - id: wp1-dc2
         code: "DC4"
@@ -54,6 +57,7 @@ attenuation in wind farms."
       - id: wp1-dc5
         code: "DC14"
         title: "Uncertainty Quantification and Technology Qualification for Advanced Wind Turbine Components"
+        name: Mr. João Brites
         supervisor: "Prof. A. Kolios, Prof. Y. Guo, Prof. J. Chiachio"
         host: "DTU"
         summary: "Develop a robust framework for uncertainty quantification (UQ) and technology qualification, aimed at validating the
@@ -63,7 +67,7 @@ safety, performance, and longevity of advanced wind turbine components, particul
         thumb: "/img/dcs/joao_brites_m2a_photo.jpg"
         thumb_size: 140
         photo: "/img/research/dc_project/fig_5.png"       
-        bio: João Brites holds a Bachelor’s and a Master’s degree in Engineering Physics from the University of Porto. Prior to joining Met2Adapt, he completed a research internship at IFIMUP focused on sustainable energy harvesting, carried out his MSc thesis research with the CENTRA group at FEUP on space debris and satellite orbit reconstruction, and later held a research fellowship at FEUP working on astrodynamics and celestial mechanics. He is currently a Doctoral Candidate at DTU Wind and Energy Systems, focusing on uncertainty quantification and technology qualification for advanced wind turbine components.
+        bio: João holds a Bachelor’s and a Master’s degree in Engineering Physics from the University of Porto. Prior to joining Met2Adapt, he completed a research internship at IFIMUP focused on sustainable energy harvesting, carried out his MSc thesis research with the CENTRA group at FEUP on space debris and satellite orbit reconstruction, and later held a research fellowship at FEUP working on astrodynamics and celestial mechanics. He is currently a Doctoral Candidate at DTU Wind and Energy Systems, focusing on uncertainty quantification and technology qualification for advanced wind turbine components.
 
   - id: wp2
     dcs:
@@ -81,6 +85,7 @@ safety, performance, and longevity of advanced wind turbine components, particul
       - id: wp2-dc2
         code: "DC2"
         title: "Coupled chemo-mechanical interactions leading to fatigue damage in corrosive environments"
+        name: Mr Ioannis Ypsilantis
         supervisor: "Prof. S. Triantafyllou, Prof. E. Sapountzakis, Prof. A. Palermo"
         host: "National Technical University of Athens"
         summary: "Formulate a high fidelity numerical framework to resolve crack initiation and propagation in components fitted with meta-materials operating in highly corrosive environments."
@@ -89,11 +94,12 @@ safety, performance, and longevity of advanced wind turbine components, particul
         thumb: "/img/dcs/ipsi.jpg"
         thumb_size: 140
         photo: "/img/research/dc_project/fig_7.png"
-        bio: Ioannis Ypsilantis holds a Bachelor in Mathematics from the University of Patras and a Master degree in Mathematics in Science and Engineering from the Technical University of Munich with a specialisation in Numerical Methods and Optimisation. Prior to joining Met2Adapt he held a junior researcher position at CIDETEC, Spain where he implemented physics informed ML pipelines in various simulation frameworks.
+        bio: Ioannis holds a Bachelor in Mathematics from the University of Patras and a Master degree in Mathematics in Science and Engineering from the Technical University of Munich with a specialisation in Numerical Methods and Optimisation. Prior to joining Met2Adapt he held a junior researcher position at CIDETEC, Spain where he implemented physics informed ML pipelines in various simulation frameworks.
         
       - id: wp2-dc3
         code: "DC9"
         title: "Modelling of the dynamic response for offshore wind farms"
+        name: Ms Fenia Papadopoulou
         supervisor: "Prof. D. Colquitt, Prof. A. Movchan, Prof. A. Palermo"
         host: "University of Liverpool"
         summary: "Deliver analytical and computational models of individual and clusters of turbines, considering solid-fluid interactions, and scattering and generation of waves."
@@ -102,7 +108,7 @@ safety, performance, and longevity of advanced wind turbine components, particul
         thumb: "/img/dcs/Photo-Fenia Papadopoulou.jpg"
         thumb_size: 140
         photo: "/img/research/dc_project/fig_8.png"
-        bio: Ms. Papadopoulou graduated with an MEng from the School of Applied Mathematical and Physical Sciences at NTUA in 2026, focusing on the mathematical modelling of wave scattering in flexural plates. Her theoretical background in PDEs, wave propagation, continuum mechanics, elasticity theory, and dynamical systems is enhanced by her practical experience using tools such as Mathematica and MATLAB. She applied this combination of skills in her thesis, "Elastic Scattering in Kirchhoff Plates" conducted under the supervision of Prof. Gourgiotis. In October 2026, she began her PhD in the Department of Mathematical Sciences, in Applied Mathematics, at the University of Liverpool, supervised by Prof. Colquitt and Prof. Movchan.
+        bio: Fenia graduated with an MEng from the School of Applied Mathematical and Physical Sciences at NTUA in 2026, focusing on the mathematical modelling of wave scattering in flexural plates. Her theoretical background in PDEs, wave propagation, continuum mechanics, elasticity theory, and dynamical systems is enhanced by her practical experience using tools such as Mathematica and MATLAB. She applied this combination of skills in her thesis, "Elastic Scattering in Kirchhoff Plates" conducted under the supervision of Prof. Gourgiotis. In October 2026, she began her PhD in the Department of Mathematical Sciences, in Applied Mathematics, at the University of Liverpool, supervised by Prof. Colquitt and Prof. Movchan.
 
       - id: wp2-dc4
         code: "DC10"
@@ -155,6 +161,7 @@ safety, performance, and longevity of advanced wind turbine components, particul
       - id: wp4-dc1
         code: "DC11"
         title: "GenAI-aided reliability assessment of mechanical metamaterials in offshore wind and wave energy applications"
+        name: Mr. Braulio Neira
         supervisor: "Prof. J. Chiachio, Prof. M.L. Jalón, Prof. A. Kolios"
         host: "University of Granada"
         summary: "Develop an efficient methodological framework to quantify the structural reliability of meta-materials involving material and geometrical uncertainties."
@@ -163,7 +170,7 @@ safety, performance, and longevity of advanced wind turbine components, particul
         thumb: "/img/dcs/Perfil_Braulio.jpg"
         thumb_size: 140
         photo: "/img/research/dc_project/fig_13.png"
-        bio: Braulio Neira is a Mechanical Engineer specialising in renewable energy systems, with a strong focus on wave energy converters and marine energy technologies. His research combines analytical modelling, multibody dynamics, numerical simulation and experimental testing. His work has focused on the development of wave energy converters with nonlinear and variable-stiffness mechanisms, including the design and construction of lab-scale prototypes for wave-channel testing. He has gained international research experience through collaborations with RWTH Aachen University, the University of Edinburgh, the Federal University of Rio de Janeiro and other partner institutions. Braulio has contributed to journal and conference publications in marine energy and mechanical engineering, and has presented his research at international conferences, receiving recognition through a poster award.
+        bio: Braulio is a Mechanical Engineer specialising in renewable energy systems, with a strong focus on wave energy converters and marine energy technologies. His research combines analytical modelling, multibody dynamics, numerical simulation and experimental testing. His work has focused on the development of wave energy converters with nonlinear and variable-stiffness mechanisms, including the design and construction of lab-scale prototypes for wave-channel testing. He has gained international research experience through collaborations with RWTH Aachen University, the University of Edinburgh, the Federal University of Rio de Janeiro and other partner institutions. Braulio has contributed to journal and conference publications in marine energy and mechanical engineering, and has presented his research at international conferences, receiving recognition through a poster award.
 
       - id: wp4-dc2
         code: "DC13"
