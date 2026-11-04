@@ -175,13 +175,16 @@ safety, performance, and longevity of advanced wind turbine components, particul
       - id: wp4-dc2
         code: "DC13"
         title: "Risk-based Maintenance Planning for Wind Turbine Components"
-        supervisor: "Prof. A. Kolios, Prof. Y. Guo, Prof. J. Santos"
+        supervisor: "Prof. A. Kolios, Prof. Y. Guo, Dr. J. Santos"
+        name: Mr. Vinzent Bohland
         host: "DTU"
         summary: "Create a comprehensive risk assessment and maintenance planning framework for wind turbine technologies, with a focus on enhancing structural resilience and operational efficiency."
         methods: "risk based inspection; risk based maintenance; digital tool development."
         tags: ["Wind turbine risk assesment","preventive maintenance"]
-        thumb: "/img/dcs/placeholder.jpg"
+        thumb: "/img/dcs/vinzent.jpg"
+        thumb_size: 140
         photo: "/img/research/dc_project/fig_14.png"
+        bio: Vinzent holds a Master of Science in Electrical Engineering and Information Technology from the Karlsruhe Institute of Technology (KIT). Prior to joining DTU Wind and Energy Systems, he worked as a Production Planner at Robert Bosch GmbH in Nuremberg, where he managed automated production lines and led continuous improvement projects. He is currently a Doctoral Candidate at DTU Wind and Energy Systems, focusing on risk-based maintenance planning for wind turbine components, with a specialization in bearings.
     
         
       - id: wp4-dc3
