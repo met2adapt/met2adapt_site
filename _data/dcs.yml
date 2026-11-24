@@ -126,13 +126,16 @@ safety, performance, and longevity of advanced wind turbine components, particul
       - id: wp3-dc1
         code: "DC5"
         title: "Enhanced Wave Bandgaps in Offshore Cylindrical Elements Embedding Linear and Nonlinear Topological Resonators"
+        name: Mr. Hooman Aminipour
         supervisor: "Prof. O. Bursi, Prof. M. F. Pantano, Dr. V. Dertimanis"
         host: "University of Trento"
         summary: "Conceive and design enhanced cylinders for wave protection of floating tanks of pump hydro offshore and vibration mitigation of towers for synergically coupled to offshore wind turbines in wind farms subjected to frequent wave/wind loadings."
         methods: "nonlinear dynamics; wave methods; topological optimisation; prototyping."
         tags: ["Distributed resonators","Spider web resonators","Hydro pumping"]
-        thumb: "/img/dcs/placeholder.jpg"
+        thumb: "/img/dcs/Picture_Hooman_Aminipour.jpg"
+        thumb_size: 140
         photo: "/img/research/dc_project/fig_10.png"
+        bio: Hooman Aminipour holds a Bachelor in Mechanical Engineering from the Islamic Azad University and an Msc from the American University of Sharjah, United Arab Emirates, where he worked in nonlinear vibration of functionally graded composite plates and shells.  He has experience in instability of anisotropic composite materials and has experience with  Simulink, MATLAB, Continuation and Bifurcation Software, MatCont and Finite Element Analysis Software, ANSYS.
 
       - id: wp3-dc2
         code: "DC7"
