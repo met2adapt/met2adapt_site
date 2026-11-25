@@ -113,6 +113,7 @@ safety, performance, and longevity of advanced wind turbine components, particul
       - id: wp2-dc4
         code: "DC10"
         title: "Development of deep learning-based surrogate models for predicting failure in meta-material composites"
+        name: Ms Manon Brun
         supervisor: "Prof. E. Kakouris, Prof. P. Brommer, Prof. S. Triantafyllou"
         host: "University of Warwick"
         summary: "Integrate advanced deep learning approaches with state-of-the-art fracture modelling techniques for rapid yet high fidelity damage modelling."
@@ -120,6 +121,7 @@ safety, performance, and longevity of advanced wind turbine components, particul
         tags: ["Surrogate modelling","fracture modelling","evolving fractures"]
         thumb: "/img/dcs/placeholder.jpg"
         photo: "/img/research/dc_project/fig_9.png"
+        bio: Manon has a strong academic background in theoretical physics, mechanics and applied physics, supported by strong computational and scientific programming skills in computer programming. Her research experience includes computational modelling, numerical implementation, model validation and the analysis of complex physical systems. These transferable skills, together with her strong analytical ability and interest in machine learning, provide a good foundation for DC10’s work on deep-learning surrogate models.
         
   - id: wp3
     dcs:
@@ -150,14 +152,18 @@ safety, performance, and longevity of advanced wind turbine components, particul
         
       - id: wp3-dc3
         code: "DC8"
+        name: Mr. Yi Yao
         title: "On the combined use of wave energy converters and meta-structures for fatigue-life extension of existing offshore structures"
         supervisor: "Prof. A. Palermo, Prof. R. Archetti, Prof. D. Colquitt"
         host: "University of Bologna"
         summary: "Develop solutions for reducing vibrations in offshore structures by attenuating the amplitude of wave loads and/or mitigating their dynamic response to wind loading."
         methods: "wave dynamics; optimisation; analytical and numerical modelling."
         tags: ["Wave Energy Converters","Wind farms","Meta-Structures"]
-        thumb: "/img/dcs/placeholder.jpg"
         photo: "/img/research/dc_project/fig_12.png"
+        thumb: "/img/dcs/Yi.jpg"
+        thumb_size: 140
+        bio: Yi holds an MEng from Tianjin University, where he ranked among the top students of his cohort. His expertise covers theoretical and experimental dynamics, including linear and nonlinear vibrations, modal analysis and random vibrations. He has research experience in nonlinear vibrations, documented by peer-reviewed publications in the field.
+        
      
   - id: wp4
     dcs:
@@ -194,12 +200,15 @@ safety, performance, and longevity of advanced wind turbine components, particul
         code: "DC15"
         title: "Meta-structures with autonomous sensing capacities"
         supervisor: "Prof. E. Chatzi, Dr. V. Dertimanis, Prof. A. Colombi"
+        name: Mr. Gianluca Lona
         host: "ETHZ"
         summary: "Develop metamaterial  based structures and devices that through vibration energy harvesting can exploit structural vibration to power sensors and data communication to the base."
         methods: "nonlinear dynamics; electro-mechanical couplings; experimental validation."
         tags: ["Vibration and Energy harversting","Electro-mechanics"]
-        thumb: "/img/dcs/placeholder.jpg"
+        thumb: "/img/dcs/Gianluca_Lona.jpeg"
+        thumb_size: 140
         photo: "/img/research/dc_project/fig_15.png"
+        bio: Gianluca holds a Bachelor's degree in Industrial Engineering and a Master's degree in Mechatronic Engineering from the University of Trento, where he focused on dynamics, finite element analysis and control. During his Master's thesis at Empa, Dübendorf, he gained experience in electromechanical modelling, numerical simulation and experimental validation, working on semi-passive vibration control of dielectric elastomer devices. He also took part in an industrial collaboration that resulted in two international patent applications.
 
       - id: wp4-dc4
         code: "DC16"
