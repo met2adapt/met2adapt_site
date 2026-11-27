@@ -1,11 +1,11 @@
 # Glossary: terms are explained in a small pop-up the first time they appear on a page,
 # and listed in full on the MetaFun page. "match" lists the spellings to recognise.
 - term: "Meta-material"
-  match: ["meta-materials", "meta-material", "metamaterials", "metamaterial"]
+  match: ["meta-materials", "Meta-materials", "meta-material", "metamaterials", "metamaterial"]
   text: "An engineered material whose properties come from its designed internal architecture, the shape and arrangement of small building blocks, rather than from its chemical composition. This allows behaviour not found in ordinary materials, such as blocking waves in certain frequency ranges."
 - term: "Meta-structure"
   match: ["meta-structures", "meta-structure", "metastructures", "metastructure", "metastructural"]
-  text: "A structure or component built from meta-material building blocks (unit cells), designed to control how it carries loads or transmits vibrations and waves."
+  text: "Clusters of structures designed to control how vibrations and waves are transmitted."
 - term: "Band gap"
   match: ["band gaps", "band gap", "bandgaps", "bandgap"]
   text: "A range of frequencies in which waves cannot travel through a periodic or resonant material, so vibrations in that range are strongly attenuated."
