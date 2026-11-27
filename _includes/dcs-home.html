@@ -1,5 +1,6 @@
 {%- comment -%}
 Include: dcs-home.html
+Uses a square copy /img/dcs/square/dcN.jpg when present (sharper, never distorted); otherwise the thumb.
 Shows Doctoral Candidates on the home page, automatically.
 A DC appears only when its entry in _data/dcs.yml has a `name` AND a
 `thumb` that is not the placeholder image. Ordered by DC number.
@@ -33,7 +34,9 @@ Each card links to the DC's accordion item on /research/ (opened by main.js).
   {%- assign clean_name = dc.name | replace: "Mr. ", "" | replace: "Ms. ", "" | replace: "Mr ", "" | replace: "Ms ", "" | replace: "Dr. ", "" | strip -%}
   <a class="dc-card" role="listitem" href="{{ '/research/' | relative_url }}#{{ dc.id }}">
     <span class="dc-card__photo">
-      <img src="{{ dc.thumb | relative_url }}" alt="Photo of {{ clean_name }}" loading="lazy" width="320" height="320">
+      {%- assign sq_path = "/img/dcs/square/" | append: dc.code | downcase | append: ".jpg" -%}
+      {%- assign sq = site.static_files | where: "path", sq_path | first -%}
+      <img src="{% if sq %}{{ sq_path | relative_url }}{% else %}{{ dc.thumb | relative_url }}{% endif %}" alt="Photo of {{ clean_name }}" loading="lazy" width="320" height="320">
     </span>
     <span class="dc-card__code">{{ dc.code }}</span>
     <span class="dc-card__name">{{ clean_name }}</span>

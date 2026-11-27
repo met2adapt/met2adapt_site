@@ -12,7 +12,7 @@ single_open: boolean (optional)
 {% comment %} no work-package provided {% endcomment %}
 {%- else -%}
 
-<section class="wp-dc" aria-labelledby="{{ wp.id }}-title">
+<section class="wp-dc" aria-labelledby="{{ wp.id }}-title" markdown="0">
 <h3 id="{{ wp.id }}-title">{{ wp.title }}</h3>
 
 {% if wp.description %}
@@ -28,26 +28,11 @@ role="button"
 aria-controls="{{ dc.id }}-body"
 aria-expanded="false"
 tabindex="0">
-{% if dc.thumb %}
-<img class="dc-thumb" src="{{ dc.thumb | relative_url }}" alt="{{ dc.code }}"
-     {% if dc.thumb_size %}style="--thumb-size: {{ dc.thumb_size }}px"{% endif %}>
-{% endif %}
-
-<div class="dc-meta">
-<p class="dc-title">
-{% if dc.code %}{{ dc.code }} {% endif %}{{ dc.title }}
-</p>
-
-
-<p class="dc-sub">
-{% if dc.name %}Name: {{ dc.name }}{% endif %}
-</p>
-<p class="dc-sub">
-{% if dc.supervisor %}Supervisors: {{ dc.supervisor }}{% endif %}
-{% if dc.host %}{% if dc.supervisor %} · {% endif %}Host: {{ dc.host }}{% endif %}
-</p>
-</div>
-
+{%- assign clean_name = dc.name | replace: "Mr. ", "" | replace: "Ms. ", "" | replace: "Mr ", "" | replace: "Ms ", "" | strip -%}
+{% if dc.thumb %}<img class="dc-thumb" src="{{ dc.thumb | relative_url }}" alt="" {% if dc.thumb_size %}style="--thumb-size: {{ dc.thumb_size }}px"{% endif %}>{% endif %}
+<div class="dc-head-top">{% if dc.code %}<span class="dc-code">{{ dc.code }}</span>{% endif %}{% if dc.name %}<span class="dc-name">{{ clean_name }}</span>{% elsif dc.host %}<span class="dc-name dc-name--host">{{ dc.host }}</span>{% endif %}</div>
+<p class="dc-title">{{ dc.title }}</p>
+<div class="dc-details">{% if dc.name and dc.host %}<span><strong>Host:</strong> {{ dc.host }}</span>{% endif %}{% if dc.supervisor %}<span><strong>Supervisors:</strong> {{ dc.supervisor }}</span>{% endif %}</div>
 <span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
 </div>
 

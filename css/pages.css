@@ -422,3 +422,59 @@ main > section.news-section { background: var(--bg-light); }
 .tile-day { font-size: 3.5rem; font-weight: 700; line-height: 1; }
 .tile-month { font-size: 1rem; font-weight: 600; opacity: 0.85; }
 .news-modal__spacer { height: 3.5rem; }
+
+/* DC photos: fixed square box; image fills it without relying on percentage heights */
+.dc-card__photo { display: block; flex: 0 0 auto; box-sizing: border-box; overflow: hidden; }
+.dc-card__photo img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; max-width: none; object-fit: cover; object-position: center top; }
+
+/* Slider on phones: whole picture visible (no cropping), caption below the picture */
+@media (max-width: 768px) {
+  main > section:has(.hero-carousel) { padding: 0; }
+  .hero-carousel { height: auto !important; max-height: none; border-radius: 0; padding-bottom: 2.6rem; background: var(--primary-dark); }
+  .hc-track { position: relative; inset: auto; align-items: stretch; }
+  .hc-slide { height: auto; flex-direction: column; justify-content: flex-start; }
+  .hc-slide img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; background-color: var(--primary-dark); }
+  .hc-caption { position: static; background: none; padding: 0.75rem 1.1rem 0; min-height: 3.2em; font-size: 0.9rem; line-height: 1.4; }
+  .hc-prev, .hc-next { top: calc(100vw / 3); width: 40px; height: 40px; }
+  .hc-indicators { bottom: 0.5rem; }
+}
+
+/* ==========================================================================
+   DC ACCORDION HEADER: clear reading order
+   code + name -> project title -> host / supervisors; chevron at the right
+   ========================================================================== */
+.dc-header {
+  display: grid; grid-template-columns: 72px minmax(0, 1fr) 44px;
+  grid-template-areas: "thumb top chev" "thumb title chev" "thumb details chev";
+  column-gap: 1.1rem; row-gap: 0.3rem; align-items: start; padding: 1.1rem 1.25rem;
+}
+.dc-header .dc-thumb { grid-area: thumb; width: 72px; height: 72px; border-radius: 50%; object-fit: cover; object-position: center top; }
+.dc-head-top { grid-area: top; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; }
+.dc-code { font: 700 0.78rem "Montserrat", sans-serif; letter-spacing: 0.05em; color: var(--white); background: var(--primary); padding: 0.2rem 0.6rem; border-radius: 999px; }
+.dc-name { font: 700 0.95rem "Montserrat", sans-serif; color: var(--accent); }
+.dc-name--host { color: var(--muted); font-weight: 600; }
+.dc-header .dc-title { grid-area: title; margin: 0; font-size: 1.08rem; line-height: 1.4; color: var(--primary-dark); }
+.dc-details { grid-area: details; display: flex; flex-direction: column; gap: 0.15rem; font-size: 0.88rem; line-height: 1.45; color: #556; }
+.dc-details strong { color: var(--primary-dark); font-weight: 600; }
+.dc-header .dc-chevron { grid-area: chev; align-self: center; margin-left: 0; }
+
+@media (max-width: 640px) {
+  .dc-header {
+    grid-template-columns: 52px minmax(0, 1fr) 40px;
+    grid-template-areas: "thumb top chev" "title title title" "details details details";
+    column-gap: 0.75rem; row-gap: 0.55rem; padding: 0.9rem 0.9rem 1rem;
+  }
+  .dc-header .dc-thumb { width: 52px; height: 52px; align-self: center; }
+  .dc-head-top { align-self: center; }
+  .dc-header .dc-chevron { width: 40px; height: 40px; }
+  .dc-header .dc-title { font-size: 1rem; }
+  .dc-body { padding: 0.9rem; }
+  .dc-photo { height: auto; max-height: 200px; }
+}
+/* Phones: less nested padding around the DC list so text gets the screen width */
+@media (max-width: 640px) {
+  .wp-card--centered { margin: 0.75rem 0 !important; padding: 0.6rem !important; }
+  .dc-list { padding: 0; border: none; box-shadow: none; background: transparent; }
+  .dc-accordion { gap: 0.75rem; }
+  .wp-dc { padding: 0 !important; }
+}
