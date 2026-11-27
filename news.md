@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "News & Events MENTOR"
+title: "News & Events | Met2Adapt"
 nav: news
 permalink: /news/
 ---
@@ -13,17 +13,4 @@ permalink: /news/
 </div>
 </section>
 
-
-
-<section class="cards-section reveal">
-<div class="container">
-<div class="news-grid">
-{% assign sorted = site.data.news.items | sort: "date" | reverse %}
-{% for item in sorted %}
-{% include news-item.html news=item %}
-{% endfor %}
-</div>
-</div>
-</section>
-
-
+{% include news-list.html %}

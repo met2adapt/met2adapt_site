@@ -1,32 +1,157 @@
+# News & Events. Newest first is automatic (sorted by date). Write dates as YYYY-MM-DD HH:MM:SS +0000.
+# type: news | event      content: Markdown, may have several paragraphs
+# image: optional (local path like /img/news/kickoff.jpg is best)
+# event_date / location: optional, shown for events
+# external_url: optional link to an external page
+# Items without a date (e.g. the "We welcome" posts) are listed first, in the order below.
+# dc_id: optional, adds a "Research project" button linking to that DC on the Research page
 items:
+
+  - id: welcome-dc2
+    title: "We welcome Ioannis Ypsilantis"
+    date: 2026-11-16 15:03:30.805 +0000
+    type: news
+    excerpt: ""
+    content: ""
+    image: "/img/news/welcome-dc2.jpg"
+    external_url: "https://www.linkedin.com/feed/update/urn:li:activity:7528110508705542144"
+    dc_id: "wp2-dc2"
+
+  - id: welcome-dc3
+    title: "We welcome Marianna Diamanta"
+    date: 2026-11-27 14:49:40.846 +0000
+    type: news
+    excerpt: ""
+    content: ""
+    image: "/img/news/welcome-dc3.jpg"
+    external_url: "https://www.linkedin.com/feed/update/urn:li:activity:7532093294126837760"
+    dc_id: "wp1-dc1"
+
+  - id: welcome-dc5
+    title: "We welcome Hooman Aminipour"
+    date: 2026-11-16 15:02:40.693 +0000
+    type: news
+    excerpt: ""
+    content: ""
+    image: "/img/news/welcome-dc5.jpg"
+    external_url: "https://www.linkedin.com/feed/update/urn:li:activity:7528110298520612864"
+    dc_id: "wp3-dc1"
+
+  - id: welcome-dc8
+    title: "We welcome Yi Yao"
+    type: news
+    excerpt: ""
+    content: ""
+    image: "/img/news/welcome-dc8.jpg"
+    external_url: "https://www.linkedin.com/company/met2adapt/posts/"
+    dc_id: "wp3-dc3"
+
+  - id: welcome-dc9
+    title: "We welcome Fenia Papadopoulou"
+    date: 2026-11-16 15:01:34.725 +0000
+    type: news
+    excerpt: ""
+    content: ""
+    image: "/img/news/welcome-dc9.jpg"
+    external_url: "https://www.linkedin.com/feed/update/urn:li:activity:7528110021830926336"
+    dc_id: "wp2-dc3"
+
+  - id: welcome-dc11
+    title: "We welcome Braulio Neira"
+    date: 2026-11-16 15:01:34.112 +0000
+    type: news
+    excerpt: ""
+    content: ""
+    image: "/img/news/welcome-dc11.jpg"
+    external_url: "https://www.linkedin.com/feed/update/urn:li:activity:7528110019259625472"
+    dc_id: "wp4-dc1"
+
+  - id: welcome-dc13
+    title: "We welcome Vinzent Bohland"
+    date: 2026-11-16 15:03:15.355 +0000
+    type: news
+    excerpt: ""
+    content: ""
+    image: "/img/news/welcome-dc13.jpg"
+    external_url: "https://www.linkedin.com/feed/update/urn:li:activity:7528110443903545344"
+    dc_id: "wp4-dc2"
+
+  - id: welcome-dc14
+    title: "We welcome João Brites"
+    date: 2026-11-16 15:02:45.464 +0000
+    type: news
+    excerpt: ""
+    content: ""
+    image: "/img/news/welcome-dc14.jpg"
+    external_url: "https://www.linkedin.com/feed/update/urn:li:activity:7528110318531731456"
+    dc_id: "wp1-dc5"
+
+  - id: welcome-dc15
+    title: "We welcome Gianluca Lona"
+    type: news
+    excerpt: ""
+    content: ""
+    image: "/img/news/welcome-dc15.jpg"
+    external_url: "https://www.linkedin.com/company/met2adapt/posts/"
+    dc_id: "wp4-dc3"
+
 
   - id: news-2026-01
     title: "The 1st call for applications is now open!"
-    date: 2026-02-01
+    date: 2026-02-01 09:00:00 +0000
+    type: news
     excerpt: "We invite applications for range of doctoral positions."
     content: >
       The first call for applications is now open. This is an exceptional opportunity for highly motivated and outstanding candidates to join an innovative team of researchers engaged in cutting-edge projects that span a wide range of disciplines.
-    image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1200&auto=format&fit=crop"
+    image: "/img/news/call-1.jpg"
     external_url: "https://euraxess.ec.europa.eu/jobs/392117"
 
   - id: news-2026-02
     title: "Met2Adapt Kick-off Meeting"
-    date: 2026-02-16
+    date: 2026-02-16 09:00:00 +0000
+    type: event
     excerpt: "Consortium-wide meeting to launch the project."
     content: >
-      The MENTOR consortium met for a two-day kick-off meeting to align research plans,
+      The Met2Adapt consortium met for a two-day kick-off meeting to align research plans,
       present work packages and introduce the doctoral candidates. Sessions included
       project governance, data management and training plans.
-    image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1200&auto=format&fit=crop"
+    image: ""
     external_url: ""
 
   - id: news-2026-03
     title: "The Met2Adapt webpage is live!"
-    date: 2026-03-05
+    date: 2026-03-05 09:00:00 +0000
+    type: news
     excerpt: "Our primary communication platform is up and running!"
     content: >
       
-    image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1200&auto=format&fit=crop"
+    image: "/img/hero-home.jpg"
     external_url: ""
 
+  - id: news-2026-06-call2
+    title: "Second call for applications: DC2 at NTUA"
+    date: 2026-06-15 09:00:00 +0000
+    type: news
+    excerpt: "A new doctoral position is open: DC2 on coupled chemo-mechanical fatigue damage in corrosive environments, hosted at NTUA, Athens."
+    content: |
+      The second Met2Adapt call for applications is now open for **Doctoral Candidate 2 (DC2)**, hosted by the National Technical University of Athens.
 
+      **Project:** Coupled chemo-mechanical interactions leading to fatigue damage in corrosive environments. The doctoral candidate will formulate a high-fidelity numerical framework to resolve crack initiation and propagation in components fitted with meta-materials operating in highly corrosive environments, combining fracture mechanics, multi-physics modelling and verification and validation.
+
+      Applicants must meet the eligibility rules of Marie Skłodowska-Curie Doctoral Networks. Details of the position and how to apply are on our [recruitment page](/recruitment/).
+    image: "/img/news/call-2.jpg"
+    external_url: ""
+
+  - id: news-2026-08-call3
+    title: "Third call for applications: DC6 at the University of Trento"
+    date: 2026-08-19 09:00:00 +0000
+    type: news
+    excerpt: "A new doctoral position is open: DC6 on self-tuning variable length systems for the vibration reduction of wind blades, hosted at the University of Trento."
+    content: |
+      The third Met2Adapt call for applications is now open for **Doctoral Candidate 6 (DC6)**, hosted by the University of Trento.
+
+      **Project:** Self-tuning variable length systems for the vibration reduction of wind blades. The doctoral candidate will derive novel dimensionless formulations of the differential-algebraic equations governing the nonlinear dynamics of variable length systems with lumped mass subject to configurational forces, drawing on nonlinear dynamics, space-time formulations and high-cycle fatigue.
+
+      Applicants must meet the eligibility rules of Marie Skłodowska-Curie Doctoral Networks. Details of the position and how to apply are on our [recruitment page](/recruitment/).
+    image: "/img/news/call-3.jpg"
+    external_url: ""

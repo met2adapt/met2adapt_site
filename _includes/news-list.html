@@ -1,0 +1,89 @@
+{%- comment -%}
+News & Events listing. Data: _data/news.yml (items).
+Fields per item: id, title, date, type (news | event), excerpt, content (Markdown),
+image (optional), location and event_date (optional, for events), external_url (optional).
+The newest item is shown as a large featured card; the rest as a grid.
+"Read more" opens the full story in a pop-up window; each story has its own link (/news/#id).
+{%- endcomment -%}
+{%- assign undated = site.data.news.items | where_exp: "i", "i.date == nil" -%}
+{%- assign dated = site.data.news.items | where_exp: "i", "i.date != nil" | sort: "date" | reverse -%}
+{%- assign sorted = undated | concat: dated -%}
+
+<section class="news-section reveal" markdown="0">
+<div class="container">
+
+<div class="news-filters" role="group" aria-label="Filter news and events">
+<button type="button" class="news-filter is-active" data-filter="all" aria-pressed="true">All</button>
+<button type="button" class="news-filter" data-filter="news" aria-pressed="false">News</button>
+<button type="button" class="news-filter" data-filter="event" aria-pressed="false">Events</button>
+</div>
+
+<div class="news-list">
+{%- for item in sorted -%}
+{%- assign type = item.type | default: "news" -%}
+{%- assign img = item.image | default: "" | strip -%}{%- if img != "" and img contains "://" -%}{%- elsif img != "" -%}{%- assign img = img | relative_url -%}{%- endif -%}
+{%- assign has_story = false -%}
+{%- assign story = item.content | strip -%}
+{%- if story != "" -%}{%- assign has_story = true -%}{%- endif -%}
+<article class="news-item{% if forloop.first %} news-item--featured{% endif %}" data-type="{{ type }}" id="{{ item.id }}-card">
+  {%- if img != "" -%}
+  <div class="news-item__media"><img src="{{ img }}" alt="" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"></div>
+  {%- else -%}
+  <div class="news-item__media news-item__media--tile" aria-hidden="true"><span class="tile-day">{{ item.date | date: "%-d" }}</span><span class="tile-month">{{ item.date | date: "%B %Y" }}</span></div>
+  {%- endif -%}
+  <div class="news-item__body">
+    <p class="news-item__meta">
+      <span class="news-tag news-tag--{{ type }}">{% if type == "event" %}Event{% else %}News{% endif %}</span>
+      {% if item.date %}<time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%-d %B %Y" }}</time>{% endif %}
+    </p>
+    <h2 class="news-item__title">{{ item.title }}</h2>
+    {%- if item.event_date or item.location -%}
+    <p class="news-item__where">{% if item.event_date %}{{ item.event_date }}{% endif %}{% if item.event_date and item.location %}, {% endif %}{% if item.location %}{{ item.location }}{% endif %}</p>
+    {%- endif -%}
+    {%- if item.excerpt and item.excerpt != "" -%}<p class="news-item__excerpt">{{ item.excerpt }}</p>{%- endif -%}
+    <div class="news-item__actions">
+      {%- if has_story -%}
+      <a class="news-btn" href="#{{ item.id }}" data-news-open="{{ item.id }}">Read more</a>
+      {%- endif -%}
+      {%- if item.external_url and item.external_url != "" -%}
+      <a class="news-btn{% if has_story %} news-btn--ghost{% endif %}" href="{{ item.external_url }}" target="_blank" rel="noopener">{% if item.external_url contains "linkedin.com" %}View on LinkedIn{% else %}Open external page{% endif %}</a>
+      {%- endif -%}
+      {%- if item.dc_id and item.dc_id != "" -%}
+      <a class="news-btn news-btn--ghost" href="{{ '/research/' | relative_url }}#{{ item.dc_id }}">Research project</a>
+      {%- endif -%}
+    </div>
+  </div>
+</article>
+
+{%- if has_story -%}
+<template id="tpl-{{ item.id }}">
+  {%- if img != "" -%}<img class="news-modal__img" src="{{ img }}" alt="">{%- else -%}<div class="news-modal__spacer"></div>{%- endif -%}
+  <div class="news-modal__body">
+    <p class="news-item__meta">
+      <span class="news-tag news-tag--{{ type }}">{% if type == "event" %}Event{% else %}News{% endif %}</span>
+      {% if item.date %}<time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%-d %B %Y" }}</time>{% endif %}
+    </p>
+    <h2 class="news-modal__title" id="news-modal-title">{{ item.title }}</h2>
+    {%- if item.event_date or item.location -%}
+    <p class="news-item__where">{% if item.event_date %}{{ item.event_date }}{% endif %}{% if item.event_date and item.location %}, {% endif %}{% if item.location %}{{ item.location }}{% endif %}</p>
+    {%- endif -%}
+    <div class="news-modal__text">{{ item.content | markdownify }}</div>
+    {%- if item.external_url and item.external_url != "" -%}
+    <p><a class="news-btn" href="{{ item.external_url }}" target="_blank" rel="noopener">Open external page</a></p>
+    {%- endif -%}
+  </div>
+</template>
+{%- endif -%}
+{%- endfor -%}
+</div>
+
+<p class="news-empty" hidden>No items in this category yet.</p>
+</div>
+</section>
+
+<dialog class="news-modal" aria-labelledby="news-modal-title">
+  <button type="button" class="news-modal__close" aria-label="Close">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+  </button>
+  <div class="news-modal__content"></div>
+</dialog>

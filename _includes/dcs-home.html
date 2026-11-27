@@ -1,0 +1,48 @@
+{%- comment -%}
+Include: dcs-home.html
+Shows Doctoral Candidates on the home page, automatically.
+A DC appears only when its entry in _data/dcs.yml has a `name` AND a
+`thumb` that is not the placeholder image. Ordered by DC number.
+Each card links to the DC's accordion item on /research/ (opened by main.js).
+{%- endcomment -%}
+
+{%- assign all_dcs = "" | split: "" -%}
+{%- for wp in site.data.dcs.work_packages -%}
+  {%- for dc in wp.dcs -%}
+    {%- if dc.name and dc.thumb and dc.thumb != "" -%}
+      {%- unless dc.thumb contains "placeholder" -%}
+        {%- assign all_dcs = all_dcs | push: dc -%}
+      {%- endunless -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+
+{%- if all_dcs.size > 0 -%}
+<section class="dcs-home-section reveal" aria-labelledby="dcs-home-title" markdown="0">
+<div class="container">
+<div class="section-head">
+<h2 id="dcs-home-title">Meet our Doctoral Candidates</h2>
+<p class="section-lede">{{ all_dcs.size }} doctoral candidates have joined Met2Adapt so far.</p>
+</div>
+
+<div class="dcs-home-grid" role="list">
+{%- for n in (1..40) -%}
+  {%- assign code = "DC" | append: n -%}
+  {%- assign dc = all_dcs | where: "code", code | first -%}
+  {%- if dc -%}
+  {%- assign clean_name = dc.name | replace: "Mr. ", "" | replace: "Ms. ", "" | replace: "Mr ", "" | replace: "Ms ", "" | replace: "Dr. ", "" | strip -%}
+  <a class="dc-card" role="listitem" href="{{ '/research/' | relative_url }}#{{ dc.id }}">
+    <span class="dc-card__photo">
+      <img src="{{ dc.thumb | relative_url }}" alt="Photo of {{ clean_name }}" loading="lazy" width="320" height="320">
+    </span>
+    <span class="dc-card__code">{{ dc.code }}</span>
+    <span class="dc-card__name">{{ clean_name }}</span>
+    <span class="dc-card__host">{{ dc.host }}</span>
+    <span class="dc-card__title">{{ dc.title }}</span>
+  </a>
+  {%- endif -%}
+{%- endfor -%}
+</div>
+</div>
+</section>
+{%- endif -%}

@@ -5,15 +5,31 @@ nav: home
 permalink: /
 ---
 
-<section class="hero hero-home reveal">
+{%- assign dc_total = 0 -%}
+{%- for wp in site.data.dcs.work_packages -%}{%- assign dc_total = dc_total | plus: wp.dcs.size -%}{%- endfor -%}
+{%- assign partner_total = site.data.logos.logos | where: "ispartner", 1 | size -%}
+{%- assign assoc_total = site.data.logos.logos | where: "ispartner", 2 | size -%}
+
+<section class="hero hero-home reveal" aria-labelledby="hero-title" markdown="0">
 <div class="hero-overlay"></div>
 
 <div class="container hero-content">
-<h1>Advanced Meta-materials and Meta-Structures for Adaptable, Resilient and Sustainable renewable energy power plants</h1>
-<p>A European training network advancing fundamental and translational research.</p>
+<p class="hero-kicker">Marie Skłodowska-Curie Doctoral Network</p>
+<h1 id="hero-title">Advanced Meta-materials and Meta-Structures for Adaptable, Resilient and Sustainable renewable energy power plants</h1>
+<p class="hero-lede">A European training network advancing fundamental and translational research.</p>
 <div class="hero-actions">
-<a href="{{ "/research/" | relative_url }}" class="btn btn-primary">Explore Research</a>
-<a href="{{ "/training/" | relative_url }}" class="btn btn-primary">Explore Training </a>
+<a href="{{ "/research/" | relative_url }}" class="btn btn-hero">Explore research</a>
+<a href="{{ "/training/" | relative_url }}" class="btn btn-hero-ghost">Explore training</a>
+<a href="https://www.linkedin.com/company/112561317" class="btn btn-hero-ghost btn-linkedin" target="_blank" rel="noopener"><svg class="li-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Connect with us on LinkedIn</a>
+</div>
+</div>
+
+<div class="hero-facts">
+<div class="container hero-facts__inner">
+<p><strong>{{ dc_total }}</strong> doctoral candidates</p>
+<p><strong>{{ partner_total }}</strong> partner institutions</p>
+<p><strong>{{ assoc_total }}</strong> associated partners</p>
+<p class="hero-facts__grant">Funded by the European Union, grant agreement No 101227175</p>
 </div>
 </div>
 </section>
@@ -31,44 +47,30 @@ permalink: /
 </div>
 </section>
 
-<section class="intro-section reveal">
-<!-- Carousel inside the overlay -->
-<div class="hero-carousel" aria-roledescription="carousel" aria-label="Hero images">
+<section class="intro-section reveal" markdown="0">
+<div class="hero-carousel" aria-roledescription="carousel" aria-label="Met2Adapt in pictures">
 <div class="hc-track" data-active="0">
-<div class="hc-slide" data-index="0" aria-hidden="false" id="slide-0">
-<img src="img/slider/slid1.png" alt="Image of a random crystal">
-</div>
-<div class="hc-slide" data-index="1" aria-hidden="true" id="slide-1">
-<img src="img/slider/slid2.jpg" alt="Image of luminesense">
-</div>
-<div class="hc-slide" data-index="2" aria-hidden="true" id="slide-2">
-<img src="img/slider/slid3.jpg" alt="Sputtering">
-</div>
-<div class="hc-slide" data-index="3" aria-hidden="true" id="slide-3">
-<img src="img/slider/slid4.jpg" alt="elipsometer">
-</div>
-<div class="hc-slide" data-index="4" aria-hidden="true" id="slide-4">
-<img src="img/slider/slid5.jpg" alt="Photo of a sound tunnel">
-</div>
-<div class="hc-slide" data-index="5" aria-hidden="true" id="slide-5">
-<img src="img/slider/slid6.png" alt="Photo of a meta-material">
-</div>
+{% for sl in site.data.slider %}
+<figure class="hc-slide" data-index="{{ forloop.index0 }}" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}" id="slide-{{ forloop.index0 }}">
+<img src="{{ sl.image | relative_url }}" alt="{{ sl.alt }}" {% unless forloop.first %}loading="lazy"{% endunless %} style="object-position: {{ sl.position | default: 'center' }};">
+{% if sl.caption %}<figcaption class="hc-caption">{{ sl.caption }}</figcaption>{% endif %}
+</figure>
+{% endfor %}
 </div>
 
 <button class="hc-prev" aria-label="Previous slide" type="button">‹</button>
 <button class="hc-next" aria-label="Next slide" type="button">›</button>
 
 <div class="hc-indicators" role="tablist" aria-label="Slide indicators">
-<button role="tab" aria-selected="true" aria-controls="slide-0" data-to="0" type="button"></button>
-<button role="tab" aria-selected="false" aria-controls="slide-1" data-to="1" type="button"></button>
-<button role="tab" aria-selected="false" aria-controls="slide-2" data-to="2" type="button"></button>
-<button role="tab" aria-selected="false" aria-controls="slide-3" data-to="3" type="button"></button>
-<button role="tab" aria-selected="false" aria-controls="slide-4" data-to="4" type="button"></button>
-<button role="tab" aria-selected="false" aria-controls="slide-5" data-to="5" type="button"></button>
+{% for sl in site.data.slider %}
+<button role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="slide-{{ forloop.index0 }}" aria-label="Slide {{ forloop.index }}" data-to="{{ forloop.index0 }}" type="button"></button>
+{% endfor %}
 </div>
 </div>
 
 </section>
+
+{% include dcs-home.html %}
 
 <section class="intro-section reveal">
 <div class="container">

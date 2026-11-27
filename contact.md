@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Contact MENTOR"
+title: "Contact | Met2Adapt"
 nav: contact
 permalink: /contact/
 ---

@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Training Met2Adapt"
+title: "Recruitment | Met2Adapt"
 nav: recruitment
 permalink: /recruitment/
 ---
 
-<section class="hero hero-home reveal">
+<section class="hero hero-secondary reveal">
 <div class="hero-overlay"></div>
 
 <div class="container hero-content">

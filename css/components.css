@@ -477,3 +477,62 @@
   margin: 0;
 }
 
+
+
+/* ===== Doctoral Candidates on the home page ===== */
+.dcs-home-section { margin: 2.5rem 0 1.5rem; padding: 2.5rem 0; background: var(--bg-light); }
+.dcs-home-section .section-head { text-align: center; margin-bottom: 1.75rem; }
+.dcs-home-section .section-lede { color: var(--muted); margin: 0.25rem 0 0; }
+
+.dcs-home-grid {
+  display: grid; gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.dc-card {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: 1.5rem 1rem 1.25rem; background: var(--white); border-radius: 14px;
+  border: 1px solid rgba(0,58,112,0.08); box-shadow: 0 4px 14px rgba(0,38,77,0.06);
+  color: var(--text); text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.dc-card:hover, .dc-card:focus-visible {
+  text-decoration: none; transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,38,77,0.12); border-color: rgba(198,146,20,0.5);
+}
+.dc-card:focus-visible { outline: 3px solid rgba(0,58,112,0.25); outline-offset: 3px; }
+
+.dc-card__photo {
+  width: 128px; height: 128px; border-radius: 50%; padding: 4px;
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  margin-bottom: 0.9rem;
+}
+.dc-card__photo img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center top;
+  border-radius: 50%; border: 3px solid var(--white);
+}
+.dc-card__code {
+  font-family: "Montserrat", sans-serif; font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.08em; color: var(--accent); text-transform: uppercase;
+}
+.dc-card__name {
+  font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 1.02rem;
+  color: var(--primary-dark); margin-top: 0.15rem;
+}
+.dc-card__host { font-size: 0.85rem; color: var(--muted); margin-top: 0.1rem; }
+.dc-card__title {
+  font-size: 0.82rem; line-height: 1.45; color: var(--text); margin-top: 0.6rem;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+@media (max-width: 520px) {
+  .dcs-home-grid { grid-template-columns: repeat(2, 1fr); gap: 0.9rem; }
+  .dc-card { padding: 1rem 0.6rem; }
+  .dc-card__photo { width: 96px; height: 96px; }
+  .dc-card__title { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .dc-card { transition: none; } .dc-card:hover { transform: none; } }
+
+/* Highlight the accordion item reached from a home-page card */
+.dc-item.dc-item--target { box-shadow: 0 0 0 3px rgba(198,146,20,0.45); border-radius: 8px; transition: box-shadow .6s ease; }
+.dc-item { scroll-margin-top: 90px; }

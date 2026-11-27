@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const indicators = Array.from(carousel.querySelectorAll('.hc-indicators button'));
   let idx = 0;
   let interval = null;
-  const AUTOPLAY_MS = 2500;
+  const AUTOPLAY_MS = 5000;
 
   function goTo(n, userTriggered = false) {
     idx = (n + slides.length) % slides.length;
@@ -289,13 +289,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function startAutoplay() {
     stopAutoplay();
+    if (slides.length < 2) return;
     interval = setInterval(nextSlide, AUTOPLAY_MS);
   }
   function stopAutoplay() { if (interval) { clearInterval(interval); interval = null; } }
   function restartAutoplay() { stopAutoplay(); startAutoplay(); }
 
-  prev.addEventListener('click', () => prevSlide());
-  next.addEventListener('click', () => nextSlide());
+  prev.addEventListener('click', () => goTo(idx - 1, true));
+  next.addEventListener('click', () => goTo(idx + 1, true));
   indicators.forEach(btn => btn.addEventListener('click', (e) => {
     const to = Number(btn.dataset.to);
     goTo(to, true);
@@ -306,8 +307,19 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === 'ArrowRight') nextSlide();
   });
 
-  carousel.addEventListener('mouseenter', stopAutoplay);
-  carousel.addEventListener('mouseleave', startAutoplay);
+  // pause only while a mouse pointer rests on the slider (touch taps do not stop it)
+  carousel.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') stopAutoplay(); });
+  carousel.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') startAutoplay(); });
+  document.addEventListener('visibilitychange', () => document.hidden ? stopAutoplay() : startAutoplay());
+  // swipe left/right on touch screens
+  let touchX = null, touchY = null;
+  carousel.addEventListener('touchstart', (e) => { touchX = e.touches[0].clientX; touchY = e.touches[0].clientY; }, { passive: true });
+  carousel.addEventListener('touchend', (e) => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX, dy = e.changedTouches[0].clientY - touchY;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) goTo(idx + (dx < 0 ? 1 : -1), true);
+    touchX = touchY = null;
+  }, { passive: true });
   carousel.setAttribute('tabindex', '0'); // make carousel focusable for keyboard nav
 
   // init
@@ -357,3 +369,85 @@ document.addEventListener("DOMContentLoaded", function () {
     e.stopPropagation();
   });
 });
+
+
+// Deep link from home-page DC cards: /research/#wp1-dc1 opens the WP list and the DC item
+(function () {
+  function openDcFromHash() {
+    var id = decodeURIComponent((location.hash || '').slice(1));
+    if (!id) return;
+    var item = document.getElementById(id);
+    if (!item || !item.classList.contains('dc-item')) return;
+
+    var list = item.closest('.dc-list');
+    if (list && list.hasAttribute('hidden')) {
+      list.removeAttribute('hidden');
+      var t = document.querySelector('.dc-toggle[aria-controls="' + list.id + '"]');
+      if (t) t.setAttribute('aria-expanded', 'true');
+    }
+    var body = item.querySelector('.dc-body');
+    var header = item.querySelector('.dc-header');
+    if (body && !body.classList.contains('open') && header) header.click();
+
+    item.classList.add('dc-item--target');
+    setTimeout(function () { item.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 50);
+    setTimeout(function () { item.classList.remove('dc-item--target'); }, 2500);
+  }
+  window.addEventListener('load', openDcFromHash);
+  window.addEventListener('hashchange', openDcFromHash);
+})();
+
+
+// News & Events: filters and full-story pop-up (each story has its own link: /news/#id)
+(function () {
+  const list = document.querySelector('.news-list');
+  if (!list) return;
+  const items = Array.from(list.querySelectorAll('.news-item'));
+  const empty = document.querySelector('.news-empty');
+
+  document.querySelectorAll('.news-filter').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const f = btn.dataset.filter;
+      document.querySelectorAll('.news-filter').forEach(b => {
+        const on = b === btn; b.classList.toggle('is-active', on); b.setAttribute('aria-pressed', on);
+      });
+      let shown = 0;
+      items.forEach(it => { const ok = f === 'all' || it.dataset.type === f; it.hidden = !ok; if (ok) shown++; });
+      if (empty) empty.hidden = shown > 0;
+    });
+  });
+
+  const dlg = document.querySelector('.news-modal');
+  if (!dlg || typeof dlg.showModal !== 'function') return;   // very old browsers: links fall back to #id
+  const content = dlg.querySelector('.news-modal__content');
+  let opener = null;
+
+  function open(id, fromHash) {
+    const tpl = document.getElementById('tpl-' + id);
+    if (!tpl) return false;
+    content.replaceChildren(tpl.content.cloneNode(true));
+    content.scrollTop = 0;
+    if (!dlg.open) dlg.showModal();
+    if (!fromHash && location.hash !== '#' + id) history.pushState(null, '', '#' + id);
+    return true;
+  }
+  function close() { if (dlg.open) dlg.close(); }
+
+  list.addEventListener('click', e => {
+    const a = e.target.closest('[data-news-open]');
+    if (!a) return;
+    e.preventDefault(); opener = a; open(a.dataset.newsOpen, false);
+  });
+  dlg.querySelector('.news-modal__close').addEventListener('click', close);
+  dlg.addEventListener('click', e => { if (e.target === dlg) close(); });   // click on the dimmed backdrop
+  dlg.addEventListener('close', () => {
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    if (opener) opener.focus();
+  });
+  function fromHash() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (id && document.getElementById('tpl-' + id)) open(id, true); else close();
+  }
+  window.addEventListener('popstate', fromHash);
+  fromHash();
+})();
