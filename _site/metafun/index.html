@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MetaFun | Met2Adapt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Play with meta-materials: stop a wave with local resonators, spin 3D lattice unit cells, test yourself with a quiz and explore the Met2Adapt glossary.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap">
+  <link rel="preload" as="image" href="/img/hero-secondary.webp" fetchpriority="high">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages.css"> 
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#003A70">  
+</head>
+
+
+
+<body>
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="/" aria-label="Met2Adapt home">
+<img class="brand__icon" src="/img/logo/met2adapt-icon-small.svg" alt="" width="40" height="40">
+<span class="brand__text"><span class="brand__name">Met2Adapt</span><span class="brand__tag">MSCA Doctoral Network</span></span>
+</a>
+
+<nav class="main-nav" aria-label="Main navigation">
+<button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu">
+<span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
+</button>
+
+<div class="nav-panel" id="main-menu">
+<ul class="nav-links">
+<li><a href="/">Home</a></li>
+<li><a href="/research/">Research</a></li>
+<li><a href="/training/">Training</a></li>
+<li><a href="/recruitment/">Recruitment</a></li>
+<li><a href="/news/">News &amp; Events</a></li>
+<li><a href="/metafun/" class="active" aria-current="page">MetaFun</a></li>
+<li><a href="/contact/">Contact</a></li>
+</ul>
+<a class="nav-linkedin" href="https://www.linkedin.com/company/112561317" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Follow us on LinkedIn</a>
+</div>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero hero-secondary reveal">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1>MetaFun</h1>
+    <p>Play with the ideas behind Met2Adapt: stop a wave, spin a lattice and test what you know.</p>
+  </div>
+</section>
+
+<nav class="mf-jump" aria-label="On this page">
+<div class="container">
+<a href="#wave">Stop the wave</a>
+<a href="#lattice">Spin a unit cell</a>
+<a href="#quiz">Quiz</a>
+<a href="#glossary">Glossary</a>
+</div>
+</nav>
+
+<section class="mf-section reveal" id="wave" aria-labelledby="wave-title">
+<div class="container mf-two">
+<div class="mf-text">
+<p class="mf-kicker">Interactive 1</p>
+<h2 id="wave-title">What is a meta-material? Stop the wave</h2>
+<p>Below is a chain of masses connected by springs. The gold driver on the left shakes it at the frequency you choose, and a wave travels along the chain to the right.</p>
+<p>Now switch on the <strong>meta-material</strong>: the masses in the middle section each get a small oscillator (a gold hexagon). Without it, the wave passes through untouched at every frequency. With it, frequencies close to the oscillators' own natural frequency are stopped: the resonators move against the chain and the wave dies out inside the section. This frequency range is called a <strong>band gap</strong>.</p>
+<p class="mf-hint">Try it: switch the meta-material on, then slide the frequency into the shaded band in the chart.</p>
+</div>
+<div class="mf-panel">
+<canvas id="wave-canvas" class="mf-canvas" height="260" aria-label="Animated chain of masses and springs"></canvas>
+<div class="mf-controls">
+<label class="mf-switch"><input type="checkbox" id="wave-meta" /><span class="mf-switch__track"><span class="mf-switch__thumb"></span></span><span>Meta-material (local resonators)</span></label>
+<label class="mf-slider"><span>Frequency <output id="wave-freq-out">0.60</output></span><input type="range" id="wave-freq" min="0.15" max="1.85" step="0.01" value="0.6" /></label>
+<button type="button" class="mf-btn mf-btn--ghost" id="wave-play" aria-pressed="true">Pause</button>
+</div>
+<div class="mf-readout"><span>Wave reaching the far end</span><strong id="wave-trans">100%</strong></div>
+<canvas id="wave-spectrum" class="mf-spectrum" height="150" aria-label="Transmission versus frequency, with and without the meta-material"></canvas>
+<p class="mf-legend"><span class="lg lg--plain"></span>Plain chain <span class="lg lg--meta"></span>With meta-material <span class="lg lg--gap"></span>Band gap</p>
+</div>
+</div>
+</section>
+
+<section class="mf-section mf-section--light reveal" id="lattice" aria-labelledby="lattice-title">
+<div class="container mf-two mf-two--flip">
+<div class="mf-panel">
+<canvas id="lattice-canvas" class="mf-canvas mf-canvas--3d" height="380" aria-label="Rotatable 3D lattice unit cell"></canvas>
+<div class="mf-controls">
+<div class="mf-seg" role="group" aria-label="Unit cell type">
+<button type="button" class="is-on" data-cell="hex">Honeycomb</button>
+<button type="button" data-cell="cubic">Cubic</button>
+<button type="button" data-cell="bcc">BCC</button>
+<button type="button" data-cell="octet">Octet truss</button>
+</div>
+<label class="mf-switch"><input type="checkbox" id="lattice-tile" /><span class="mf-switch__track"><span class="mf-switch__thumb"></span></span><span>Repeat 2 × 2 × 2</span></label>
+</div>
+<p class="mf-small">Drag to rotate. On phones, swipe with one finger.</p>
+</div>
+<div class="mf-text">
+<p class="mf-kicker">Interactive 2</p>
+<h2 id="lattice-title">Spin a unit cell</h2>
+<p>A meta-material is built by repeating a small <strong>unit cell</strong> over and over, like bricks in a wall. Engineers design the shape of that cell to get the behaviour they need: very light yet stiff, energy-absorbing, or able to block vibrations.</p>
+<ul class="mf-facts">
+<li><strong>Honeycomb:</strong> the shape in our logo. Light and stiff, used in aircraft panels and sandwich structures.</li>
+<li><strong>Cubic:</strong> the simplest lattice, with struts only along the edges.</li>
+<li><strong>BCC (body-centred cubic):</strong> adds diagonal struts to the centre, a common choice for 3D-printed lattices.</li>
+<li><strong>Octet truss:</strong> struts arranged as tetrahedra and octahedra, among the stiffest lattices for its weight.</li>
+</ul>
+<p>Switch on <em>Repeat 2 × 2 × 2</em> to see how cells join into a larger block.</p>
+</div>
+</div>
+</section>
+
+<section class="mf-section reveal" id="quiz" aria-labelledby="quiz-title">
+<div class="container">
+<p class="mf-kicker">Interactive 3</p>
+<h2 id="quiz-title">Quick quiz: waves, wind and meta-materials</h2>
+<p class="mf-lede">Six questions. Pick an answer to see whether you were right and why.</p>
+<div class="mf-score" aria-live="polite"><span id="quiz-score">0</span> / <span id="quiz-total">6</span> correct</div>
+<div id="quiz-list" class="mf-quiz"></div>
+<div class="mf-quiz-end" id="quiz-end" hidden="">
+<p id="quiz-verdict"></p>
+<button type="button" class="mf-btn" id="quiz-retry">Try again</button>
+</div>
+</div>
+</section>
+
+<section class="mf-section mf-section--light reveal" id="glossary" aria-labelledby="glossary-title">
+<div class="container">
+<p class="mf-kicker">Explained</p>
+<h2 id="glossary-title">Glossary</h2>
+<p class="mf-lede">Short explanations of the terms used across this website. Elsewhere on the site, terms with a dotted underline open the same explanation when you tap or hover over them.</p>
+<dl class="mf-glossary"><div class="mf-glossary__item"><dt>Band gap</dt><dd>A range of frequencies in which waves cannot travel through a periodic or resonant material, so vibrations in that range are strongly attenuated.</dd></div><div class="mf-glossary__item"><dt>Digital twin</dt><dd>A virtual model of a physical asset that is updated with measured data, so it mirrors the asset's current state and can predict its future behaviour.</dd></div><div class="mf-glossary__item"><dt>Fatigue</dt><dd>Progressive damage caused by repeated (cyclic) loading. It can lead to cracking and failure even when each individual load is well below the material's static strength.</dd></div><div class="mf-glossary__item"><dt>Finite element method</dt><dd>A numerical method that divides a structure into many small elements to compute how it deforms, vibrates or fails under load.</dd></div><div class="mf-glossary__item"><dt>Local resonator</dt><dd>A small oscillator embedded in a material. Near its own natural frequency it moves against the host material and absorbs its motion, opening a band gap even at low frequencies.</dd></div><div class="mf-glossary__item"><dt>Meta-material</dt><dd>An engineered material whose properties come from its designed internal architecture, the shape and arrangement of small building blocks, rather than from its chemical composition. This allows behaviour not found in ordinary materials, such as blocking waves in certain frequency ranges.</dd></div><div class="mf-glossary__item"><dt>Meta-structure</dt><dd>A structure or component built from meta-material building blocks (unit cells), designed to control how it carries loads or transmits vibrations and waves.</dd></div><div class="mf-glossary__item"><dt>Offshore wind</dt><dd>Wind turbines installed at sea, where winds are stronger and steadier than on land. They must withstand demanding loads from wind, waves and corrosion.</dd></div><div class="mf-glossary__item"><dt>Phase-field model</dt><dd>A modelling approach that represents a crack as a smooth damage field rather than a sharp discontinuity, which makes complex crack growth easier to simulate.</dd></div><div class="mf-glossary__item"><dt>Physics-informed AI</dt><dd>Machine-learning models constrained by known physical laws, so they need less data and give physically consistent predictions.</dd></div><div class="mf-glossary__item"><dt>Secondment</dt><dd>A period a Doctoral Candidate spends at another partner organisation, often in industry, to gain complementary skills and experience.</dd></div><div class="mf-glossary__item"><dt>Structural Health Monitoring (SHM)</dt><dd>Continuous or periodic assessment of a structure's condition using sensors and data analysis, to detect damage early and support maintenance decisions.</dd></div><div class="mf-glossary__item"><dt>Uncertainty quantification</dt><dd>Methods that describe how uncertainty in inputs, such as loads, material properties or models, affects predictions, so results come with confidence bounds.</dd></div><div class="mf-glossary__item"><dt>Vibration mitigation</dt><dd>Reducing unwanted vibrations of a structure, for example by damping, isolation or wave-blocking meta-materials, to extend its service life and improve safety.</dd></div><div class="mf-glossary__item"><dt>Wave energy converter</dt><dd>A device that captures the energy of ocean surface waves and converts it into electricity.</dd></div></dl>
+</div>
+</section>
+
+
+</main>
+<footer class="site-footer">
+<div class="container footer-inner">
+
+
+<div class="footer-col col-1">
+<p>The Met2Adapt Doctoral Network<br />
+		  National Technical University of Athens,<br/>
+		  School of Civil Engineering,<br/>
+		  Laboratory for Structural Analysis and Aseismic Research,<br />
+		  9 Iroon Polytechneiou st.<br />
+		  NTUA Zografou Campus, Greece, 15780 <br />
+            (<a href="https://www.google.com/maps/place/School+of+Civil+Engineering/@37.9768088,23.7786468,19.58z/data=!4m12!1m6!3m5!1s0x14a19740180c6e35:0x36ea0453d9a5b61c!2sSecretariat,+School+of+Civil+Engineering,+NTUA!8m2!3d37.976605!4d23.7787197!3m4!1s0x0:0xd4676bf12d7b7605!8m2!3d37.9768576!4d23.7787981">Maps</a>, <a href="https://www.ntua.gr/en/contact/general-information">Directions</a>)</p>
+</div>
+
+<div class="footer-col col-2">
+<p>Coordinator<br />
+Dr. Savvas Triantafyllou, Associate Professor</p>
+</div>
+
+<div class="footer-col col-3">
+  <div class="col-3-content">
+    <div class="col-3-text">
+      Met2Adapt is funded by the European Union under the grant agreement No 101227175. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency (REA). Neither the European Union nor the granting authority can be held responsible for them.
+    </div>
+    <img src="/img/logos/eulogo.png" alt="European Union logo" class="eu-logo" loading="lazy" decoding="async">
+  </div>
+</div>
+
+
+
+
+
+</div>
+</footer>
+
+<script id="glossary-data" type="application/json">[{"term":"Meta-material","match":["meta-materials","meta-material","metamaterials","metamaterial"],"text":"An engineered material whose properties come from its designed internal architecture, the shape and arrangement of small building blocks, rather than from its chemical composition. This allows behaviour not found in ordinary materials, such as blocking waves in certain frequency ranges."},{"term":"Meta-structure","match":["meta-structures","meta-structure","metastructures","metastructure","metastructural"],"text":"A structure or component built from meta-material building blocks (unit cells), designed to control how it carries loads or transmits vibrations and waves."},{"term":"Band gap","match":["band gaps","band gap","bandgaps","bandgap"],"text":"A range of frequencies in which waves cannot travel through a periodic or resonant material, so vibrations in that range are strongly attenuated."},{"term":"Local resonator","match":["local resonators","local resonator","local resonance","locally resonant"],"text":"A small oscillator embedded in a material. Near its own natural frequency it moves against the host material and absorbs its motion, opening a band gap even at low frequencies."},{"term":"Vibration mitigation","match":["vibration mitigation","vibration reduction","vibration-attenuating"],"text":"Reducing unwanted vibrations of a structure, for example by damping, isolation or wave-blocking meta-materials, to extend its service life and improve safety."},{"term":"Structural Health Monitoring (SHM)","match":["Structural Health Monitoring","structural health monitoring","SHM"],"text":"Continuous or periodic assessment of a structure's condition using sensors and data analysis, to detect damage early and support maintenance decisions."},{"term":"Digital twin","match":["Digital Twins","digital twins","Digital Twin","digital twin","Digital Twinning"],"text":"A virtual model of a physical asset that is updated with measured data, so it mirrors the asset's current state and can predict its future behaviour."},{"term":"Fatigue","match":["fatigue"],"text":"Progressive damage caused by repeated (cyclic) loading. It can lead to cracking and failure even when each individual load is well below the material's static strength."},{"term":"Phase-field model","match":["phase-field","phase field"],"text":"A modelling approach that represents a crack as a smooth damage field rather than a sharp discontinuity, which makes complex crack growth easier to simulate."},{"term":"Finite element method","match":["finite element method","finite elements","finite element","FE models"],"text":"A numerical method that divides a structure into many small elements to compute how it deforms, vibrates or fails under load."},{"term":"Wave energy converter","match":["wave energy converters","wave energy converter","wave-energy converters","ocean energy conversion devices","WECs"],"text":"A device that captures the energy of ocean surface waves and converts it into electricity."},{"term":"Offshore wind","match":["offshore wind farms","offshore wind","off-shore"],"text":"Wind turbines installed at sea, where winds are stronger and steadier than on land. They must withstand demanding loads from wind, waves and corrosion."},{"term":"Uncertainty quantification","match":["uncertainty quantification","Uncertainty Quantification"],"text":"Methods that describe how uncertainty in inputs, such as loads, material properties or models, affects predictions, so results come with confidence bounds."},{"term":"Physics-informed AI","match":["physics-informed AI","Physics informed AI","Physics-informed AI","fusing physics and AI"],"text":"Machine-learning models constrained by known physical laws, so they need less data and give physically consistent predictions."},{"term":"Secondment","match":["secondments","secondment"],"text":"A period a Doctoral Candidate spends at another partner organisation, often in industry, to gain complementary skills and experience."}]</script>
+<script src="/js/main.js" defer></script>
+<script src="/js/metafun.js" defer></script>
+
+
+
+
+
+ 
+
+
+
+</body>
+</html>
+
+

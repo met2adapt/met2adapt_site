@@ -1,0 +1,13 @@
+<section class="mf-section mf-section--light reveal" id="glossary" markdown="0" aria-labelledby="glossary-title">
+<div class="container">
+<p class="mf-kicker">Explained</p>
+<h2 id="glossary-title">Glossary</h2>
+<p class="mf-lede">Short explanations of the terms used across this website. Elsewhere on the site, terms with a dotted underline open the same explanation when you tap or hover over them.</p>
+<dl class="mf-glossary">
+{%- assign terms = site.data.glossary | sort: "term" -%}
+{%- for g in terms -%}
+<div class="mf-glossary__item"><dt>{{ g.term }}</dt><dd>{{ g.text }}</dd></div>
+{%- endfor -%}
+</dl>
+</div>
+</section>

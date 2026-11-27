@@ -22,7 +22,7 @@ Dr. Savvas Triantafyllou, Associate Professor</p>
     <div class="col-3-text">
       {{ site.footer.col3 | default: "Funded by the European Union" }}
     </div>
-    <img src="{{ "/img/logos/eulogo.png" | relative_url }}" alt="European Union logo" class="eu-logo">
+    <img src="{{ "/img/logos/eulogo.png" | relative_url }}" alt="European Union logo" class="eu-logo" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -33,7 +33,9 @@ Dr. Savvas Triantafyllou, Associate Professor</p>
 </div>
 </footer>
 
-<script src="{{ "/js/main.js" | relative_url }}"></script>
+<script id="glossary-data" type="application/json">{{ site.data.glossary | jsonify }}</script>
+<script src="{{ "/js/main.js" | relative_url }}" defer></script>
+{% if page.extra_js %}<script src="{{ page.extra_js | relative_url }}" defer></script>{% endif %}
 
 
 

@@ -245,6 +245,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function goTo(n, userTriggered = false) {
     idx = (n + slides.length) % slides.length;
     track.style.transform = `translateX(-${idx * 100}%)`;
+    [idx, (idx + 1) % slides.length].forEach(k => { const im = slides[k] && slides[k].querySelector('img[data-src]'); if (im) { im.src = im.dataset.src; im.removeAttribute('data-src'); } });
     slides.forEach((s,i) => {
       s.setAttribute('aria-hidden', i === idx ? 'false' : 'true');
     });
@@ -401,4 +402,80 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('click', (e) => { if (nav.classList.contains('open') && !nav.contains(e.target)) setOpen(false); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && nav.classList.contains('open')) { setOpen(false); toggle.focus(); } });
   mq.addEventListener('change', () => setOpen(false));
+})();
+
+
+// Glossary: the first mention of each term on a page gets a dotted underline and a small pop-up explanation
+(function () {
+  const data = document.getElementById('glossary-data');
+  if (!data) return;
+  let terms; try { terms = JSON.parse(data.textContent); } catch (e) { return; }
+  const scope = document.querySelectorAll('main p, main li, main dd');
+  const skip = 'a, button, h1, h2, h3, h4, .hero, .mf-glossary, .gloss, .news-item__meta, .ttw__place, .dc-header, .news-modal, nav, script, style';
+  // longest spellings first so "band gaps" wins over "band gap"
+  const entries = [];
+  terms.forEach((t, i) => (t.match || [t.term]).forEach(s => entries.push({ s, i })));
+  entries.sort((a, b) => b.s.length - a.s.length);
+  const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re = new RegExp('(^|[^A-Za-z0-9-])(' + entries.map(e => esc(e.s)).join('|') + ')(?![A-Za-z0-9-])');
+  const used = new Set();
+  const lookup = (txt) => { const e = entries.find(x => x.s === txt) || entries.find(x => x.s.toLowerCase() === txt.toLowerCase()); return e ? e.i : -1; };
+
+  scope.forEach(el => {
+    if (el.closest(skip)) return;
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, { acceptNode: n => n.parentElement.closest(skip) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+    const nodes = []; while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(node => {
+      let cur = node;
+      while (cur) {
+        const txt = cur.nodeValue, g = new RegExp(re.source, 'g'); let m, hit = null;
+        while ((m = g.exec(txt))) {
+          const i = lookup(m[2]);
+          if (i >= 0 && !used.has(i)) { hit = { start: m.index + m[1].length, w: m[2], i }; break; }
+        }
+        if (!hit) break;
+        used.add(hit.i);
+        const mid = cur.splitText(hit.start), tail = mid.splitText(hit.w.length);
+        const btn = document.createElement('button');
+        btn.type = 'button'; btn.className = 'gloss'; btn.textContent = hit.w;
+        btn.setAttribute('aria-expanded', 'false'); btn.dataset.term = hit.i;
+        mid.parentNode.replaceChild(btn, mid);
+        cur = tail;
+      }
+    });
+  });
+
+  // pop-up
+  const pop = document.createElement('div');
+  pop.className = 'gloss-pop'; pop.setAttribute('role', 'tooltip'); pop.id = 'gloss-pop'; pop.hidden = true;
+  document.body.appendChild(pop);
+  let current = null, hoverTimer = null;
+  function show(btn) {
+    const t = terms[btn.dataset.term]; if (!t) return;
+    pop.innerHTML = '<strong></strong><span></span><a></a>';
+    pop.querySelector('strong').textContent = t.term;
+    pop.querySelector('span').textContent = t.text;
+    const a = pop.querySelector('a'); a.href = '/metafun/#glossary'; a.textContent = 'Full glossary';
+    pop.hidden = false;
+    const r = btn.getBoundingClientRect(), pw = Math.min(320, window.innerWidth - 24);
+    pop.style.width = pw + 'px';
+    let left = r.left + r.width / 2 - pw / 2; left = Math.max(12, Math.min(left, window.innerWidth - pw - 12));
+    const below = r.bottom + 10 + pop.offsetHeight < window.innerHeight;
+    pop.style.left = left + 'px';
+    pop.style.top = (below ? r.bottom + 8 : r.top - pop.offsetHeight - 8) + 'px';
+    if (current && current !== btn) current.setAttribute('aria-expanded', 'false');
+    current = btn; btn.setAttribute('aria-expanded', 'true'); btn.setAttribute('aria-describedby', 'gloss-pop');
+  }
+  function hide() { if (!current) return; pop.hidden = true; current.setAttribute('aria-expanded', 'false'); current.removeAttribute('aria-describedby'); current = null; }
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('.gloss');
+    if (b) { e.preventDefault(); current === b ? hide() : show(b); return; }
+    if (!e.target.closest('.gloss-pop')) hide();
+  });
+  document.addEventListener('mouseover', (e) => { const b = e.target.closest('.gloss'); if (b && window.matchMedia('(hover: hover)').matches) { clearTimeout(hoverTimer); show(b); } });
+  document.addEventListener('mouseout', (e) => { if (e.target.closest('.gloss') && window.matchMedia('(hover: hover)').matches) { hoverTimer = setTimeout(() => { if (!pop.matches(':hover')) hide(); }, 250); } });
+  pop.addEventListener('mouseleave', () => { if (window.matchMedia('(hover: hover)').matches) hide(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hide(); });
+  window.addEventListener('scroll', hide, { passive: true });
+  window.addEventListener('resize', hide);
 })();

@@ -2,24 +2,24 @@
 # image: path under /img ; alt: description for screen readers
 # caption (optional): short text shown on the slide
 # position (optional): CSS object-position, e.g. "center 30%"
-- image: /img/slider/sizable-lifting.jpg
+- image: /img/slider/sizable-lifting.webp
   alt: "Crane lifting the Sizable Energy floating structure into the sea, with a tugboat waiting. Courtesy of Sizable Energy"
   caption: "Sizable Energy prototype being lifted into the sea (courtesy of Sizable Energy)"
-- image: /img/slider/sizable-deployed-top.jpg
+- image: /img/slider/sizable-deployed-top.webp
   alt: "Top view of the deployed circular floating structure and its moored buoys. Courtesy of Sizable Energy"
   caption: "The deployed structure seen from above (courtesy of Sizable Energy)"
-- image: /img/slider/sizable-deployed-aerial.jpg
+- image: /img/slider/sizable-deployed-aerial.webp
   alt: "Aerial view of the deployed floating structure with yellow mooring buoys. Courtesy of Sizable Energy"
   caption: "Moored and operating at sea (courtesy of Sizable Energy)"
-- image: /img/slider/slid1.png
+- image: /img/slider/slid1.webp
   alt: "Image of a crystal structure"
-- image: /img/slider/slid2.jpg
+- image: /img/slider/slid2.webp
   alt: "Luminescence experiment"
-- image: /img/slider/slid3.jpg
+- image: /img/slider/slid3.webp
   alt: "Sputtering"
-- image: /img/slider/slid4.jpg
+- image: /img/slider/slid4.webp
   alt: "Ellipsometer"
-- image: /img/slider/slid5.jpg
+- image: /img/slider/slid5.webp
   alt: "Photo of a sound tunnel"
-- image: /img/slider/slid6.png
+- image: /img/slider/slid6.webp
   alt: "Photo of a metamaterial"

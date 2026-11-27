@@ -29,7 +29,7 @@ aria-controls="{{ dc.id }}-body"
 aria-expanded="false"
 tabindex="0">
 {%- assign clean_name = dc.name | replace: "Mr. ", "" | replace: "Ms. ", "" | replace: "Mr ", "" | replace: "Ms ", "" | strip -%}
-{% if dc.thumb %}<img class="dc-thumb" src="{{ dc.thumb | relative_url }}" alt="" {% if dc.thumb_size %}style="--thumb-size: {{ dc.thumb_size }}px"{% endif %}>{% endif %}
+{% if dc.thumb %}<img class="dc-thumb" loading="lazy" decoding="async" src="{{ dc.thumb | relative_url }}" alt="" {% if dc.thumb_size %}style="--thumb-size: {{ dc.thumb_size }}px"{% endif %}>{% endif %}
 <div class="dc-head-top">{% if dc.code %}<span class="dc-code">{{ dc.code }}</span>{% endif %}{% if dc.name %}<span class="dc-name">{{ clean_name }}</span>{% elsif dc.host %}<span class="dc-name dc-name--host">{{ dc.host }}</span>{% endif %}</div>
 <p class="dc-title">{{ dc.title }}</p>
 <div class="dc-details">{% if dc.name and dc.host %}<span><strong>Host:</strong> {{ dc.host }}</span>{% endif %}{% if dc.supervisor %}<span><strong>Supervisors:</strong> {{ dc.supervisor }}</span>{% endif %}</div>
@@ -66,7 +66,7 @@ tabindex="0">
 
 <div>
 {% if dc.photo %}
-<img class="dc-photo" style="--dc-scale: {{ dc.photo_scale | default: 1 }};" src="{{ dc.photo | escape }}" alt="{{ dc.title | escape }} photo">
+<img class="dc-photo" loading="lazy" decoding="async" style="--dc-scale: {{ dc.photo_scale | default: 1 }};" src="{{ dc.photo | escape }}" alt="{{ dc.title | escape }} photo">
 {% endif %}
 </div>
 </div>

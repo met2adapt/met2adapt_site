@@ -15,23 +15,27 @@ permalink: /contact/
 
 
 
-<section class="contact-section">
-<div class="container contact-grid">
-<div>
-<h3>Coordination</h3>
-<p>
-<strong>Project coordinator</strong><br />
-Dr. Savvas Triantafyllou<br />
-National Technical University of Athens<br />
-Athens, Greece
-</p>
-<p>
-<strong>Email:</strong> savtri@mail.ntua.gr<br />
-<strong>Phone:</strong> +30 210 772 2972
-</p>
+<section class="contact-section" markdown="0">
+<div class="container">
+<h2>Coordination team</h2>
+<div class="contact-cards">
+
+<article class="contact-card">
+<p class="contact-card__role">Project Coordinator</p>
+<h3 class="contact-card__name">Dr. Savvas Triantafyllou</h3>
+<p class="contact-card__org">National Technical University of Athens<br>Athens, Greece</p>
+<p class="contact-card__line"><span>Email</span><a href="mailto:savtri@mail.ntua.gr">savtri@mail.ntua.gr</a></p>
+<p class="contact-card__line"><span>Phone</span><a href="tel:+302107722972">+30 210 772 2972</a></p>
+</article>
+
+<article class="contact-card">
+<p class="contact-card__role">Project Manager</p>
+<h3 class="contact-card__name">Mr. George Pissas</h3>
+<p class="contact-card__org">National Technical University of Athens<br>Athens, Greece</p>
+<p class="contact-card__line"><span>Email</span><a href="mailto:pissasgeorge@mail.ntua.gr">pissasgeorge@mail.ntua.gr</a></p>
+</article>
+
 </div>
-
-
 </div>
 </section>
 

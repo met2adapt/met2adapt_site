@@ -13,7 +13,7 @@ items:
     type: news
     excerpt: ""
     content: ""
-    image: "/img/news/welcome-dc2.jpg"
+    image: "/img/news/welcome-dc2.webp"
     external_url: "https://www.linkedin.com/feed/update/urn:li:activity:7528110508705542144"
     dc_id: "wp2-dc2"
 
@@ -23,7 +23,7 @@ items:
     type: news
     excerpt: ""
     content: ""
-    image: "/img/news/welcome-dc3.jpg"
+    image: "/img/news/welcome-dc3.webp"
     external_url: "https://www.linkedin.com/feed/update/urn:li:activity:7532093294126837760"
     dc_id: "wp1-dc1"
 
@@ -33,7 +33,7 @@ items:
     type: news
     excerpt: ""
     content: ""
-    image: "/img/news/welcome-dc5.jpg"
+    image: "/img/news/welcome-dc5.webp"
     external_url: "https://www.linkedin.com/feed/update/urn:li:activity:7528110298520612864"
     dc_id: "wp3-dc1"
 
@@ -42,7 +42,7 @@ items:
     type: news
     excerpt: ""
     content: ""
-    image: "/img/news/welcome-dc8.jpg"
+    image: "/img/news/welcome-dc8.webp"
     external_url: "https://www.linkedin.com/company/met2adapt/posts/"
     dc_id: "wp3-dc3"
 
@@ -52,7 +52,7 @@ items:
     type: news
     excerpt: ""
     content: ""
-    image: "/img/news/welcome-dc9.jpg"
+    image: "/img/news/welcome-dc9.webp"
     external_url: "https://www.linkedin.com/feed/update/urn:li:activity:7528110021830926336"
     dc_id: "wp2-dc3"
 
@@ -62,7 +62,7 @@ items:
     type: news
     excerpt: ""
     content: ""
-    image: "/img/news/welcome-dc11.jpg"
+    image: "/img/news/welcome-dc11.webp"
     external_url: "https://www.linkedin.com/feed/update/urn:li:activity:7528110019259625472"
     dc_id: "wp4-dc1"
 
@@ -72,7 +72,7 @@ items:
     type: news
     excerpt: ""
     content: ""
-    image: "/img/news/welcome-dc13.jpg"
+    image: "/img/news/welcome-dc13.webp"
     external_url: "https://www.linkedin.com/feed/update/urn:li:activity:7528110443903545344"
     dc_id: "wp4-dc2"
 
@@ -82,7 +82,7 @@ items:
     type: news
     excerpt: ""
     content: ""
-    image: "/img/news/welcome-dc14.jpg"
+    image: "/img/news/welcome-dc14.webp"
     external_url: "https://www.linkedin.com/feed/update/urn:li:activity:7528110318531731456"
     dc_id: "wp1-dc5"
 
@@ -91,7 +91,7 @@ items:
     type: news
     excerpt: ""
     content: ""
-    image: "/img/news/welcome-dc15.jpg"
+    image: "/img/news/welcome-dc15.webp"
     external_url: "https://www.linkedin.com/company/met2adapt/posts/"
     dc_id: "wp4-dc3"
 
@@ -103,7 +103,7 @@ items:
     excerpt: "We invite applications for range of doctoral positions."
     content: >
       The first call for applications is now open. This is an exceptional opportunity for highly motivated and outstanding candidates to join an innovative team of researchers engaged in cutting-edge projects that span a wide range of disciplines.
-    image: "/img/news/call-1.jpg"
+    image: "/img/news/call-1.webp"
     external_url: "https://euraxess.ec.europa.eu/jobs/392117"
 
   - id: news-2026-02
@@ -125,7 +125,7 @@ items:
     excerpt: "Our primary communication platform is up and running!"
     content: >
       
-    image: "/img/hero-home.jpg"
+    image: "/img/news/webpage-live.webp"
     external_url: ""
 
   - id: news-2026-06-call2
@@ -139,7 +139,7 @@ items:
       **Project:** Coupled chemo-mechanical interactions leading to fatigue damage in corrosive environments. The doctoral candidate will formulate a high-fidelity numerical framework to resolve crack initiation and propagation in components fitted with meta-materials operating in highly corrosive environments, combining fracture mechanics, multi-physics modelling and verification and validation.
 
       Applicants must meet the eligibility rules of Marie Skłodowska-Curie Doctoral Networks. Details of the position and how to apply are on our [recruitment page](/recruitment/).
-    image: "/img/news/call-2.jpg"
+    image: "/img/news/call-2.webp"
     external_url: ""
 
   - id: news-2026-08-call3
@@ -153,7 +153,7 @@ items:
       **Project:** Self-tuning variable length systems for the vibration reduction of wind blades. The doctoral candidate will derive novel dimensionless formulations of the differential-algebraic equations governing the nonlinear dynamics of variable length systems with lumped mass subject to configurational forces, drawing on nonlinear dynamics, space-time formulations and high-cycle fatigue.
 
       Applicants must meet the eligibility rules of Marie Skłodowska-Curie Doctoral Networks. Details of the position and how to apply are on our [recruitment page](/recruitment/).
-    image: "/img/news/call-3.jpg"
+    image: "/img/news/call-3.webp"
     external_url: ""
 
   - id: news-2026-09-sb2
@@ -164,5 +164,5 @@ items:
     location: "Online"
     excerpt: "The Met2Adapt Supervisory Board held its second meeting online."
     content: ""
-    image: "/img/news/supervisory-board-2.jpg"
+    image: "/img/news/supervisory-board-2.webp"
     external_url: ""

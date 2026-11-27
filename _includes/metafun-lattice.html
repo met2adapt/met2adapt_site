@@ -1,0 +1,29 @@
+<section class="mf-section mf-section--light reveal" id="lattice" markdown="0" aria-labelledby="lattice-title">
+<div class="container mf-two mf-two--flip">
+<div class="mf-panel">
+<canvas id="lattice-canvas" class="mf-canvas mf-canvas--3d" height="380" aria-label="Rotatable 3D lattice unit cell"></canvas>
+<div class="mf-controls">
+<div class="mf-seg" role="group" aria-label="Unit cell type">
+<button type="button" class="is-on" data-cell="hex">Honeycomb</button>
+<button type="button" data-cell="cubic">Cubic</button>
+<button type="button" data-cell="bcc">BCC</button>
+<button type="button" data-cell="octet">Octet truss</button>
+</div>
+<label class="mf-switch"><input type="checkbox" id="lattice-tile"><span class="mf-switch__track"><span class="mf-switch__thumb"></span></span><span>Repeat 2 × 2 × 2</span></label>
+</div>
+<p class="mf-small">Drag to rotate. On phones, swipe with one finger.</p>
+</div>
+<div class="mf-text">
+<p class="mf-kicker">Interactive 2</p>
+<h2 id="lattice-title">Spin a unit cell</h2>
+<p>A meta-material is built by repeating a small <strong>unit cell</strong> over and over, like bricks in a wall. Engineers design the shape of that cell to get the behaviour they need: very light yet stiff, energy-absorbing, or able to block vibrations.</p>
+<ul class="mf-facts">
+<li><strong>Honeycomb:</strong> the shape in our logo. Light and stiff, used in aircraft panels and sandwich structures.</li>
+<li><strong>Cubic:</strong> the simplest lattice, with struts only along the edges.</li>
+<li><strong>BCC (body-centred cubic):</strong> adds diagonal struts to the centre, a common choice for 3D-printed lattices.</li>
+<li><strong>Octet truss:</strong> struts arranged as tetrahedra and octahedra, among the stiffest lattices for its weight.</li>
+</ul>
+<p>Switch on <em>Repeat 2 × 2 × 2</em> to see how cells join into a larger block.</p>
+</div>
+</div>
+</section>

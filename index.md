@@ -52,7 +52,7 @@ permalink: /
 <div class="hc-track" data-active="0">
 {% for sl in site.data.slider %}
 <figure class="hc-slide" data-index="{{ forloop.index0 }}" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}" id="slide-{{ forloop.index0 }}">
-<img src="{{ sl.image | relative_url }}" alt="{{ sl.alt }}" {% unless forloop.first %}loading="lazy"{% endunless %} style="object-position: {{ sl.position | default: 'center' }};">
+<img {% if forloop.first %}src="{{ sl.image | relative_url }}" fetchpriority="low"{% else %}data-src="{{ sl.image | relative_url }}"{% endif %} alt="{{ sl.alt }}" decoding="async" style="object-position: {{ sl.position | default: 'center' }};">
 {% if sl.caption %}<figcaption class="hc-caption">{{ sl.caption }}</figcaption>{% endif %}
 </figure>
 {% endfor %}
@@ -93,7 +93,7 @@ href="{{ item.url }}"
 target="_blank"
 rel="noopener"
 style="--scale: {{ item.scale }};">
-<img src="{{ item.image | relative_url }}" alt="Partner logo">
+<img src="{{ item.image | relative_url }}" alt="Partner logo" loading="lazy" decoding="async">
 </a>
 {% endif %}
 {% endfor %}
@@ -125,7 +125,7 @@ href="{{ item.url }}"
 target="_blank"
 rel="noopener"
 style="--scale: {{ item.scale }};">
-<img src="{{ item.image | relative_url }}" alt="Partner logo">
+<img src="{{ item.image | relative_url }}" alt="Partner logo" loading="lazy" decoding="async">
 </a>
 {% endif %}
 {% endfor %}

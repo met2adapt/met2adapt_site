@@ -2,6 +2,16 @@
   <meta charset="utf-8" />
   <title>{{ page.title | default: site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="{{ page.description | default: 'Met2Adapt: a Marie Skłodowska-Curie Doctoral Network on advanced meta-materials and meta-structures for adaptable, resilient and sustainable renewable energy power plants.' }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap">
+  {%- if page.nav == "home" %}
+  <link rel="preload" as="image" href="{{ '/img/hero-home.webp' | relative_url }}" media="(min-width: 769px)" fetchpriority="high">
+  <link rel="preload" as="image" href="{{ '/img/hero-home-mobile.webp' | relative_url }}" media="(max-width: 768px)" fetchpriority="high">
+  {%- else %}
+  <link rel="preload" as="image" href="{{ '/img/hero-secondary.webp' | relative_url }}" fetchpriority="high">
+  {%- endif %}
   <link rel="stylesheet" href="{{ '/css/base.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/css/layout.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/css/components.css' | relative_url }}">
