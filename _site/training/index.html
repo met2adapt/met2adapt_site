@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Training Met2Adapt</title>
+  <title>Training | Met2Adapt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/layout.css">
   <link rel="stylesheet" href="/css/components.css">
   <link rel="stylesheet" href="/css/pages.css"> 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="alternate icon" type="image/x-icon" href="/favicon.ico">  
+  <link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#003A70">  
 </head>
 
 
@@ -17,34 +19,30 @@
 <body>
 <header class="site-header">
 <div class="container header-inner">
-<div class="logo">
-<a href="/">Met2Adapt</a>
-</div>
+<a class="brand" href="/" aria-label="Met2Adapt home">
+<img class="brand__icon" src="/img/logo/met2adapt-icon-small.svg" alt="" width="40" height="40">
+<span class="brand__text"><span class="brand__name">Met2Adapt</span><span class="brand__tag">MSCA Doctoral Network</span></span>
+</a>
 
 <nav class="main-nav" aria-label="Main navigation">
-<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-menu">
-<!-- inline SVG hamburger so color inherits from CSS -->
-<svg class="nav-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
-<rect x="3" y="6" width="18" height="2" rx="1"></rect>
-<rect x="3" y="11" width="18" height="2" rx="1"></rect>
-<rect x="3" y="16" width="18" height="2" rx="1"></rect>
-</svg>
+<button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu">
+<span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
 </button>
 
-<ul id="main-menu">
-<li><a href="/" class="">Home</a></li>
-<li><a href="/research/" class="">Research</a></li>
-<li><a href="/training/" class="active">Training</a></li>
-<li><a href="/recruitment/" class="">Recruitment</a></li>
-<li><a href="/news/" class="">News &amp; Events</a></li>
-<li><a href="/contact/" class="">Contact</a></li>
+<div class="nav-panel" id="main-menu">
+<ul class="nav-links">
+<li><a href="/">Home</a></li>
+<li><a href="/research/">Research</a></li>
+<li><a href="/training/" class="active" aria-current="page">Training</a></li>
+<li><a href="/news/">News &amp; Events</a></li>
+<li><a href="/contact/">Contact</a></li>
 </ul>
+<a class="nav-cta" href="/recruitment/">Recruitment</a>
+<a class="nav-linkedin" href="https://www.linkedin.com/company/112561317" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Follow us on LinkedIn</a>
+</div>
 </nav>
-
 </div>
 </header>
-
-
 
 <main>
 <section class="hero hero-secondary reveal">
@@ -56,104 +54,160 @@
 </section>
 
 <section class="intro-section reveal">
-  <div class="container">
-    <h2>Our training philosophy</h2>
-    <p>The Met2Adapt training programme combines cutting-edge research projects with a comprehensive curriculum of scientific, technical and transferable skills. To this end, Met2Adapt brings together a team of world-leading academic and industrial experts and puts in place an innovation driven training programme. Our overarching aim is to deliver highly qualified individuals with a multidisciplinary skillset across the spectrum of meta-materials and structural engineering, renewable energy production, computer programming, as well as the modelling of life cycle impacts in the energy sector. They will be able to drive forward the long overdue integration of advanced materials in renewable energy production. Key to our training methodology is our firm commitment on establishing an active and student-centred ‘training by research’ environment, which will put the Doctoral Candidates in charge of their training process.</p>
-
-    <h2>The training programme</h2>
-
-    <div class="metadapt-content">
-
-      <ol class="metadapt-olist metadapt-olist--separated">
-
-<li>
-<div>
-<span class="metadapt-li-title">
-High level research activity and quality of supervision:
-</span>
-Our Doctoral Candidates will benefit from a holistic training experience, utilizing state-of-the-art laboratory facilities, hands-on technical training, and elite scientific supervision across all host institutions.
+<div class="container">
+<h2>Our training philosophy</h2>
+<p>The Met2Adapt training programme combines cutting-edge research projects with a comprehensive curriculum of scientific, technical and transferable skills. To this end, Met2Adapt brings together a team of world-leading academic and industrial experts and puts in place an innovation-driven training programme. Our overarching aim is to deliver highly qualified individuals with a multidisciplinary skillset across the spectrum of meta-materials and structural engineering, renewable energy production, computer programming, and the modelling of life-cycle impacts in the energy sector. They will be able to drive forward the long-overdue integration of advanced materials in renewable energy production. Key to our training methodology is our firm commitment to an active, student-centred ‘training by research’ environment, which puts the Doctoral Candidates in charge of their training.</p>
 </div>
-</li>
+</section>
 
-<li>
-<div>
-<span class="metadapt-li-title">
-Personal Career Development Plan:
-</span>
-To ensure optimal professional growth, each Doctoral Candidate will co-design a bespoke Personal Career Development Plan (PCDP). This dynamic roadmap will be meticulously calibrated to align with their unique scientific strengths and accelerate their long-term professional aspirations.
+<section class="training-pillars reveal" aria-labelledby="pillars-title">
+<div class="container">
+<h2 id="pillars-title">The training programme</h2>
+<div class="pillar-grid">
 
-<ul class="metadapt-list">
-<li>
-Each doctoral candidate will be enrolled to their host institution  doctoral school.
-</li>
-<li>
-They will undertake formal training activities targetting  transferable skills.
-</li>
-<li>
-To ensure continuous alignment with project objectives and to proactively navigate research challenges, Doctoral Candidates will engage in structured progress monitoring and strategic metadapting sessions.
-</li>
+<article class="pillar">
+<div class="pillar__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /><path d="M7.5 15h9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg></div>
+<h3>High-level research and supervision</h3>
+<p>A holistic training experience with state-of-the-art laboratory facilities, hands-on technical training and expert scientific supervision across all host institutions.</p>
+</article>
+
+<article class="pillar">
+<div class="pillar__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg></div>
+<h3>Personal Career Development Plan</h3>
+<p>Each Doctoral Candidate co-designs a Personal Career Development Plan (PCDP), calibrated to their scientific strengths and long-term professional aspirations.</p>
+<details>
+<summary>What it includes</summary>
+<ul>
+<li>Enrolment in the doctoral school of the host institution.</li>
+<li>Formal training activities targeting transferable skills.</li>
+<li>Structured progress monitoring and strategic mentoring sessions, to stay aligned with project objectives and address research challenges early.</li>
 </ul>
-</div>
-</li>
+</details>
+</article>
 
-<li>
-<div>
-<span class="metadapt-li-title">
-Gender aspects:
-</span>
-Gender balance and inclusiveness are actively promoted within the Met2Adapt programme.
-
-<ul class="metadapt-list">
-<li>
-As part of the core training modules, DCs will participate in expert-led workshops on inclusive leadership, cultural competency, and recognizing implicit biases.
-</li>
-<li>
-An Equal Opportunities Officer monitors diversity metrics from the applicant pool ratio to DC retention and satisfaction, creating a feedback loop that refines our strategies in real-time.
-</li>
-<li>
-Met2Adapt champions agile and flexible working arrangements. We ensure that parental leave, childcare responsibilities, and part-time options are respected and structurally supported without penalizing career progression or publication output.
-</li>
+<article class="pillar">
+<div class="pillar__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.8" /><circle cx="16.5" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M2.5 19c.8-3.2 3-5 5.5-5s4.7 1.8 5.5 5M13 14.5c1-.9 2.2-1.4 3.5-1.4 2.2 0 4 1.5 4.8 4.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg></div>
+<h3>Gender balance and inclusion</h3>
+<p>Gender balance and inclusiveness are actively promoted throughout the Met2Adapt programme.</p>
+<details>
+<summary>How we put it into practice</summary>
+<ul>
+<li>Expert-led workshops on inclusive leadership, cultural competency and recognising implicit bias, as part of the core training modules.</li>
+<li>An Equal Opportunities Officer monitors diversity metrics, from the applicant pool to DC retention and satisfaction, and feeds the results back into our strategies.</li>
+<li>Flexible working arrangements: parental leave, childcare responsibilities and part-time options are respected and supported without penalising career progression or publication output.</li>
 </ul>
+</details>
+</article>
+
+<article class="pillar">
+<div class="pillar__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg></div>
+<h3>Thematic Training Weeks</h3>
+<p>Network-wide events organised by the beneficiaries, where all Met2Adapt scholars and associated partners work directly with the Doctoral Candidates through lectures, personal tutorials and workshop-style sessions.</p>
+<a class="pillar__link" href="#training-weeks">See the schedule ↓</a>
+</article>
+
 </div>
-</li>
-
-<li>
-<div>
-<span class="metadapt-li-title">
-Met2Adapt led thematic training weeks:
-</span>
-Network-wide training events will be organised by all beneficiaries in the form of Thematic Training Weeks (TTW). TTWs will be an ideal opportunity all Met2Adapt scholars and associated partners to directly interact with the Doctoral Candidates with a mixture of lectured material, personal tutorials and workshop style example sessions. Our TTWs will cover aspects covering the state-of-the-art and beyond and will involve sessions on
-
-<ul class="metadapt-list">
-<li>
-Fundamentals and design principle of meta-materials and meta-structures for wave conditioning and vibration mitigation with applications in critical infrastructure.
-</li>
-<li>
-Adaptability and resilience against climate change– Challenges and digital opportunities for the European industry.
-</li>
-<li>
-Structural Health Monitoring and Prognostics for meta-materials.
-</li>
-<li>
-Understanding damage evolution in meta- materials.
-</li>
-<li>
-State of the art on shore protection measures and ocean energy conver-sion devices.
-</li>
-<li>
-Advanced modelling of meta-structures across scales for damage estimates.
-</li>
-<li>
-Pathways to commercial end-product impact.
-</li>
-</ul>
 </div>
-</li>
+</section>
 
-</ol>
+<section class="training-weeks reveal" id="training-weeks" aria-labelledby="ttw-title">
+<div class="container">
+<h2 id="ttw-title">Thematic Training Weeks</h2>
+<p class="ttw-lede">8 core training weeks, open to all Doctoral Candidates, from April 2027 to the end of the project. Dates marked TBC are provisional.</p>
 
-    </div>
+<ol class="ttw-timeline"><li class="ttw">
+  <div class="ttw__when">
+    <span class="ttw__date">5–9 April 2027</span><span class="ttw__fixed">Confirmed</span></div>
+  <div class="ttw__dot" aria-hidden="true">1</div>
+  <div class="ttw__card">
+    <p class="ttw__num">Training Week 1</p>
+    <h3 class="ttw__title">Introduction Week</h3>
+    <p class="ttw__summary">Research methods, scientific writing, literature review, project management, environmental sustainability and green measures, conflict resolution, research data management and open science, ethics in research, responsible AI.</p>
+    <p class="ttw__place"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2" /><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2" /></svg><span><strong>ETH Zurich</strong>, Zurich, Switzerland</span></p>
   </div>
+</li><li class="ttw">
+  <div class="ttw__when">
+    <span class="ttw__date">July 2027</span><span class="ttw__tbc">TBC</span></div>
+  <div class="ttw__dot" aria-hidden="true">2</div>
+  <div class="ttw__card">
+    <p class="ttw__num">Training Week 2</p>
+    <h3 class="ttw__title">Fundamentals and design principles of meta-materials and meta-structures for wave conditioning and vibration mitigation</h3>
+    <p class="ttw__summary">Fundamental concepts, structural instabilities, variable length structures and nonlinear meta-structures; modelling tools; experimental techniques for metamaterial response characterisation; application in critical infrastructure.</p>
+    <p class="ttw__place"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2" /><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2" /></svg><span><strong>University of Bologna</strong>, Bologna, Italy</span></p>
+  </div>
+</li><li class="ttw">
+  <div class="ttw__when">
+    <span class="ttw__date">November 2027</span><span class="ttw__tbc">TBC</span></div>
+  <div class="ttw__dot" aria-hidden="true">3</div>
+  <div class="ttw__card">
+    <p class="ttw__num">Training Week 3</p>
+    <h3 class="ttw__title">Adaptability and resilience against climate change: challenges and digital opportunities for the European industry</h3>
+    <p class="ttw__summary">Life cycle of onshore and offshore wind turbines, climatic hazards, life cycle analysis of sensitive environments employing meta-materials.</p>
+    <p class="ttw__place"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2" /><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2" /></svg><span><strong>Technical University of Denmark</strong>, Kongens Lyngby, Denmark</span></p>
+  </div>
+</li><li class="ttw">
+  <div class="ttw__when">
+    <span class="ttw__date">January 2028</span><span class="ttw__tbc">TBC</span></div>
+  <div class="ttw__dot" aria-hidden="true">4</div>
+  <div class="ttw__card">
+    <p class="ttw__num">Training Week 4</p>
+    <h3 class="ttw__title">Structural Health Monitoring and prognostics for meta-materials</h3>
+    <p class="ttw__summary">SHM, sensor development, artificial intelligence and prognosis, laboratory experiments, design and calculation methods, latest trends in vibration mitigation.</p>
+    <p class="ttw__place"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2" /><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2" /></svg><span><strong>ETH Zurich</strong>, Zurich, Switzerland</span></p>
+  </div>
+</li><li class="ttw">
+  <div class="ttw__when">
+    <span class="ttw__date">May 2028</span><span class="ttw__tbc">TBC</span></div>
+  <div class="ttw__dot" aria-hidden="true">5</div>
+  <div class="ttw__card">
+    <p class="ttw__num">Training Week 5</p>
+    <h3 class="ttw__title">Understanding damage evolution in meta-materials</h3>
+    <p class="ttw__summary">Damage quantification methods, corrosion-induced damage, laboratory experiments, design and calculation methods.</p>
+    <p class="ttw__place"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2" /><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2" /></svg><span><strong>National Technical University of Athens</strong>, Athens, Greece</span></p>
+  </div>
+</li><li class="ttw">
+  <div class="ttw__when">
+    <span class="ttw__date">October 2028</span><span class="ttw__tbc">TBC</span></div>
+  <div class="ttw__dot" aria-hidden="true">6</div>
+  <div class="ttw__card">
+    <p class="ttw__num">Training Week 6</p>
+    <h3 class="ttw__title">State of the art on shore protection measures and ocean energy conversion devices</h3>
+    <p class="ttw__summary">The ocean environment; assessment of wind and ocean resources; design of ocean energy conversion devices and shore protection systems; meta-materials and meta-structures for shallow-water control.</p>
+    <p class="ttw__place"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2" /><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2" /></svg><span><strong>University of Bologna</strong>, Bologna, Italy</span></p>
+  </div>
+</li><li class="ttw">
+  <div class="ttw__when">
+    <span class="ttw__date">January 2029</span><span class="ttw__tbc">TBC</span></div>
+  <div class="ttw__dot" aria-hidden="true">7</div>
+  <div class="ttw__card">
+    <p class="ttw__num">Training Week 7</p>
+    <h3 class="ttw__title">Advanced modelling of meta-structures across scales for damage estimates</h3>
+    <p class="ttw__summary">Physics-informed AI, multi-physics simulations across scales, diffuse damage modelling methods, phase-field and TLS methods for durability assessment.</p>
+    <p class="ttw__place"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2" /><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2" /></svg><span><strong>National Technical University of Athens</strong>, Athens, Greece</span></p>
+  </div>
+</li><li class="ttw">
+  <div class="ttw__when">
+    <span class="ttw__date">November 2029</span><span class="ttw__tbc">TBC</span></div>
+  <div class="ttw__dot" aria-hidden="true">8</div>
+  <div class="ttw__card">
+    <p class="ttw__num">Training Week 8</p>
+    <h3 class="ttw__title">Pathways to commercial end-product impact and final Met2Adapt results</h3>
+    <p class="ttw__summary">Global view, foundations and pathways to end-user product development; business and entrepreneurial skills; leadership; Met2Adapt results workshops.</p>
+    <p class="ttw__place"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2" /><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2" /></svg><span><strong>University of Trento</strong>, Trento, Italy</span></p>
+  </div>
+</li></ol>
+</div>
+</section>
+
+<section class="training-cta reveal">
+<div class="container training-cta__inner">
+<h2>Follow the programme</h2>
+<p>Meet the Doctoral Candidates behind the research and follow each training week as it happens.</p>
+<div class="training-cta__actions">
+<a class="news-btn" href="/research/">Meet our Doctoral Candidates</a>
+<a class="news-btn news-btn--ghost" href="https://www.linkedin.com/company/112561317" target="_blank" rel="noopener">Follow us on LinkedIn</a>
+</div>
+</div>
 </section>
 
 </main>

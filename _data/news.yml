@@ -155,3 +155,14 @@ items:
       Applicants must meet the eligibility rules of Marie Skłodowska-Curie Doctoral Networks. Details of the position and how to apply are on our [recruitment page](/recruitment/).
     image: "/img/news/call-3.jpg"
     external_url: ""
+
+  - id: news-2026-09-sb2
+    title: "Second Supervisory Board Meeting"
+    date: 2026-09-08 09:00:00 +0000
+    type: event
+    event_date: "8 September 2026"
+    location: "Online"
+    excerpt: "The Met2Adapt Supervisory Board held its second meeting online."
+    content: ""
+    image: "/img/news/supervisory-board-2.jpg"
+    external_url: ""

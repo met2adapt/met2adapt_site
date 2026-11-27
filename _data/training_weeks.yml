@@ -1,0 +1,84 @@
+# Thematic Training Weeks (TTW). Project start: February 2026 (M1); end: January 2030 (M48).
+# when: text shown on the page. tbc: true adds "(TBC)". month: project month.
+# lead: hosting beneficiary; host / city: shown on the page as the venue.
+weeks:
+  - n: 1
+    title: "Introduction Week"
+    summary: "Research methods, scientific writing, literature review, project management, environmental sustainability and green measures, conflict resolution, research data management and open science, ethics in research, responsible AI."
+    when: "5–9 April 2027"
+    tbc: false
+    month: 15
+    ects: 0.5
+    lead: "ETHZ"
+    host: "ETH Zurich"
+    city: "Zurich, Switzerland"
+  - n: 2
+    title: "Fundamentals and design principles of meta-materials and meta-structures for wave conditioning and vibration mitigation"
+    summary: "Fundamental concepts, structural instabilities, variable length structures and nonlinear meta-structures; modelling tools; experimental techniques for metamaterial response characterisation; application in critical infrastructure."
+    when: "July 2027"
+    tbc: true
+    month: 18
+    ects: 0.5
+    lead: "UniBo"
+    host: "University of Bologna"
+    city: "Bologna, Italy"
+  - n: 3
+    title: "Adaptability and resilience against climate change: challenges and digital opportunities for the European industry"
+    summary: "Life cycle of onshore and offshore wind turbines, climatic hazards, life cycle analysis of sensitive environments employing meta-materials."
+    when: "November 2027"
+    tbc: true
+    month: 22
+    ects: 0.5
+    lead: "DTU"
+    host: "Technical University of Denmark"
+    city: "Kongens Lyngby, Denmark"
+  - n: 4
+    title: "Structural Health Monitoring and prognostics for meta-materials"
+    summary: "SHM, sensor development, artificial intelligence and prognosis, laboratory experiments, design and calculation methods, latest trends in vibration mitigation."
+    when: "January 2028"
+    tbc: true
+    month: 24
+    ects: 0.5
+    lead: "ETHZ"
+    host: "ETH Zurich"
+    city: "Zurich, Switzerland"
+  - n: 5
+    title: "Understanding damage evolution in meta-materials"
+    summary: "Damage quantification methods, corrosion-induced damage, laboratory experiments, design and calculation methods."
+    when: "May 2028"
+    tbc: true
+    month: 28
+    ects: 0.5
+    lead: "NTUA"
+    host: "National Technical University of Athens"
+    city: "Athens, Greece"
+  - n: 6
+    title: "State of the art on shore protection measures and ocean energy conversion devices"
+    summary: "The ocean environment; assessment of wind and ocean resources; design of ocean energy conversion devices and shore protection systems; meta-materials and meta-structures for shallow-water control."
+    when: "October 2028"
+    tbc: true
+    month: 33
+    ects: 0.5
+    lead: "UniBo"
+    host: "University of Bologna"
+    city: "Bologna, Italy"
+  - n: 7
+    title: "Advanced modelling of meta-structures across scales for damage estimates"
+    summary: "Physics-informed AI, multi-physics simulations across scales, diffuse damage modelling methods, phase-field and TLS methods for durability assessment."
+    when: "January 2029"
+    tbc: true
+    month: 36
+    ects: 0.5
+    lead: "NTUA"
+    host: "National Technical University of Athens"
+    city: "Athens, Greece"
+  - n: 8
+    title: "Pathways to commercial end-product impact and final Met2Adapt results"
+    summary: "Global view, foundations and pathways to end-user product development; business and entrepreneurial skills; leadership; Met2Adapt results workshops."
+    when: "November 2029"
+    tbc: true
+    month: 46
+    ects: 0.5
+    lead: "UNITN"
+    host: "University of Trento"
+    city: "Trento, Italy"

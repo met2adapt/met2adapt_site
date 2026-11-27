@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="/css/components.css">
   <link rel="stylesheet" href="/css/pages.css"> 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="alternate icon" type="image/x-icon" href="/favicon.ico">  
+  <link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#003A70">  
 </head>
 
 
@@ -17,34 +19,30 @@
 <body>
 <header class="site-header">
 <div class="container header-inner">
-<div class="logo">
-<a href="/">Met2Adapt</a>
-</div>
+<a class="brand" href="/" aria-label="Met2Adapt home">
+<img class="brand__icon" src="/img/logo/met2adapt-icon-small.svg" alt="" width="40" height="40">
+<span class="brand__text"><span class="brand__name">Met2Adapt</span><span class="brand__tag">MSCA Doctoral Network</span></span>
+</a>
 
 <nav class="main-nav" aria-label="Main navigation">
-<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-menu">
-<!-- inline SVG hamburger so color inherits from CSS -->
-<svg class="nav-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
-<rect x="3" y="6" width="18" height="2" rx="1"></rect>
-<rect x="3" y="11" width="18" height="2" rx="1"></rect>
-<rect x="3" y="16" width="18" height="2" rx="1"></rect>
-</svg>
+<button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu">
+<span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
 </button>
 
-<ul id="main-menu">
-<li><a href="/" class="">Home</a></li>
-<li><a href="/research/" class="active">Research</a></li>
-<li><a href="/training/" class="">Training</a></li>
-<li><a href="/recruitment/" class="">Recruitment</a></li>
-<li><a href="/news/" class="">News &amp; Events</a></li>
-<li><a href="/contact/" class="">Contact</a></li>
+<div class="nav-panel" id="main-menu">
+<ul class="nav-links">
+<li><a href="/">Home</a></li>
+<li><a href="/research/" class="active" aria-current="page">Research</a></li>
+<li><a href="/training/">Training</a></li>
+<li><a href="/news/">News &amp; Events</a></li>
+<li><a href="/contact/">Contact</a></li>
 </ul>
+<a class="nav-cta" href="/recruitment/">Recruitment</a>
+<a class="nav-linkedin" href="https://www.linkedin.com/company/112561317" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Follow us on LinkedIn</a>
+</div>
 </nav>
-
 </div>
 </header>
-
-
 
 <main>
 <section class="hero hero-secondary reveal">
@@ -173,288 +171,245 @@
 
           <div id="wp1-dc-list" class="dc-list" hidden="">
             <section class="wp-dc" aria-labelledby="wp1-title">
-              <h3 id="wp1-title"></h3>
+<h3 id="wp1-title"></h3>
 
-              <div class="dc-accordion" id="wp1-accordion" data-single-open="false">
-                <div class="dc-item" id="wp1-dc1">
-                  <div class="dc-header" role="button" aria-controls="wp1-dc1-body" aria-expanded="false" tabindex="0">
 
-                    <p><img class="dc-thumb" src="/img/dcs/MD2.jpg" alt="DC3" style="--thumb-size: 140px" /></p>
 
-                    <div class="dc-meta">
-                      <p class="dc-title">
-DC3 Multiscale Modelling and Machine Learning-Based Design of Innovative Vibration-Attenuating Metapanels
-</p>
+<div class="dc-accordion" id="wp1-accordion" data-single-open="false">
+<div class="dc-item" id="wp1-dc1">
+<div class="dc-header" role="button" aria-controls="wp1-dc1-body" aria-expanded="false" tabindex="0"><img class="dc-thumb" src="/img/dcs/MD2.jpg" alt="" style="--thumb-size: 140px" />
+<div class="dc-head-top"><span class="dc-code">DC3</span><span class="dc-name">Marianna Diamanta</span></div>
+<p class="dc-title">Multiscale Modelling and Machine Learning-Based Design of Innovative Vibration-Attenuating Metapanels</p>
+<div class="dc-details"><span><strong>Host:</strong> National Technical University of Athens</span><span><strong>Supervisors:</strong> Prof. I. Kalogeris, Prof. I. Antoniadis, Prof. D. Chronopoulos</span></div>
+<span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+</div>
 
-                      <p class="dc-sub">
-Name: Ms. Marianna Diamanta
-</p>
-                      <p class="dc-sub">
-Supervisors: Prof. I. Kalogeris, Prof. I. Antoniadis, Prof. D. Chronopoulos
- · Host: National Technical University of Athens
-</p>
-                    </div>
+<div id="wp1-dc1-body" class="dc-body" aria-hidden="true" hidden="">
+<div class="dc-grid">
+<div>
 
-                    <p><span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></p>
-                  </div>
+<div class="dc-bio">
+  <h4 class="dc-section-label">Short Bio</h4>
+  <p>Marianna holds a Diploma in Civil Engineering from National Technical University of Athens, a minor in Finance from Deree, and a Masters degree in Hydraulic Mechanics from Delft University with a specialization in Hydraulic Engineering. She has experience in Wave Mechanics, Numerical Modelling, Machine Learning, and Stochastic Methods, as well as strong programming skills.</p>
 
-                  <div id="wp1-dc1-body" class="dc-body" aria-hidden="true" hidden="">
-                    <div class="dc-grid">
-                      <div>
+</div>
 
-                        <div class="dc-bio">
-                          <h4 class="dc-section-label">Short Bio</h4>
-                          <p>Marianna holds a Diploma in Civil Engineering from National Technical University of Athens, a minor in Finance from Deree, and a Masters degree in Hydraulic Mechanics from Delft University with a specialization in Hydraulic Engineering. She has experience in Wave Mechanics, Numerical Modelling, Machine Learning, and Stochastic Methods, as well as strong programming skills.</p>
 
-                        </div>
+<p><strong>Project summary</strong></p>
+<p>Create high-performance, reusable metamaterial panel systems that achieve superior vibration and noise attenuation while remaining cost-effective and compatible with sustainable construction practices.</p>
 
-                        <p><strong>Project summary</strong></p>
-                        <p>Create high-performance, reusable metamaterial panel systems that achieve superior vibration and noise attenuation while remaining cost-effective and compatible with sustainable construction practices.</p>
 
-                        <p><strong>Methods</strong></p>
-                        <p>computational mechanics; experimental validation; numerical simulation.</p>
 
-                        <div class="dc-tags">
+<p><strong>Methods</strong></p>
+<p>computational mechanics; experimental validation; numerical simulation.</p>
 
-                          <p><span class="dc-tag">machine learning</span></p>
 
-                          <p><span class="dc-tag">vibro-acoustics</span></p>
 
-                          <p><span class="dc-tag">sustainability</span></p>
+<div class="dc-tags">
 
-                        </div>
+<span class="dc-tag">machine learning</span>
 
-                      </div>
+<span class="dc-tag">vibro-acoustics</span>
 
-                      <div>
+<span class="dc-tag">sustainability</span>
 
-                        <p><img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_3.png" alt="Multiscale Modelling and Machine Learning-Based Design of Innovative Vibration-Attenuating Metapanels photo" /></p>
+</div>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+</div>
 
-                <div class="dc-item" id="wp1-dc2">
-                  <div class="dc-header" role="button" aria-controls="wp1-dc2-body" aria-expanded="false" tabindex="0">
+<div>
 
-                    <p><img class="dc-thumb" src="/img/dcs/placeholder.jpg" alt="DC4" /></p>
+<img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_3.png" alt="Multiscale Modelling and Machine Learning-Based Design of Innovative Vibration-Attenuating Metapanels photo" />
 
-                    <div class="dc-meta">
-                      <p class="dc-title">
-DC4 Optimal devices, methodologies and digital twin models for the use of metastructural devices in Operational Wind Turbines
-</p>
+</div>
+</div>
+</div>
+</div>
 
-                      <p class="dc-sub">
+<div class="dc-item" id="wp1-dc2">
+<div class="dc-header" role="button" aria-controls="wp1-dc2-body" aria-expanded="false" tabindex="0"><img class="dc-thumb" src="/img/dcs/placeholder.jpg" alt="" />
+<div class="dc-head-top"><span class="dc-code">DC4</span><span class="dc-name dc-name--host">University of Porto</span></div>
+<p class="dc-title">Optimal devices, methodologies and digital twin models for the use of metastructural devices in Operational Wind Turbines</p>
+<div class="dc-details"><span><strong>Supervisors:</strong> Prof. F. Magalhães, Mr. A. Graca, Prof. O. Bursi</span></div>
+<span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+</div>
 
-</p>
-                      <p class="dc-sub">
-Supervisors: Prof. F. Magalhães, Mr. A. Graca, Prof. O. Bursi
- · Host: University of Porto
-</p>
-                    </div>
+<div id="wp1-dc2-body" class="dc-body" aria-hidden="true" hidden="">
+<div class="dc-grid">
+<div>
 
-                    <p><span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></p>
-                  </div>
 
-                  <div id="wp1-dc2-body" class="dc-body" aria-hidden="true" hidden="">
-                    <div class="dc-grid">
-                      <div>
+<p><strong>Project summary</strong></p>
+<p>To develop a digital twin for meta0-material fitted wind turbines incorporating SHM  and simulation data from aeroelastic and structural FE models.</p>
 
-                        <p><strong>Project summary</strong></p>
-                        <p>To develop a digital twin for meta0-material fitted wind turbines incorporating SHM  and simulation data from aeroelastic and structural FE models.</p>
 
-                        <p><strong>Methods</strong></p>
-                        <p>numerical modelling; structural health monitoring; data fusion.</p>
 
-                        <div class="dc-tags">
+<p><strong>Methods</strong></p>
+<p>numerical modelling; structural health monitoring; data fusion.</p>
 
-                          <p><span class="dc-tag">surrrogate modelling</span></p>
 
-                          <p><span class="dc-tag">substruturing</span></p>
 
-                          <p><span class="dc-tag">Digital Twinning</span></p>
+<div class="dc-tags">
 
-                        </div>
+<span class="dc-tag">surrrogate modelling</span>
 
-                      </div>
+<span class="dc-tag">substruturing</span>
 
-                      <div>
+<span class="dc-tag">Digital Twinning</span>
 
-                        <p><img class="dc-photo" style="--dc-scale: 0.9;" src="/img/research/dc_project/fig_1.png" alt="Optimal devices, methodologies and digital twin models for the use of metastructural devices in Operational Wind Turbines photo" /></p>
+</div>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+</div>
 
-                <div class="dc-item" id="wp1-dc3">
-                  <div class="dc-header" role="button" aria-controls="wp1-dc3-body" aria-expanded="false" tabindex="0">
+<div>
 
-                    <p><img class="dc-thumb" src="/img/dcs/placeholder.jpg" alt="DC6" /></p>
+<img class="dc-photo" style="--dc-scale: 0.9;" src="/img/research/dc_project/fig_1.png" alt="Optimal devices, methodologies and digital twin models for the use of metastructural devices in Operational Wind Turbines photo" />
 
-                    <div class="dc-meta">
-                      <p class="dc-title">
-DC6 Self-tuning variable length systems for the vibration reduction of wind blades
-</p>
+</div>
+</div>
+</div>
+</div>
 
-                      <p class="dc-sub">
+<div class="dc-item" id="wp1-dc3">
+<div class="dc-header" role="button" aria-controls="wp1-dc3-body" aria-expanded="false" tabindex="0"><img class="dc-thumb" src="/img/dcs/placeholder.jpg" alt="" />
+<div class="dc-head-top"><span class="dc-code">DC6</span><span class="dc-name dc-name--host">University of Trento</span></div>
+<p class="dc-title">Self-tuning variable length systems for the vibration reduction of wind blades</p>
+<div class="dc-details"><span><strong>Supervisors:</strong> Prof. F. Dal Corso, Prof. R. Springhetti, Prof. F. Magalhães, Mr. A. Graça</span></div>
+<span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+</div>
 
-</p>
-                      <p class="dc-sub">
-Supervisors: Prof. F. Dal Corso, Prof. R. Springhetti, Prof. F. Magalhães, Mr. A. Graça
- · Host: University of Trento
-</p>
-                    </div>
+<div id="wp1-dc3-body" class="dc-body" aria-hidden="true" hidden="">
+<div class="dc-grid">
+<div>
 
-                    <p><span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></p>
-                  </div>
 
-                  <div id="wp1-dc3-body" class="dc-body" aria-hidden="true" hidden="">
-                    <div class="dc-grid">
-                      <div>
+<p><strong>Project summary</strong></p>
+<p>Derive novel dimensionless expressions of the Differential Algebraic System of equations governing the nonlinear dynamics of variable  length systems with lumped mass and subject to configurational forces.</p>
 
-                        <p><strong>Project summary</strong></p>
-                        <p>Derive novel dimensionless expressions of the Differential Algebraic System of equations governing the nonlinear dynamics of variable  length systems with lumped mass and subject to configurational forces.</p>
 
-                        <p><strong>Methods</strong></p>
-                        <p>nonlinear dynamics; space-time formulations; high cycle fatigue .</p>
 
-                        <div class="dc-tags">
+<p><strong>Methods</strong></p>
+<p>nonlinear dynamics; space-time formulations; high cycle fatigue .</p>
 
-                          <p><span class="dc-tag">Variable Length Systems</span></p>
 
-                          <p><span class="dc-tag">self tuning</span></p>
 
-                          <p><span class="dc-tag">Optimisation</span></p>
+<div class="dc-tags">
 
-                        </div>
+<span class="dc-tag">Variable Length Systems</span>
 
-                      </div>
+<span class="dc-tag">self tuning</span>
 
-                      <div>
+<span class="dc-tag">Optimisation</span>
 
-                        <p><img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_2.png" alt="Self-tuning variable length systems for the vibration reduction of wind blades photo" /></p>
+</div>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+</div>
 
-                <div class="dc-item" id="wp1-dc4">
-                  <div class="dc-header" role="button" aria-controls="wp1-dc4-body" aria-expanded="false" tabindex="0">
+<div>
 
-                    <p><img class="dc-thumb" src="/img/dcs/placeholder.jpg" alt="DC12" /></p>
+<img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_2.png" alt="Self-tuning variable length systems for the vibration reduction of wind blades photo" />
 
-                    <div class="dc-meta">
-                      <p class="dc-title">
-DC12 Developing elasto-acoustic metamaterials for noise and vibration attenuation in wind turbine blades
-</p>
+</div>
+</div>
+</div>
+</div>
 
-                      <p class="dc-sub">
+<div class="dc-item" id="wp1-dc4">
+<div class="dc-header" role="button" aria-controls="wp1-dc4-body" aria-expanded="false" tabindex="0"><img class="dc-thumb" src="/img/dcs/placeholder.jpg" alt="" />
+<div class="dc-head-top"><span class="dc-code">DC12</span><span class="dc-name dc-name--host">KU Leuven</span></div>
+<p class="dc-title">Developing elasto-acoustic metamaterials for noise and vibration attenuation in wind turbine blades</p>
+<div class="dc-details"><span><strong>Supervisors:</strong> Prof. D. Chronopoulos, Prof. E. Deckers, Prof. I. Kalogeris</span></div>
+<span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+</div>
 
-</p>
-                      <p class="dc-sub">
-Supervisors: Prof. D. Chronopoulos, Prof. E. Deckers, Prof. I. Kalogeris
- · Host: KU Leuven
-</p>
-                    </div>
+<div id="wp1-dc4-body" class="dc-body" aria-hidden="true" hidden="">
+<div class="dc-grid">
+<div>
 
-                    <p><span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></p>
-                  </div>
 
-                  <div id="wp1-dc4-body" class="dc-body" aria-hidden="true" hidden="">
-                    <div class="dc-grid">
-                      <div>
+<p><strong>Project summary</strong></p>
+<p>Develop and optimize elasto-acoustic metamaterials with phase cancellation in order to simultaneously achieve vibration and noise attenuation in wind farms.</p>
 
-                        <p><strong>Project summary</strong></p>
-                        <p>Develop and optimize elasto-acoustic metamaterials with phase cancellation in order to simultaneously achieve vibration and noise attenuation in wind farms.</p>
 
-                        <p><strong>Methods</strong></p>
-                        <p>noise propagation modelling; structural optimisation; optimal placement.</p>
 
-                        <div class="dc-tags">
+<p><strong>Methods</strong></p>
+<p>noise propagation modelling; structural optimisation; optimal placement.</p>
 
-                          <p><span class="dc-tag">Phase Retrieval</span></p>
 
-                          <p><span class="dc-tag">Noise attentuation</span></p>
 
-                          <p><span class="dc-tag">nonlinear dynamics</span></p>
+<div class="dc-tags">
 
-                        </div>
+<span class="dc-tag">Phase Retrieval</span>
 
-                      </div>
+<span class="dc-tag">Noise attentuation</span>
 
-                      <div>
+<span class="dc-tag">nonlinear dynamics</span>
 
-                        <p><img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_4.png" alt="Developing elasto-acoustic metamaterials for noise and vibration attenuation in wind turbine blades photo" /></p>
+</div>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+</div>
 
-                <div class="dc-item" id="wp1-dc5">
-                  <div class="dc-header" role="button" aria-controls="wp1-dc5-body" aria-expanded="false" tabindex="0">
+<div>
 
-                    <p><img class="dc-thumb" src="/img/dcs/joao_brites_m2a_photo.jpg" alt="DC14" style="--thumb-size: 140px" /></p>
+<img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_4.png" alt="Developing elasto-acoustic metamaterials for noise and vibration attenuation in wind turbine blades photo" />
 
-                    <div class="dc-meta">
-                      <p class="dc-title">
-DC14 Uncertainty Quantification and Technology Qualification for Advanced Wind Turbine Components
-</p>
+</div>
+</div>
+</div>
+</div>
 
-                      <p class="dc-sub">
-Name: Mr. João Brites
-</p>
-                      <p class="dc-sub">
-Supervisors: Prof. A. Kolios, Prof. Y. Guo, Prof. J. Chiachio
- · Host: DTU
-</p>
-                    </div>
+<div class="dc-item" id="wp1-dc5">
+<div class="dc-header" role="button" aria-controls="wp1-dc5-body" aria-expanded="false" tabindex="0"><img class="dc-thumb" src="/img/dcs/joao_brites_m2a_photo.jpg" alt="" style="--thumb-size: 140px" />
+<div class="dc-head-top"><span class="dc-code">DC14</span><span class="dc-name">João Brites</span></div>
+<p class="dc-title">Uncertainty Quantification and Technology Qualification for Advanced Wind Turbine Components</p>
+<div class="dc-details"><span><strong>Host:</strong> DTU</span><span><strong>Supervisors:</strong> Prof. A. Kolios, Prof. Y. Guo, Prof. J. Chiachio</span></div>
+<span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+</div>
 
-                    <p><span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></p>
-                  </div>
+<div id="wp1-dc5-body" class="dc-body" aria-hidden="true" hidden="">
+<div class="dc-grid">
+<div>
 
-                  <div id="wp1-dc5-body" class="dc-body" aria-hidden="true" hidden="">
-                    <div class="dc-grid">
-                      <div>
+<div class="dc-bio">
+  <h4 class="dc-section-label">Short Bio</h4>
+  <p>João holds a Bachelor’s and a Master’s degree in Engineering Physics from the University of Porto. Prior to joining Met2Adapt, he completed a research internship at IFIMUP focused on sustainable energy harvesting, carried out his MSc thesis research with the CENTRA group at FEUP on space debris and satellite orbit reconstruction, and later held a research fellowship at FEUP working on astrodynamics and celestial mechanics. He is currently a Doctoral Candidate at DTU Wind and Energy Systems, focusing on uncertainty quantification and technology qualification for advanced wind turbine components.</p>
 
-                        <div class="dc-bio">
-                          <h4 class="dc-section-label">Short Bio</h4>
-                          <p>João holds a Bachelor’s and a Master’s degree in Engineering Physics from the University of Porto. Prior to joining Met2Adapt, he completed a research internship at IFIMUP focused on sustainable energy harvesting, carried out his MSc thesis research with the CENTRA group at FEUP on space debris and satellite orbit reconstruction, and later held a research fellowship at FEUP working on astrodynamics and celestial mechanics. He is currently a Doctoral Candidate at DTU Wind and Energy Systems, focusing on uncertainty quantification and technology qualification for advanced wind turbine components.</p>
+</div>
 
-                        </div>
 
-                        <p><strong>Project summary</strong></p>
-                        <p>Develop a robust framework for uncertainty quantification (UQ) and technology qualification, aimed at validating the safety, performance, and longevity of advanced wind turbine components, particularly next-generation blades featuring adaptive meta-materials.</p>
+<p><strong>Project summary</strong></p>
+<p>Develop a robust framework for uncertainty quantification (UQ) and technology qualification, aimed at validating the safety, performance, and longevity of advanced wind turbine components, particularly next-generation blades featuring adaptive meta-materials.</p>
 
-                        <p><strong>Methods</strong></p>
-                        <p>Baysian Inference; Stochastic modelling; performance benchmarks.</p>
 
-                        <div class="dc-tags">
 
-                          <p><span class="dc-tag">UQ</span></p>
+<p><strong>Methods</strong></p>
+<p>Baysian Inference; Stochastic modelling; performance benchmarks.</p>
 
-                          <p><span class="dc-tag">Technology Qualifcation</span></p>
 
-                          <p><span class="dc-tag">Certification</span></p>
 
-                        </div>
+<div class="dc-tags">
 
-                      </div>
+<span class="dc-tag">UQ</span>
 
-                      <div>
+<span class="dc-tag">Technology Qualifcation</span>
 
-                        <p><img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_5.png" alt="Uncertainty Quantification and Technology Qualification for Advanced Wind Turbine Components photo" /></p>
+<span class="dc-tag">Certification</span>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+</div>
 
-              </div>
-            </section>
+</div>
+
+<div>
+
+<img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_5.png" alt="Uncertainty Quantification and Technology Qualification for Advanced Wind Turbine Components photo" />
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
           </div>
         </div>
 
@@ -510,243 +465,209 @@ Supervisors: Prof. A. Kolios, Prof. Y. Guo, Prof. J. Chiachio
 
           <div id="wp2-dc-list" class="dc-list" hidden="">
             <section class="wp-dc" aria-labelledby="wp2-title">
-              <h3 id="wp2-title"></h3>
+<h3 id="wp2-title"></h3>
 
-              <div class="dc-accordion" id="wp2-accordion" data-single-open="false">
-                <div class="dc-item" id="wp2-dc1">
-                  <div class="dc-header" role="button" aria-controls="wp2-dc1-body" aria-expanded="false" tabindex="0">
 
-                    <p><img class="dc-thumb" src="/img/dcs/placeholder.jpg" alt="DC1" /></p>
 
-                    <div class="dc-meta">
-                      <p class="dc-title">
-DC1 Resolving failure modes in complex composite components
-</p>
+<div class="dc-accordion" id="wp2-accordion" data-single-open="false">
+<div class="dc-item" id="wp2-dc1">
+<div class="dc-header" role="button" aria-controls="wp2-dc1-body" aria-expanded="false" tabindex="0"><img class="dc-thumb" src="/img/dcs/placeholder.jpg" alt="" />
+<div class="dc-head-top"><span class="dc-code">DC1</span><span class="dc-name dc-name--host">National Technical University of Athens</span></div>
+<p class="dc-title">Resolving failure modes in complex composite components</p>
+<div class="dc-details"><span><strong>Supervisors:</strong> Prof. S. Triantafyllou, Prof. I. Kalogeris, Prof. F. Magalhães</span></div>
+<span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+</div>
 
-                      <p class="dc-sub">
+<div id="wp2-dc1-body" class="dc-body" aria-hidden="true" hidden="">
+<div class="dc-grid">
+<div>
 
-</p>
-                      <p class="dc-sub">
-Supervisors: Prof. S. Triantafyllou, Prof. I. Kalogeris, Prof. F. Magalhães
- · Host: National Technical University of Athens
-</p>
-                    </div>
 
-                    <p><span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></p>
-                  </div>
+<p><strong>Project summary</strong></p>
+<p>Develop an efficient and versatile multiscale computational method for simulating damage evolution in meta-materials.</p>
 
-                  <div id="wp2-dc1-body" class="dc-body" aria-hidden="true" hidden="">
-                    <div class="dc-grid">
-                      <div>
 
-                        <p><strong>Project summary</strong></p>
-                        <p>Develop an efficient and versatile multiscale computational method for simulating damage evolution in meta-materials.</p>
 
-                        <p><strong>Methods</strong></p>
-                        <p>computational mechanics; machine learning; high-performance computing.</p>
+<p><strong>Methods</strong></p>
+<p>computational mechanics; machine learning; high-performance computing.</p>
 
-                        <div class="dc-tags">
 
-                          <p><span class="dc-tag">Composites</span></p>
 
-                          <p><span class="dc-tag">Fracture</span></p>
+<div class="dc-tags">
 
-                          <p><span class="dc-tag">Surrogate modelling</span></p>
+<span class="dc-tag">Composites</span>
 
-                        </div>
+<span class="dc-tag">Fracture</span>
 
-                      </div>
+<span class="dc-tag">Surrogate modelling</span>
 
-                      <div>
+</div>
 
-                        <p><img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_6.png" alt="Resolving failure modes in complex composite components photo" /></p>
+</div>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+<div>
 
-                <div class="dc-item" id="wp2-dc2">
-                  <div class="dc-header" role="button" aria-controls="wp2-dc2-body" aria-expanded="false" tabindex="0">
+<img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_6.png" alt="Resolving failure modes in complex composite components photo" />
 
-                    <p><img class="dc-thumb" src="/img/dcs/ipsi.jpg" alt="DC2" style="--thumb-size: 140px" /></p>
+</div>
+</div>
+</div>
+</div>
 
-                    <div class="dc-meta">
-                      <p class="dc-title">
-DC2 Coupled chemo-mechanical interactions leading to fatigue damage in corrosive environments
-</p>
+<div class="dc-item" id="wp2-dc2">
+<div class="dc-header" role="button" aria-controls="wp2-dc2-body" aria-expanded="false" tabindex="0"><img class="dc-thumb" src="/img/dcs/ipsi.jpg" alt="" style="--thumb-size: 140px" />
+<div class="dc-head-top"><span class="dc-code">DC2</span><span class="dc-name">Ioannis Ypsilantis</span></div>
+<p class="dc-title">Coupled chemo-mechanical interactions leading to fatigue damage in corrosive environments</p>
+<div class="dc-details"><span><strong>Host:</strong> National Technical University of Athens</span><span><strong>Supervisors:</strong> Prof. S. Triantafyllou, Prof. E. Sapountzakis, Prof. A. Palermo</span></div>
+<span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+</div>
 
-                      <p class="dc-sub">
-Name: Mr Ioannis Ypsilantis
-</p>
-                      <p class="dc-sub">
-Supervisors: Prof. S. Triantafyllou, Prof. E. Sapountzakis, Prof. A. Palermo
- · Host: National Technical University of Athens
-</p>
-                    </div>
+<div id="wp2-dc2-body" class="dc-body" aria-hidden="true" hidden="">
+<div class="dc-grid">
+<div>
 
-                    <p><span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></p>
-                  </div>
+<div class="dc-bio">
+  <h4 class="dc-section-label">Short Bio</h4>
+  <p>Ioannis holds a Bachelor in Mathematics from the University of Patras and a Master degree in Mathematics in Science and Engineering from the Technical University of Munich with a specialisation in Numerical Methods and Optimisation. Prior to joining Met2Adapt he held a junior researcher position at CIDETEC, Spain where he implemented physics informed ML pipelines in various simulation frameworks.</p>
 
-                  <div id="wp2-dc2-body" class="dc-body" aria-hidden="true" hidden="">
-                    <div class="dc-grid">
-                      <div>
+</div>
 
-                        <div class="dc-bio">
-                          <h4 class="dc-section-label">Short Bio</h4>
-                          <p>Ioannis holds a Bachelor in Mathematics from the University of Patras and a Master degree in Mathematics in Science and Engineering from the Technical University of Munich with a specialisation in Numerical Methods and Optimisation. Prior to joining Met2Adapt he held a junior researcher position at CIDETEC, Spain where he implemented physics informed ML pipelines in various simulation frameworks.</p>
 
-                        </div>
+<p><strong>Project summary</strong></p>
+<p>Formulate a high fidelity numerical framework to resolve crack initiation and propagation in components fitted with meta-materials operating in highly corrosive environments.</p>
 
-                        <p><strong>Project summary</strong></p>
-                        <p>Formulate a high fidelity numerical framework to resolve crack initiation and propagation in components fitted with meta-materials operating in highly corrosive environments.</p>
 
-                        <p><strong>Methods</strong></p>
-                        <p>Fracture mechanics; multi-phusics; V&amp;V.</p>
 
-                        <div class="dc-tags">
+<p><strong>Methods</strong></p>
+<p>Fracture mechanics; multi-phusics; V&amp;V.</p>
 
-                          <p><span class="dc-tag">Meta-materials</span></p>
 
-                          <p><span class="dc-tag">Corrosion</span></p>
 
-                          <p><span class="dc-tag">Fracture</span></p>
+<div class="dc-tags">
 
-                        </div>
+<span class="dc-tag">Meta-materials</span>
 
-                      </div>
+<span class="dc-tag">Corrosion</span>
 
-                      <div>
+<span class="dc-tag">Fracture</span>
 
-                        <p><img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_7.png" alt="Coupled chemo-mechanical interactions leading to fatigue damage in corrosive environments photo" /></p>
+</div>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+</div>
 
-                <div class="dc-item" id="wp2-dc3">
-                  <div class="dc-header" role="button" aria-controls="wp2-dc3-body" aria-expanded="false" tabindex="0">
+<div>
 
-                    <p><img class="dc-thumb" src="/img/dcs/Photo-Fenia%20Papadopoulou.jpg" alt="DC9" style="--thumb-size: 140px" /></p>
+<img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_7.png" alt="Coupled chemo-mechanical interactions leading to fatigue damage in corrosive environments photo" />
 
-                    <div class="dc-meta">
-                      <p class="dc-title">
-DC9 Modelling of the dynamic response for offshore wind farms
-</p>
+</div>
+</div>
+</div>
+</div>
 
-                      <p class="dc-sub">
-Name: Ms Fenia Papadopoulou
-</p>
-                      <p class="dc-sub">
-Supervisors: Prof. D. Colquitt, Prof. A. Movchan, Prof. A. Palermo
- · Host: University of Liverpool
-</p>
-                    </div>
+<div class="dc-item" id="wp2-dc3">
+<div class="dc-header" role="button" aria-controls="wp2-dc3-body" aria-expanded="false" tabindex="0"><img class="dc-thumb" src="/img/dcs/Photo-Fenia%20Papadopoulou.jpg" alt="" style="--thumb-size: 140px" />
+<div class="dc-head-top"><span class="dc-code">DC9</span><span class="dc-name">Fenia Papadopoulou</span></div>
+<p class="dc-title">Modelling of the dynamic response for offshore wind farms</p>
+<div class="dc-details"><span><strong>Host:</strong> University of Liverpool</span><span><strong>Supervisors:</strong> Prof. D. Colquitt, Prof. A. Movchan, Prof. A. Palermo</span></div>
+<span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+</div>
 
-                    <p><span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></p>
-                  </div>
+<div id="wp2-dc3-body" class="dc-body" aria-hidden="true" hidden="">
+<div class="dc-grid">
+<div>
 
-                  <div id="wp2-dc3-body" class="dc-body" aria-hidden="true" hidden="">
-                    <div class="dc-grid">
-                      <div>
+<div class="dc-bio">
+  <h4 class="dc-section-label">Short Bio</h4>
+  <p>Fenia graduated with an MEng from the School of Applied Mathematical and Physical Sciences at NTUA in 2026, focusing on the mathematical modelling of wave scattering in flexural plates. Her theoretical background in PDEs, wave propagation, continuum mechanics, elasticity theory, and dynamical systems is enhanced by her practical experience using tools such as Mathematica and MATLAB. She applied this combination of skills in her thesis, “Elastic Scattering in Kirchhoff Plates” conducted under the supervision of Prof. Gourgiotis. In October 2026, she began her PhD in the Department of Mathematical Sciences, in Applied Mathematics, at the University of Liverpool, supervised by Prof. Colquitt and Prof. Movchan.</p>
 
-                        <div class="dc-bio">
-                          <h4 class="dc-section-label">Short Bio</h4>
-                          <p>Fenia graduated with an MEng from the School of Applied Mathematical and Physical Sciences at NTUA in 2026, focusing on the mathematical modelling of wave scattering in flexural plates. Her theoretical background in PDEs, wave propagation, continuum mechanics, elasticity theory, and dynamical systems is enhanced by her practical experience using tools such as Mathematica and MATLAB. She applied this combination of skills in her thesis, “Elastic Scattering in Kirchhoff Plates” conducted under the supervision of Prof. Gourgiotis. In October 2026, she began her PhD in the Department of Mathematical Sciences, in Applied Mathematics, at the University of Liverpool, supervised by Prof. Colquitt and Prof. Movchan.</p>
+</div>
 
-                        </div>
 
-                        <p><strong>Project summary</strong></p>
-                        <p>Deliver analytical and computational models of individual and clusters of turbines, considering solid-fluid interactions, and scattering and generation of waves.</p>
+<p><strong>Project summary</strong></p>
+<p>Deliver analytical and computational models of individual and clusters of turbines, considering solid-fluid interactions, and scattering and generation of waves.</p>
 
-                        <p><strong>Methods</strong></p>
-                        <p>analytical modelling; nonlinear dynamics; environmental impact assessment.</p>
 
-                        <div class="dc-tags">
 
-                          <p><span class="dc-tag">Wind turbine clusters</span></p>
+<p><strong>Methods</strong></p>
+<p>analytical modelling; nonlinear dynamics; environmental impact assessment.</p>
 
-                          <p><span class="dc-tag">gravity water waves</span></p>
 
-                          <p><span class="dc-tag">mechanical waves</span></p>
 
-                          <p><span class="dc-tag">acoustic waves</span></p>
+<div class="dc-tags">
 
-                        </div>
+<span class="dc-tag">Wind turbine clusters</span>
 
-                      </div>
+<span class="dc-tag">gravity water waves</span>
 
-                      <div>
+<span class="dc-tag">mechanical waves</span>
 
-                        <p><img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_8.png" alt="Modelling of the dynamic response for offshore wind farms photo" /></p>
+<span class="dc-tag">acoustic waves</span>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+</div>
 
-                <div class="dc-item" id="wp2-dc4">
-                  <div class="dc-header" role="button" aria-controls="wp2-dc4-body" aria-expanded="false" tabindex="0">
+</div>
 
-                    <p><img class="dc-thumb" src="/img/dcs/placeholder.jpg" alt="DC10" /></p>
+<div>
 
-                    <div class="dc-meta">
-                      <p class="dc-title">
-DC10 Development of deep learning-based surrogate models for predicting failure in meta-material composites
-</p>
+<img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_8.png" alt="Modelling of the dynamic response for offshore wind farms photo" />
 
-                      <p class="dc-sub">
-Name: Ms Manon Brun
-</p>
-                      <p class="dc-sub">
-Supervisors: Prof. E. Kakouris, Prof. P. Brommer, Prof. S. Triantafyllou
- · Host: University of Warwick
-</p>
-                    </div>
+</div>
+</div>
+</div>
+</div>
 
-                    <p><span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></p>
-                  </div>
+<div class="dc-item" id="wp2-dc4">
+<div class="dc-header" role="button" aria-controls="wp2-dc4-body" aria-expanded="false" tabindex="0"><img class="dc-thumb" src="/img/dcs/placeholder.jpg" alt="" />
+<div class="dc-head-top"><span class="dc-code">DC10</span><span class="dc-name">Manon Brun</span></div>
+<p class="dc-title">Development of deep learning-based surrogate models for predicting failure in meta-material composites</p>
+<div class="dc-details"><span><strong>Host:</strong> University of Warwick</span><span><strong>Supervisors:</strong> Prof. E. Kakouris, Prof. P. Brommer, Prof. S. Triantafyllou</span></div>
+<span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+</div>
 
-                  <div id="wp2-dc4-body" class="dc-body" aria-hidden="true" hidden="">
-                    <div class="dc-grid">
-                      <div>
+<div id="wp2-dc4-body" class="dc-body" aria-hidden="true" hidden="">
+<div class="dc-grid">
+<div>
 
-                        <div class="dc-bio">
-                          <h4 class="dc-section-label">Short Bio</h4>
-                          <p>Manon has a strong academic background in theoretical physics, mechanics and applied physics, supported by strong computational and scientific programming skills in computer programming. Her research experience includes computational modelling, numerical implementation, model validation and the analysis of complex physical systems. These transferable skills, together with her strong analytical ability and interest in machine learning, provide a good foundation for DC10’s work on deep-learning surrogate models.</p>
+<div class="dc-bio">
+  <h4 class="dc-section-label">Short Bio</h4>
+  <p>Manon has a strong academic background in theoretical physics, mechanics and applied physics, supported by strong computational and scientific programming skills in computer programming. Her research experience includes computational modelling, numerical implementation, model validation and the analysis of complex physical systems. These transferable skills, together with her strong analytical ability and interest in machine learning, provide a good foundation for DC10’s work on deep-learning surrogate models.</p>
 
-                        </div>
+</div>
 
-                        <p><strong>Project summary</strong></p>
-                        <p>Integrate advanced deep learning approaches with state-of-the-art fracture modelling techniques for rapid yet high fidelity damage modelling.</p>
 
-                        <p><strong>Methods</strong></p>
-                        <p>machine learning; computational fracture mechanics; verification and validation.</p>
+<p><strong>Project summary</strong></p>
+<p>Integrate advanced deep learning approaches with state-of-the-art fracture modelling techniques for rapid yet high fidelity damage modelling.</p>
 
-                        <div class="dc-tags">
 
-                          <p><span class="dc-tag">Surrogate modelling</span></p>
 
-                          <p><span class="dc-tag">fracture modelling</span></p>
+<p><strong>Methods</strong></p>
+<p>machine learning; computational fracture mechanics; verification and validation.</p>
 
-                          <p><span class="dc-tag">evolving fractures</span></p>
 
-                        </div>
 
-                      </div>
+<div class="dc-tags">
 
-                      <div>
+<span class="dc-tag">Surrogate modelling</span>
 
-                        <p><img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_9.png" alt="Development of deep learning-based surrogate models for predicting failure in meta-material composites photo" /></p>
+<span class="dc-tag">fracture modelling</span>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+<span class="dc-tag">evolving fractures</span>
 
-              </div>
-            </section>
+</div>
+
+</div>
+
+<div>
+
+<img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_9.png" alt="Development of deep learning-based surrogate models for predicting failure in meta-material composites photo" />
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
           </div>
         </div>
 
@@ -802,182 +723,157 @@ Supervisors: Prof. E. Kakouris, Prof. P. Brommer, Prof. S. Triantafyllou
 
           <div id="wp3-dc-list" class="dc-list" hidden="">
             <section class="wp-dc" aria-labelledby="wp3-title">
-              <h3 id="wp3-title"></h3>
+<h3 id="wp3-title"></h3>
 
-              <div class="dc-accordion" id="wp3-accordion" data-single-open="false">
-                <div class="dc-item" id="wp3-dc1">
-                  <div class="dc-header" role="button" aria-controls="wp3-dc1-body" aria-expanded="false" tabindex="0">
 
-                    <p><img class="dc-thumb" src="/img/dcs/Picture_Hooman_Aminipour.jpg" alt="DC5" style="--thumb-size: 140px" /></p>
 
-                    <div class="dc-meta">
-                      <p class="dc-title">
-DC5 Enhanced Wave Bandgaps in Offshore Cylindrical Elements Embedding Linear and Nonlinear Topological Resonators
-</p>
+<div class="dc-accordion" id="wp3-accordion" data-single-open="false">
+<div class="dc-item" id="wp3-dc1">
+<div class="dc-header" role="button" aria-controls="wp3-dc1-body" aria-expanded="false" tabindex="0"><img class="dc-thumb" src="/img/dcs/Picture_Hooman_Aminipour.jpg" alt="" style="--thumb-size: 140px" />
+<div class="dc-head-top"><span class="dc-code">DC5</span><span class="dc-name">Hooman Aminipour</span></div>
+<p class="dc-title">Enhanced Wave Bandgaps in Offshore Cylindrical Elements Embedding Linear and Nonlinear Topological Resonators</p>
+<div class="dc-details"><span><strong>Host:</strong> University of Trento</span><span><strong>Supervisors:</strong> Prof. O. Bursi, Prof. M. F. Pantano, Dr. V. Dertimanis</span></div>
+<span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+</div>
 
-                      <p class="dc-sub">
-Name: Mr. Hooman Aminipour
-</p>
-                      <p class="dc-sub">
-Supervisors: Prof. O. Bursi, Prof. M. F. Pantano, Dr. V. Dertimanis
- · Host: University of Trento
-</p>
-                    </div>
+<div id="wp3-dc1-body" class="dc-body" aria-hidden="true" hidden="">
+<div class="dc-grid">
+<div>
 
-                    <p><span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></p>
-                  </div>
+<div class="dc-bio">
+  <h4 class="dc-section-label">Short Bio</h4>
+  <p>Hooman Aminipour holds a Bachelor in Mechanical Engineering from the Islamic Azad University and an Msc from the American University of Sharjah, United Arab Emirates, where he worked in nonlinear vibration of functionally graded composite plates and shells.  He has experience in instability of anisotropic composite materials and has experience with  Simulink, MATLAB, Continuation and Bifurcation Software, MatCont and Finite Element Analysis Software, ANSYS.</p>
 
-                  <div id="wp3-dc1-body" class="dc-body" aria-hidden="true" hidden="">
-                    <div class="dc-grid">
-                      <div>
+</div>
 
-                        <div class="dc-bio">
-                          <h4 class="dc-section-label">Short Bio</h4>
-                          <p>Hooman Aminipour holds a Bachelor in Mechanical Engineering from the Islamic Azad University and an Msc from the American University of Sharjah, United Arab Emirates, where he worked in nonlinear vibration of functionally graded composite plates and shells.  He has experience in instability of anisotropic composite materials and has experience with  Simulink, MATLAB, Continuation and Bifurcation Software, MatCont and Finite Element Analysis Software, ANSYS.</p>
 
-                        </div>
+<p><strong>Project summary</strong></p>
+<p>Conceive and design enhanced cylinders for wave protection of floating tanks of pump hydro offshore and vibration mitigation of towers for synergically coupled to offshore wind turbines in wind farms subjected to frequent wave/wind loadings.</p>
 
-                        <p><strong>Project summary</strong></p>
-                        <p>Conceive and design enhanced cylinders for wave protection of floating tanks of pump hydro offshore and vibration mitigation of towers for synergically coupled to offshore wind turbines in wind farms subjected to frequent wave/wind loadings.</p>
 
-                        <p><strong>Methods</strong></p>
-                        <p>nonlinear dynamics; wave methods; topological optimisation; prototyping.</p>
 
-                        <div class="dc-tags">
+<p><strong>Methods</strong></p>
+<p>nonlinear dynamics; wave methods; topological optimisation; prototyping.</p>
 
-                          <p><span class="dc-tag">Distributed resonators</span></p>
 
-                          <p><span class="dc-tag">Spider web resonators</span></p>
 
-                          <p><span class="dc-tag">Hydro pumping</span></p>
+<div class="dc-tags">
 
-                        </div>
+<span class="dc-tag">Distributed resonators</span>
 
-                      </div>
+<span class="dc-tag">Spider web resonators</span>
 
-                      <div>
+<span class="dc-tag">Hydro pumping</span>
 
-                        <p><img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_10.png" alt="Enhanced Wave Bandgaps in Offshore Cylindrical Elements Embedding Linear and Nonlinear Topological Resonators photo" /></p>
+</div>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+</div>
 
-                <div class="dc-item" id="wp3-dc2">
-                  <div class="dc-header" role="button" aria-controls="wp3-dc2-body" aria-expanded="false" tabindex="0">
+<div>
 
-                    <p><img class="dc-thumb" src="/img/dcs/placeholder.jpg" alt="DC7" /></p>
+<img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_10.png" alt="Enhanced Wave Bandgaps in Offshore Cylindrical Elements Embedding Linear and Nonlinear Topological Resonators photo" />
 
-                    <div class="dc-meta">
-                      <p class="dc-title">
-DC7 Optimal displacement of meta-structures for enhanced renewable energy harvesting
-</p>
+</div>
+</div>
+</div>
+</div>
 
-                      <p class="dc-sub">
+<div class="dc-item" id="wp3-dc2">
+<div class="dc-header" role="button" aria-controls="wp3-dc2-body" aria-expanded="false" tabindex="0"><img class="dc-thumb" src="/img/dcs/placeholder.jpg" alt="" />
+<div class="dc-head-top"><span class="dc-code">DC7</span><span class="dc-name dc-name--host">University of Bologna</span></div>
+<p class="dc-title">Optimal displacement of meta-structures for enhanced renewable energy harvesting</p>
+<div class="dc-details"><span><strong>Supervisors:</strong> Prof. R. Archetti, Prof. A. Marzani, Prof. D. Colquitt</span></div>
+<span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+</div>
 
-</p>
-                      <p class="dc-sub">
-Supervisors: Prof. R. Archetti, Prof. A. Marzani, Prof. D. Colquitt
- · Host: University of Bologna
-</p>
-                    </div>
+<div id="wp3-dc2-body" class="dc-body" aria-hidden="true" hidden="">
+<div class="dc-grid">
+<div>
 
-                    <p><span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></p>
-                  </div>
 
-                  <div id="wp3-dc2-body" class="dc-body" aria-hidden="true" hidden="">
-                    <div class="dc-grid">
-                      <div>
+<p><strong>Project summary</strong></p>
+<p>Study the underlying physics and design periodic (resonant) structures either fully or partially submerged and located near the shore, where shallow wavefronts exist.</p>
 
-                        <p><strong>Project summary</strong></p>
-                        <p>Study the underlying physics and design periodic (resonant) structures either fully or partially submerged and located near the shore, where shallow wavefronts exist.</p>
 
-                        <p><strong>Methods</strong></p>
-                        <p>wave dynamics; analytical and numerical modelling; prototyping.</p>
 
-                        <div class="dc-tags">
+<p><strong>Methods</strong></p>
+<p>wave dynamics; analytical and numerical modelling; prototyping.</p>
 
-                          <p><span class="dc-tag">Meta-Structures</span></p>
 
-                          <p><span class="dc-tag">wave attenuation</span></p>
 
-                          <p><span class="dc-tag">Fluid Structure Interaction</span></p>
+<div class="dc-tags">
 
-                        </div>
+<span class="dc-tag">Meta-Structures</span>
 
-                      </div>
+<span class="dc-tag">wave attenuation</span>
 
-                      <div>
+<span class="dc-tag">Fluid Structure Interaction</span>
 
-                        <p><img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_11.png" alt="Optimal displacement of meta-structures for enhanced renewable energy harvesting photo" /></p>
+</div>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+</div>
 
-                <div class="dc-item" id="wp3-dc3">
-                  <div class="dc-header" role="button" aria-controls="wp3-dc3-body" aria-expanded="false" tabindex="0">
+<div>
 
-                    <p><img class="dc-thumb" src="/img/dcs/Yi.jpg" alt="DC8" style="--thumb-size: 140px" /></p>
+<img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_11.png" alt="Optimal displacement of meta-structures for enhanced renewable energy harvesting photo" />
 
-                    <div class="dc-meta">
-                      <p class="dc-title">
-DC8 On the combined use of wave energy converters and meta-structures for fatigue-life extension of existing offshore structures
-</p>
+</div>
+</div>
+</div>
+</div>
 
-                      <p class="dc-sub">
-Name: Mr. Yi Yao
-</p>
-                      <p class="dc-sub">
-Supervisors: Prof. A. Palermo, Prof. R. Archetti, Prof. D. Colquitt
- · Host: University of Bologna
-</p>
-                    </div>
+<div class="dc-item" id="wp3-dc3">
+<div class="dc-header" role="button" aria-controls="wp3-dc3-body" aria-expanded="false" tabindex="0"><img class="dc-thumb" src="/img/dcs/Yi.jpg" alt="" style="--thumb-size: 140px" />
+<div class="dc-head-top"><span class="dc-code">DC8</span><span class="dc-name">Yi Yao</span></div>
+<p class="dc-title">On the combined use of wave energy converters and meta-structures for fatigue-life extension of existing offshore structures</p>
+<div class="dc-details"><span><strong>Host:</strong> University of Bologna</span><span><strong>Supervisors:</strong> Prof. A. Palermo, Prof. R. Archetti, Prof. D. Colquitt</span></div>
+<span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+</div>
 
-                    <p><span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></p>
-                  </div>
+<div id="wp3-dc3-body" class="dc-body" aria-hidden="true" hidden="">
+<div class="dc-grid">
+<div>
 
-                  <div id="wp3-dc3-body" class="dc-body" aria-hidden="true" hidden="">
-                    <div class="dc-grid">
-                      <div>
+<div class="dc-bio">
+  <h4 class="dc-section-label">Short Bio</h4>
+  <p>Yi holds an MEng from Tianjin University, where he ranked among the top students of his cohort. His expertise covers theoretical and experimental dynamics, including linear and nonlinear vibrations, modal analysis and random vibrations. He has research experience in nonlinear vibrations, documented by peer-reviewed publications in the field.</p>
 
-                        <div class="dc-bio">
-                          <h4 class="dc-section-label">Short Bio</h4>
-                          <p>Yi holds an MEng from Tianjin University, where he ranked among the top students of his cohort. His expertise covers theoretical and experimental dynamics, including linear and nonlinear vibrations, modal analysis and random vibrations. He has research experience in nonlinear vibrations, documented by peer-reviewed publications in the field.</p>
+</div>
 
-                        </div>
 
-                        <p><strong>Project summary</strong></p>
-                        <p>Develop solutions for reducing vibrations in offshore structures by attenuating the amplitude of wave loads and/or mitigating their dynamic response to wind loading.</p>
+<p><strong>Project summary</strong></p>
+<p>Develop solutions for reducing vibrations in offshore structures by attenuating the amplitude of wave loads and/or mitigating their dynamic response to wind loading.</p>
 
-                        <p><strong>Methods</strong></p>
-                        <p>wave dynamics; optimisation; analytical and numerical modelling.</p>
 
-                        <div class="dc-tags">
 
-                          <p><span class="dc-tag">Wave Energy Converters</span></p>
+<p><strong>Methods</strong></p>
+<p>wave dynamics; optimisation; analytical and numerical modelling.</p>
 
-                          <p><span class="dc-tag">Wind farms</span></p>
 
-                          <p><span class="dc-tag">Meta-Structures</span></p>
 
-                        </div>
+<div class="dc-tags">
 
-                      </div>
+<span class="dc-tag">Wave Energy Converters</span>
 
-                      <div>
+<span class="dc-tag">Wind farms</span>
 
-                        <p><img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_12.png" alt="On the combined use of wave energy converters and meta-structures for fatigue-life extension of existing offshore structures photo" /></p>
+<span class="dc-tag">Meta-Structures</span>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+</div>
 
-              </div>
-            </section>
+</div>
+
+<div>
+
+<img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_12.png" alt="On the combined use of wave energy converters and meta-structures for fatigue-life extension of existing offshore structures photo" />
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
           </div>
         </div>
 
@@ -1033,237 +929,203 @@ Supervisors: Prof. A. Palermo, Prof. R. Archetti, Prof. D. Colquitt
 
           <div id="wp4-dc-list" class="dc-list" hidden="">
             <section class="wp-dc" aria-labelledby="wp4-title">
-              <h3 id="wp4-title"></h3>
+<h3 id="wp4-title"></h3>
 
-              <div class="dc-accordion" id="wp4-accordion" data-single-open="false">
-                <div class="dc-item" id="wp4-dc1">
-                  <div class="dc-header" role="button" aria-controls="wp4-dc1-body" aria-expanded="false" tabindex="0">
 
-                    <p><img class="dc-thumb" src="/img/dcs/Perfil_Braulio.jpg" alt="DC11" style="--thumb-size: 140px" /></p>
 
-                    <div class="dc-meta">
-                      <p class="dc-title">
-DC11 GenAI-aided reliability assessment of mechanical metamaterials in offshore wind and wave energy applications
-</p>
+<div class="dc-accordion" id="wp4-accordion" data-single-open="false">
+<div class="dc-item" id="wp4-dc1">
+<div class="dc-header" role="button" aria-controls="wp4-dc1-body" aria-expanded="false" tabindex="0"><img class="dc-thumb" src="/img/dcs/Perfil_Braulio.jpg" alt="" style="--thumb-size: 140px" />
+<div class="dc-head-top"><span class="dc-code">DC11</span><span class="dc-name">Braulio Neira</span></div>
+<p class="dc-title">GenAI-aided reliability assessment of mechanical metamaterials in offshore wind and wave energy applications</p>
+<div class="dc-details"><span><strong>Host:</strong> University of Granada</span><span><strong>Supervisors:</strong> Prof. J. Chiachio, Prof. M.L. Jalón, Prof. A. Kolios</span></div>
+<span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+</div>
 
-                      <p class="dc-sub">
-Name: Mr. Braulio Neira
-</p>
-                      <p class="dc-sub">
-Supervisors: Prof. J. Chiachio, Prof. M.L. Jalón, Prof. A. Kolios
- · Host: University of Granada
-</p>
-                    </div>
+<div id="wp4-dc1-body" class="dc-body" aria-hidden="true" hidden="">
+<div class="dc-grid">
+<div>
 
-                    <p><span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></p>
-                  </div>
+<div class="dc-bio">
+  <h4 class="dc-section-label">Short Bio</h4>
+  <p>Braulio is a Mechanical Engineer specialising in renewable energy systems, with a strong focus on wave energy converters and marine energy technologies. His research combines analytical modelling, multibody dynamics, numerical simulation and experimental testing. His work has focused on the development of wave energy converters with nonlinear and variable-stiffness mechanisms, including the design and construction of lab-scale prototypes for wave-channel testing. He has gained international research experience through collaborations with RWTH Aachen University, the University of Edinburgh, the Federal University of Rio de Janeiro and other partner institutions. Braulio has contributed to journal and conference publications in marine energy and mechanical engineering, and has presented his research at international conferences, receiving recognition through a poster award.</p>
 
-                  <div id="wp4-dc1-body" class="dc-body" aria-hidden="true" hidden="">
-                    <div class="dc-grid">
-                      <div>
+</div>
 
-                        <div class="dc-bio">
-                          <h4 class="dc-section-label">Short Bio</h4>
-                          <p>Braulio is a Mechanical Engineer specialising in renewable energy systems, with a strong focus on wave energy converters and marine energy technologies. His research combines analytical modelling, multibody dynamics, numerical simulation and experimental testing. His work has focused on the development of wave energy converters with nonlinear and variable-stiffness mechanisms, including the design and construction of lab-scale prototypes for wave-channel testing. He has gained international research experience through collaborations with RWTH Aachen University, the University of Edinburgh, the Federal University of Rio de Janeiro and other partner institutions. Braulio has contributed to journal and conference publications in marine energy and mechanical engineering, and has presented his research at international conferences, receiving recognition through a poster award.</p>
 
-                        </div>
+<p><strong>Project summary</strong></p>
+<p>Develop an efficient methodological framework to quantify the structural reliability of meta-materials involving material and geometrical uncertainties.</p>
 
-                        <p><strong>Project summary</strong></p>
-                        <p>Develop an efficient methodological framework to quantify the structural reliability of meta-materials involving material and geometrical uncertainties.</p>
 
-                        <p><strong>Methods</strong></p>
-                        <p>Data augmentation; generative AI; reliability analysis.</p>
 
-                        <div class="dc-tags">
+<p><strong>Methods</strong></p>
+<p>Data augmentation; generative AI; reliability analysis.</p>
 
-                          <p><span class="dc-tag">risk</span></p>
 
-                          <p><span class="dc-tag">machine learning</span></p>
 
-                          <p><span class="dc-tag">wind and wave energy</span></p>
+<div class="dc-tags">
 
-                        </div>
+<span class="dc-tag">risk</span>
 
-                      </div>
+<span class="dc-tag">machine learning</span>
 
-                      <div>
+<span class="dc-tag">wind and wave energy</span>
 
-                        <p><img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_13.png" alt="GenAI-aided reliability assessment of mechanical metamaterials in offshore wind and wave energy applications photo" /></p>
+</div>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+</div>
 
-                <div class="dc-item" id="wp4-dc2">
-                  <div class="dc-header" role="button" aria-controls="wp4-dc2-body" aria-expanded="false" tabindex="0">
+<div>
 
-                    <p><img class="dc-thumb" src="/img/dcs/vinzent.jpg" alt="DC13" style="--thumb-size: 140px" /></p>
+<img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_13.png" alt="GenAI-aided reliability assessment of mechanical metamaterials in offshore wind and wave energy applications photo" />
 
-                    <div class="dc-meta">
-                      <p class="dc-title">
-DC13 Risk-based Maintenance Planning for Wind Turbine Components
-</p>
+</div>
+</div>
+</div>
+</div>
 
-                      <p class="dc-sub">
-Name: Mr. Vinzent Bohland
-</p>
-                      <p class="dc-sub">
-Supervisors: Prof. A. Kolios, Prof. Y. Guo, Dr. J. Santos
- · Host: DTU
-</p>
-                    </div>
+<div class="dc-item" id="wp4-dc2">
+<div class="dc-header" role="button" aria-controls="wp4-dc2-body" aria-expanded="false" tabindex="0"><img class="dc-thumb" src="/img/dcs/vinzent.jpg" alt="" style="--thumb-size: 140px" />
+<div class="dc-head-top"><span class="dc-code">DC13</span><span class="dc-name">Vinzent Bohland</span></div>
+<p class="dc-title">Risk-based Maintenance Planning for Wind Turbine Components</p>
+<div class="dc-details"><span><strong>Host:</strong> DTU</span><span><strong>Supervisors:</strong> Prof. A. Kolios, Prof. Y. Guo, Dr. J. Santos</span></div>
+<span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+</div>
 
-                    <p><span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></p>
-                  </div>
+<div id="wp4-dc2-body" class="dc-body" aria-hidden="true" hidden="">
+<div class="dc-grid">
+<div>
 
-                  <div id="wp4-dc2-body" class="dc-body" aria-hidden="true" hidden="">
-                    <div class="dc-grid">
-                      <div>
+<div class="dc-bio">
+  <h4 class="dc-section-label">Short Bio</h4>
+  <p>Vinzent holds a Master of Science in Electrical Engineering and Information Technology from the Karlsruhe Institute of Technology (KIT). Prior to joining DTU Wind and Energy Systems, he worked as a Production Planner at Robert Bosch GmbH in Nuremberg, where he managed automated production lines and led continuous improvement projects. He is currently a Doctoral Candidate at DTU Wind and Energy Systems, focusing on risk-based maintenance planning for wind turbine components, with a specialization in bearings.</p>
 
-                        <div class="dc-bio">
-                          <h4 class="dc-section-label">Short Bio</h4>
-                          <p>Vinzent holds a Master of Science in Electrical Engineering and Information Technology from the Karlsruhe Institute of Technology (KIT). Prior to joining DTU Wind and Energy Systems, he worked as a Production Planner at Robert Bosch GmbH in Nuremberg, where he managed automated production lines and led continuous improvement projects. He is currently a Doctoral Candidate at DTU Wind and Energy Systems, focusing on risk-based maintenance planning for wind turbine components, with a specialization in bearings.</p>
+</div>
 
-                        </div>
 
-                        <p><strong>Project summary</strong></p>
-                        <p>Create a comprehensive risk assessment and maintenance planning framework for wind turbine technologies, with a focus on enhancing structural resilience and operational efficiency.</p>
+<p><strong>Project summary</strong></p>
+<p>Create a comprehensive risk assessment and maintenance planning framework for wind turbine technologies, with a focus on enhancing structural resilience and operational efficiency.</p>
 
-                        <p><strong>Methods</strong></p>
-                        <p>risk based inspection; risk based maintenance; digital tool development.</p>
 
-                        <div class="dc-tags">
 
-                          <p><span class="dc-tag">Wind turbine risk assesment</span></p>
+<p><strong>Methods</strong></p>
+<p>risk based inspection; risk based maintenance; digital tool development.</p>
 
-                          <p><span class="dc-tag">preventive maintenance</span></p>
 
-                        </div>
 
-                      </div>
+<div class="dc-tags">
 
-                      <div>
+<span class="dc-tag">Wind turbine risk assesment</span>
 
-                        <p><img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_14.png" alt="Risk-based Maintenance Planning for Wind Turbine Components photo" /></p>
+<span class="dc-tag">preventive maintenance</span>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+</div>
 
-                <div class="dc-item" id="wp4-dc3">
-                  <div class="dc-header" role="button" aria-controls="wp4-dc3-body" aria-expanded="false" tabindex="0">
+</div>
 
-                    <p><img class="dc-thumb" src="/img/dcs/Gianluca_Lona.jpeg" alt="DC15" style="--thumb-size: 140px" /></p>
+<div>
 
-                    <div class="dc-meta">
-                      <p class="dc-title">
-DC15 Meta-structures with autonomous sensing capacities
-</p>
+<img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_14.png" alt="Risk-based Maintenance Planning for Wind Turbine Components photo" />
 
-                      <p class="dc-sub">
-Name: Mr. Gianluca Lona
-</p>
-                      <p class="dc-sub">
-Supervisors: Prof. E. Chatzi, Dr. V. Dertimanis, Prof. A. Colombi
- · Host: ETHZ
-</p>
-                    </div>
+</div>
+</div>
+</div>
+</div>
 
-                    <p><span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></p>
-                  </div>
+<div class="dc-item" id="wp4-dc3">
+<div class="dc-header" role="button" aria-controls="wp4-dc3-body" aria-expanded="false" tabindex="0"><img class="dc-thumb" src="/img/dcs/Gianluca_Lona.jpeg" alt="" style="--thumb-size: 140px" />
+<div class="dc-head-top"><span class="dc-code">DC15</span><span class="dc-name">Gianluca Lona</span></div>
+<p class="dc-title">Meta-structures with autonomous sensing capacities</p>
+<div class="dc-details"><span><strong>Host:</strong> ETHZ</span><span><strong>Supervisors:</strong> Prof. E. Chatzi, Dr. V. Dertimanis, Prof. A. Colombi</span></div>
+<span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+</div>
 
-                  <div id="wp4-dc3-body" class="dc-body" aria-hidden="true" hidden="">
-                    <div class="dc-grid">
-                      <div>
+<div id="wp4-dc3-body" class="dc-body" aria-hidden="true" hidden="">
+<div class="dc-grid">
+<div>
 
-                        <div class="dc-bio">
-                          <h4 class="dc-section-label">Short Bio</h4>
-                          <p>Gianluca holds a Bachelor’s degree in Industrial Engineering and a Master’s degree in Mechatronic Engineering from the University of Trento, where he focused on dynamics, finite element analysis and control. During his Master’s thesis at Empa, Dübendorf, he gained experience in electromechanical modelling, numerical simulation and experimental validation, working on semi-passive vibration control of dielectric elastomer devices. He also took part in an industrial collaboration that resulted in two international patent applications.</p>
+<div class="dc-bio">
+  <h4 class="dc-section-label">Short Bio</h4>
+  <p>Gianluca holds a Bachelor’s degree in Industrial Engineering and a Master’s degree in Mechatronic Engineering from the University of Trento, where he focused on dynamics, finite element analysis and control. During his Master’s thesis at Empa, Dübendorf, he gained experience in electromechanical modelling, numerical simulation and experimental validation, working on semi-passive vibration control of dielectric elastomer devices. He also took part in an industrial collaboration that resulted in two international patent applications.</p>
 
-                        </div>
+</div>
 
-                        <p><strong>Project summary</strong></p>
-                        <p>Develop metamaterial  based structures and devices that through vibration energy harvesting can exploit structural vibration to power sensors and data communication to the base.</p>
 
-                        <p><strong>Methods</strong></p>
-                        <p>nonlinear dynamics; electro-mechanical couplings; experimental validation.</p>
+<p><strong>Project summary</strong></p>
+<p>Develop metamaterial  based structures and devices that through vibration energy harvesting can exploit structural vibration to power sensors and data communication to the base.</p>
 
-                        <div class="dc-tags">
 
-                          <p><span class="dc-tag">Vibration and Energy harversting</span></p>
 
-                          <p><span class="dc-tag">Electro-mechanics</span></p>
+<p><strong>Methods</strong></p>
+<p>nonlinear dynamics; electro-mechanical couplings; experimental validation.</p>
 
-                        </div>
 
-                      </div>
 
-                      <div>
+<div class="dc-tags">
 
-                        <p><img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_15.png" alt="Meta-structures with autonomous sensing capacities photo" /></p>
+<span class="dc-tag">Vibration and Energy harversting</span>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+<span class="dc-tag">Electro-mechanics</span>
 
-                <div class="dc-item" id="wp4-dc4">
-                  <div class="dc-header" role="button" aria-controls="wp4-dc4-body" aria-expanded="false" tabindex="0">
+</div>
 
-                    <p><img class="dc-thumb" src="/img/dcs/placeholder.jpg" alt="DC16" /></p>
+</div>
 
-                    <div class="dc-meta">
-                      <p class="dc-title">
-DC16 Active meta-structures for enhanced damage detection and localization on wind turbine blades
-</p>
+<div>
 
-                      <p class="dc-sub">
+<img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_15.png" alt="Meta-structures with autonomous sensing capacities photo" />
 
-</p>
-                      <p class="dc-sub">
-Supervisors: Prof. E. Chatzi, Dr. V. Dertimanis, Prof. A. Colombi
- · Host: ETHZ
-</p>
-                    </div>
+</div>
+</div>
+</div>
+</div>
 
-                    <p><span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></p>
-                  </div>
+<div class="dc-item" id="wp4-dc4">
+<div class="dc-header" role="button" aria-controls="wp4-dc4-body" aria-expanded="false" tabindex="0"><img class="dc-thumb" src="/img/dcs/placeholder.jpg" alt="" />
+<div class="dc-head-top"><span class="dc-code">DC16</span><span class="dc-name dc-name--host">ETHZ</span></div>
+<p class="dc-title">Active meta-structures for enhanced damage detection and localization on wind turbine blades</p>
+<div class="dc-details"><span><strong>Supervisors:</strong> Prof. E. Chatzi, Dr. V. Dertimanis, Prof. A. Colombi</span></div>
+<span class="dc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+</div>
 
-                  <div id="wp4-dc4-body" class="dc-body" aria-hidden="true" hidden="">
-                    <div class="dc-grid">
-                      <div>
+<div id="wp4-dc4-body" class="dc-body" aria-hidden="true" hidden="">
+<div class="dc-grid">
+<div>
 
-                        <p><strong>Project summary</strong></p>
-                        <p>Classify the topology of damage on blades and design a class of surface-bonded metamaterials acting as meta-filters for guided waves.</p>
 
-                        <p><strong>Methods</strong></p>
-                        <p>nonlinear dynamics; algorithmic development; experimental validation.</p>
+<p><strong>Project summary</strong></p>
+<p>Classify the topology of damage on blades and design a class of surface-bonded metamaterials acting as meta-filters for guided waves.</p>
 
-                        <div class="dc-tags">
 
-                          <p><span class="dc-tag">Damage identification</span></p>
 
-                          <p><span class="dc-tag">Damage Localisation</span></p>
+<p><strong>Methods</strong></p>
+<p>nonlinear dynamics; algorithmic development; experimental validation.</p>
 
-                          <p><span class="dc-tag">Meta-Filtering</span></p>
 
-                        </div>
 
-                      </div>
+<div class="dc-tags">
 
-                      <div>
+<span class="dc-tag">Damage identification</span>
 
-                        <p><img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_16.png" alt="Active meta-structures for enhanced damage detection and localization on wind turbine blades photo" /></p>
+<span class="dc-tag">Damage Localisation</span>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+<span class="dc-tag">Meta-Filtering</span>
 
-              </div>
-            </section>
+</div>
+
+</div>
+
+<div>
+
+<img class="dc-photo" style="--dc-scale: 1;" src="/img/research/dc_project/fig_16.png" alt="Active meta-structures for enhanced damage detection and localization on wind turbine blades photo" />
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
           </div>
         </div>
 

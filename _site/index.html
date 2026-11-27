@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="/css/components.css">
   <link rel="stylesheet" href="/css/pages.css"> 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="alternate icon" type="image/x-icon" href="/favicon.ico">  
+  <link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#003A70">  
 </head>
 
 
@@ -17,34 +19,30 @@
 <body>
 <header class="site-header">
 <div class="container header-inner">
-<div class="logo">
-<a href="/">Met2Adapt</a>
-</div>
+<a class="brand" href="/" aria-label="Met2Adapt home">
+<img class="brand__icon" src="/img/logo/met2adapt-icon-small.svg" alt="" width="40" height="40">
+<span class="brand__text"><span class="brand__name">Met2Adapt</span><span class="brand__tag">MSCA Doctoral Network</span></span>
+</a>
 
 <nav class="main-nav" aria-label="Main navigation">
-<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-menu">
-<!-- inline SVG hamburger so color inherits from CSS -->
-<svg class="nav-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
-<rect x="3" y="6" width="18" height="2" rx="1"></rect>
-<rect x="3" y="11" width="18" height="2" rx="1"></rect>
-<rect x="3" y="16" width="18" height="2" rx="1"></rect>
-</svg>
+<button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu">
+<span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
 </button>
 
-<ul id="main-menu">
-<li><a href="/" class="active">Home</a></li>
-<li><a href="/research/" class="">Research</a></li>
-<li><a href="/training/" class="">Training</a></li>
-<li><a href="/recruitment/" class="">Recruitment</a></li>
-<li><a href="/news/" class="">News &amp; Events</a></li>
-<li><a href="/contact/" class="">Contact</a></li>
+<div class="nav-panel" id="main-menu">
+<ul class="nav-links">
+<li><a href="/" class="active" aria-current="page">Home</a></li>
+<li><a href="/research/">Research</a></li>
+<li><a href="/training/">Training</a></li>
+<li><a href="/news/">News &amp; Events</a></li>
+<li><a href="/contact/">Contact</a></li>
 </ul>
+<a class="nav-cta" href="/recruitment/">Recruitment</a>
+<a class="nav-linkedin" href="https://www.linkedin.com/company/112561317" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Follow us on LinkedIn</a>
+</div>
 </nav>
-
 </div>
 </header>
-
-
 
 <main>
 <section class="hero hero-home reveal" aria-labelledby="hero-title">
@@ -167,72 +165,63 @@
 </div>
 
 <div class="dcs-home-grid" role="list"><a class="dc-card" role="listitem" href="/research/#wp2-dc2">
-    <span class="dc-card__photo">
-      <img src="/img/dcs/ipsi.jpg" alt="Photo of Ioannis Ypsilantis" loading="lazy" width="320" height="320" />
+    <span class="dc-card__photo"><img src="/img/dcs/square/dc2.jpg" alt="Photo of Ioannis Ypsilantis" loading="lazy" width="320" height="320" />
     </span>
     <span class="dc-card__code">DC2</span>
     <span class="dc-card__name">Ioannis Ypsilantis</span>
     <span class="dc-card__host">National Technical University of Athens</span>
     <span class="dc-card__title">Coupled chemo-mechanical interactions leading to fatigue damage in corrosive environments</span>
   </a><a class="dc-card" role="listitem" href="/research/#wp1-dc1">
-    <span class="dc-card__photo">
-      <img src="/img/dcs/MD2.jpg" alt="Photo of Marianna Diamanta" loading="lazy" width="320" height="320" />
+    <span class="dc-card__photo"><img src="/img/dcs/square/dc3.jpg" alt="Photo of Marianna Diamanta" loading="lazy" width="320" height="320" />
     </span>
     <span class="dc-card__code">DC3</span>
     <span class="dc-card__name">Marianna Diamanta</span>
     <span class="dc-card__host">National Technical University of Athens</span>
     <span class="dc-card__title">Multiscale Modelling and Machine Learning-Based Design of Innovative Vibration-Attenuating Metapanels</span>
   </a><a class="dc-card" role="listitem" href="/research/#wp3-dc1">
-    <span class="dc-card__photo">
-      <img src="/img/dcs/Picture_Hooman_Aminipour.jpg" alt="Photo of Hooman Aminipour" loading="lazy" width="320" height="320" />
+    <span class="dc-card__photo"><img src="/img/dcs/square/dc5.jpg" alt="Photo of Hooman Aminipour" loading="lazy" width="320" height="320" />
     </span>
     <span class="dc-card__code">DC5</span>
     <span class="dc-card__name">Hooman Aminipour</span>
     <span class="dc-card__host">University of Trento</span>
     <span class="dc-card__title">Enhanced Wave Bandgaps in Offshore Cylindrical Elements Embedding Linear and Nonlinear Topological Resonators</span>
   </a><a class="dc-card" role="listitem" href="/research/#wp3-dc3">
-    <span class="dc-card__photo">
-      <img src="/img/dcs/Yi.jpg" alt="Photo of Yi Yao" loading="lazy" width="320" height="320" />
+    <span class="dc-card__photo"><img src="/img/dcs/square/dc8.jpg" alt="Photo of Yi Yao" loading="lazy" width="320" height="320" />
     </span>
     <span class="dc-card__code">DC8</span>
     <span class="dc-card__name">Yi Yao</span>
     <span class="dc-card__host">University of Bologna</span>
     <span class="dc-card__title">On the combined use of wave energy converters and meta-structures for fatigue-life extension of existing offshore structures</span>
   </a><a class="dc-card" role="listitem" href="/research/#wp2-dc3">
-    <span class="dc-card__photo">
-      <img src="/img/dcs/Photo-Fenia%20Papadopoulou.jpg" alt="Photo of Fenia Papadopoulou" loading="lazy" width="320" height="320" />
+    <span class="dc-card__photo"><img src="/img/dcs/square/dc9.jpg" alt="Photo of Fenia Papadopoulou" loading="lazy" width="320" height="320" />
     </span>
     <span class="dc-card__code">DC9</span>
     <span class="dc-card__name">Fenia Papadopoulou</span>
     <span class="dc-card__host">University of Liverpool</span>
     <span class="dc-card__title">Modelling of the dynamic response for offshore wind farms</span>
   </a><a class="dc-card" role="listitem" href="/research/#wp4-dc1">
-    <span class="dc-card__photo">
-      <img src="/img/dcs/Perfil_Braulio.jpg" alt="Photo of Braulio Neira" loading="lazy" width="320" height="320" />
+    <span class="dc-card__photo"><img src="/img/dcs/square/dc11.jpg" alt="Photo of Braulio Neira" loading="lazy" width="320" height="320" />
     </span>
     <span class="dc-card__code">DC11</span>
     <span class="dc-card__name">Braulio Neira</span>
     <span class="dc-card__host">University of Granada</span>
     <span class="dc-card__title">GenAI-aided reliability assessment of mechanical metamaterials in offshore wind and wave energy applications</span>
   </a><a class="dc-card" role="listitem" href="/research/#wp4-dc2">
-    <span class="dc-card__photo">
-      <img src="/img/dcs/vinzent.jpg" alt="Photo of Vinzent Bohland" loading="lazy" width="320" height="320" />
+    <span class="dc-card__photo"><img src="/img/dcs/square/dc13.jpg" alt="Photo of Vinzent Bohland" loading="lazy" width="320" height="320" />
     </span>
     <span class="dc-card__code">DC13</span>
     <span class="dc-card__name">Vinzent Bohland</span>
     <span class="dc-card__host">DTU</span>
     <span class="dc-card__title">Risk-based Maintenance Planning for Wind Turbine Components</span>
   </a><a class="dc-card" role="listitem" href="/research/#wp1-dc5">
-    <span class="dc-card__photo">
-      <img src="/img/dcs/joao_brites_m2a_photo.jpg" alt="Photo of João Brites" loading="lazy" width="320" height="320" />
+    <span class="dc-card__photo"><img src="/img/dcs/square/dc14.jpg" alt="Photo of João Brites" loading="lazy" width="320" height="320" />
     </span>
     <span class="dc-card__code">DC14</span>
     <span class="dc-card__name">João Brites</span>
     <span class="dc-card__host">DTU</span>
     <span class="dc-card__title">Uncertainty Quantification and Technology Qualification for Advanced Wind Turbine Components</span>
   </a><a class="dc-card" role="listitem" href="/research/#wp4-dc3">
-    <span class="dc-card__photo">
-      <img src="/img/dcs/Gianluca_Lona.jpeg" alt="Photo of Gianluca Lona" loading="lazy" width="320" height="320" />
+    <span class="dc-card__photo"><img src="/img/dcs/square/dc15.jpg" alt="Photo of Gianluca Lona" loading="lazy" width="320" height="320" />
     </span>
     <span class="dc-card__code">DC15</span>
     <span class="dc-card__name">Gianluca Lona</span>
